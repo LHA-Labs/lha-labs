@@ -11,9 +11,9 @@ export default function Footer() {
   const { formatMessage } = useIntl();
 
   const listOrganisation = [
-    'About Us',
-    'Partners',
-    'Make an anonymous donation',
+    'aboutUs',
+    'partners',
+    'makeAnonyme',
     'let’shelp@gmail.com',
   ];
 
@@ -71,7 +71,7 @@ export default function Footer() {
               letterSpacing: '-0.42px',
             }}
           >
-            {formatMessage({ id: 'Get involved' })}
+            {formatMessage({ id: 'getInvolved' })}
           </Typography>
           <Typography
             sx={{
@@ -84,7 +84,7 @@ export default function Footer() {
             }}
           >
             {formatMessage({
-              id: 'Lets Help Association, devoted to compassion and social impact, is committed to providing meaningful assistance to communities.',
+              id: 'textFooter',
             })}
           </Typography>
           <Box
@@ -101,7 +101,7 @@ export default function Footer() {
               color="primary"
               sx={{ borderRadius: '50px' }}
             >
-              {formatMessage({ id: 'Make a donation' })}
+              {formatMessage({ id: 'makeADonation' })}
             </Button>
             <Button
               variant="contained"
@@ -109,7 +109,7 @@ export default function Footer() {
               color="secondary"
               sx={{ borderRadius: '50px' }}
             >
-              {formatMessage({ id: 'Nous joindre' })}
+              {formatMessage({ id: 'joinUs' })}
             </Button>
           </Box>
         </Box>
@@ -133,7 +133,7 @@ export default function Footer() {
               letterSpacing: '-0.42px',
             }}
           >
-            {formatMessage({ id: 'Get in touch' })}
+            {formatMessage({ id: 'getInTouch' })}
           </Typography>
           <Box sx={{ display: 'flex' }}>
             {socialMediaLinks.map((item, index) => (
@@ -181,7 +181,6 @@ export default function Footer() {
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'space-between',
-            // width:"33%",
           }}
         >
           <Typography

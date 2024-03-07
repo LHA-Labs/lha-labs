@@ -28,19 +28,19 @@ export default function Header() {
 
   const items: LayoutMenu[] = [
     {
-      title: 'Home',
+      title: 'home',
       active: true,
     },
     {
-      title: 'About Us',
+      title: 'aboutUs',
       active: false,
     },
     {
-      title: 'Partners',
+      title: 'partners',
       active: false,
     },
     {
-      title: 'Donate',
+      title: 'donate',
       active: false,
     },
   ];
@@ -168,7 +168,7 @@ export default function Header() {
               size="large"
               sx={{ borderRadius: '50px' }}
             >
-              {formatMessage({ id: 'Make a donation' })}
+              {formatMessage({ id: 'makeADonation' })}
             </Button>
           </Box>
           {/* side BAr */}

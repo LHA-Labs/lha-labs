@@ -2,21 +2,19 @@ export const website = {
   Hello: 'Salut',
 
   //Header
-  Home: "Accueil",
-  Donate: "Donation",
-  Eng: "Fr",
+  home: "Accueil",
+  donate: "Donation",
 
   //Buttons
-  ["Make a donation"]:"Faire un don",
-  ["Nous joindre"]: "Join Us",
+  makeADonation: "Faire un don",
+  joinUs: "Nous rejoindre",
 
   //Footer
-  ["Get involved"]: "S'impliquer",
-  ['Get in touch']: "Prendre contact",
-  Organisation: "Organisation",
-  ['Lets Help Association, devoted to compassion and social impact, is committed to providing meaningful assistance to communities.']: "L'association Lets Help, qui se consacre à la compassion et à l'impact social, s'engage à fournir une assistance significative aux communautés.",
-  ["About Us"]: "À propos de nous",
-  ['Partners']: "Partenaires",
-  ['Make an anonymous donation']: 'Faire un don anonyme',
-  ['let’shelp@gmail.com']: "let'shelp@gmail.com",
+  getInvolved: "S'impliquer",
+  getInTouch: "Prendre contact",
+  organisation: "Organisation",
+  textFooter: "L'association Lets Help, qui se consacre à la compassion et à l'impact social, s'engage à fournir une assistance significative aux communautés.",
+  aboutUs: "À propos de nous",
+  partners: "Partenaires",
+  makeAnonyme: 'Faire un don anonyme',
 };
