@@ -1,11 +1,11 @@
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import { Box, Button, IconButton, Typography } from '@mui/material';
-import Image from 'next/image';
+import { Box, Button, Typography } from '@mui/material';
+import Image, { StaticImageData } from 'next/image';
 import { useIntl } from 'react-intl';
 import ImgFooter from '../../../assets/ImgFooter.png';
+import facebook from '../../../assets/facebook.svg';
+import instagram from '../../../assets/instagram.svg';
+import linkedin from '../../../assets/linkedin.svg';
+import twitter from '../../../assets/twitter.svg';
 
 export default function Footer() {
   const { formatMessage } = useIntl();
@@ -17,11 +17,16 @@ export default function Footer() {
     'let’shelp@gmail.com',
   ];
 
-  const socialMediaLinks = [
-    { icon: <FacebookIcon />, link: 'lien_facebook' },
-    { icon: <TwitterIcon />, link: 'lien_twitter' },
-    { icon: <InstagramIcon />, link: 'lien_instagram' },
-    { icon: <LinkedInIcon />, link: 'lien_linkedin' },
+  interface socialMedia {
+    icon: StaticImageData;
+    link: string;
+  }
+
+  const socialMediaLinks: socialMedia[] = [
+    { icon: facebook, link: 'lien_facebook' },
+    { icon: twitter, link: 'lien_twitter' },
+    { icon: instagram, link: 'lien_instagram' },
+    { icon: linkedin, link: 'lien_linkedin' },
   ];
 
   const getRandomSize = () => {
@@ -136,14 +141,14 @@ export default function Footer() {
             {formatMessage({ id: 'getInTouch' })}
           </Typography>
           <Box sx={{ display: 'flex' }}>
-            {socialMediaLinks.map((item, index) => (
+            {socialMediaLinks.map(({ icon, link }, index) => (
               <a
                 key={index}
-                href={item.link}
+                href={link}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Box
+                {/* <Box
                   sx={{
                     borderRadius: '50%',
                     backgroundColor: '#FFF',
@@ -154,12 +159,12 @@ export default function Footer() {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                  }}
-                >
-                  <IconButton style={{ color: '#A50000' }}>
-                    {item.icon}
-                  </IconButton>
-                </Box>
+                  }} */}
+                {/* > */}
+                {/* <IconButton  style={{ color: '#A50000' }}> */}
+                {/* {icon} */}
+                {/* </IconButton> */}
+                {/* </Box> */}
               </a>
             ))}
           </Box>
