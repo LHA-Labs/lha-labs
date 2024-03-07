@@ -1,6 +1,7 @@
 import CaretIcon from '@iconify-icons/fluent/chevron-down-24-regular';
 import MenuIcon from '@iconify-icons/fluent/line-horizontal-3-20-regular';
 import { Icon } from '@iconify/react';
+import { useLanguage } from '@lha-labs/theme';
 import {
   Box,
   Button,
@@ -18,6 +19,8 @@ import Sidebar from '../SideBar/SideBar';
 
 export default function Header() {
   const { formatMessage } = useIntl();
+
+  const { activeLanguage, languageDispatch } = useLanguage();
 
   const [activeItem, setActiveItem] = useState(0);
 
@@ -137,7 +140,13 @@ export default function Header() {
                 justifyContent: 'center',
                 alignItems: 'center',
                 gap: '4px',
+                cursor: 'pointer',
               }}
+              onClick={() =>
+                languageDispatch({
+                  type: activeLanguage === 'en' ? 'USE_FRENCH' : 'USE_ENGLISH',
+                })
+              }
             >
               <Typography
                 sx={{
@@ -149,7 +158,7 @@ export default function Header() {
                   lineHeight: '20px',
                 }}
               >
-                {formatMessage({ id: 'Eng' })}
+                {activeLanguage}
               </Typography>
               <Icon icon={CaretIcon} color="#2F3A45" />
             </Box>
