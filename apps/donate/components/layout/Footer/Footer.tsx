@@ -2,11 +2,10 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import { Box, IconButton, Typography } from '@mui/material';
+import { Box, Button, IconButton, Typography } from '@mui/material';
 import Image from 'next/image';
 import { useIntl } from 'react-intl';
 import ImgFooter from '../../../assets/ImgFooter.png';
-import ButtonFilled from '../Buttons/ButtonFilled';
 
 export default function Footer() {
   const { formatMessage } = useIntl();
@@ -96,14 +95,22 @@ export default function Footer() {
               gap: '16px',
             }}
           >
-            <ButtonFilled
-              label={formatMessage({ id: 'Make a donation' })}
-              isPrimary={true}
-            ></ButtonFilled>
-            <ButtonFilled
-              label={formatMessage({ id: 'Nous joindre' })}
-              isPrimary={false}
-            ></ButtonFilled>
+            <Button
+              variant="contained"
+              size="large"
+              color="primary"
+              sx={{ borderRadius: '50px' }}
+            >
+              {formatMessage({ id: 'Make a donation' })}
+            </Button>
+            <Button
+              variant="contained"
+              size="large"
+              color="secondary"
+              sx={{ borderRadius: '50px' }}
+            >
+              {formatMessage({ id: 'Nous joindre' })}
+            </Button>
           </Box>
         </Box>
 

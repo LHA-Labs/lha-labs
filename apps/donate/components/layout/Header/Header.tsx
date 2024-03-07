@@ -3,6 +3,7 @@ import MenuIcon from '@iconify-icons/fluent/line-horizontal-3-20-regular';
 import { Icon } from '@iconify/react';
 import {
   Box,
+  Button,
   IconButton,
   ImageListItem,
   Toolbar,
@@ -13,7 +14,6 @@ import { useState } from 'react';
 import { useIntl } from 'react-intl';
 import LayoutMenu from '../../../Interface';
 import LogoLHA from '../../../assets/LogoLha.png';
-import ButtonFilled from '../Buttons/ButtonFilled';
 import Sidebar from '../SideBar/SideBar';
 
 export default function Header() {
@@ -153,14 +153,18 @@ export default function Header() {
               </Typography>
               <Icon icon={CaretIcon} color="#2F3A45" />
             </Box>
-            <ButtonFilled
-              label={formatMessage({ id: 'Make a donation' })}
-              isPrimary={true}
-            ></ButtonFilled>
+            <Button
+              variant="contained"
+              color="primary"
+              size="large"
+              sx={{ borderRadius: '50px' }}
+            >
+              {formatMessage({ id: 'Make a donation' })}
+            </Button>
           </Box>
           {/* side BAr */}
           <IconButton
-            sx={{ display: { desktop: 'none', mobile: 'block' }}}
+            sx={{ display: { desktop: 'none', mobile: 'block' } }}
             onClick={openSidebar}
           >
             <Icon icon={MenuIcon} color="#2F3A45" />
