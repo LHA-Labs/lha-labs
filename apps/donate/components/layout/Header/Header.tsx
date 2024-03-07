@@ -56,116 +56,117 @@ export default function Header() {
   };
 
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        backgroundColor: 'var(--background, #F5F5F5)',
-        padding: '24px 94px',
-      }}
-    >
-      <Toolbar
+    <>
+      <Sidebar
+        open={sidebarOpen}
+        onClose={closeSidebar}
+        items={items}
+        activeItem={activeItem}
+        onItemClick={itemClick}
+      />
+      <Box
         sx={{
           display: 'flex',
           justifyContent: 'space-between',
-          width: '100%',
-          paddingRight: '0px',
-          paddingLeft: '0px',
+          alignItems: 'center',
+          backgroundColor: 'var(--background, #F5F5F5)',
+          padding: '24px 94px',
         }}
       >
-        <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <ImageListItem sx={{ width: '167px', height: '63px' }}>
-            <Image
-              src={LogoLHA}
-              alt="Logo LHA"
-              style={{ width: '167px', height: '63px' }}
-            />
-          </ImageListItem>
-        </Box>
-
-        <Box
+        <Toolbar
           sx={{
             display: 'flex',
-            alignItems: 'center',
-            gap: '24px',
+            justifyContent: 'space-between',
+            width: '100%',
+            paddingRight: '0px',
+            paddingLeft: '0px',
           }}
         >
-          {items.map(({ title, active }, index) => (
-            <Box
-              onClick={() => itemClick(index)}
-              key={index}
-              sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                color: 'var(--Body, #2F3A45)',
-                fontFamily: 'Montserrat, sans-serif',
-                fontSize: '12px',
-                fontStyle: 'normal',
-                fontWeight: 500,
-                cursor: 'pointer',
-                lineHeight: '16px',
-                paddingBottom: '8px',
-                borderBottom: activeItem === index ? '2px solid red' : 'none',
-              }}
-            >
-              {formatMessage({ id: `${title}` })}
-            </Box>
-          ))}
-        </Box>
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <ImageListItem sx={{ width: '167px', height: '63px' }}>
+              <Image
+                src={LogoLHA}
+                alt="Logo LHA"
+                style={{ width: '167px', height: '63px' }}
+              />
+            </ImageListItem>
+          </Box>
 
-        <Box
-          sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center',
-            gap: '12px',
-          }}
-        >
+          <Box
+            sx={{
+              display: 'flex',
+              alignItems: 'center',
+              gap: '24px',
+            }}
+          >
+            {items.map(({ title, active }, index) => (
+              <Box
+                onClick={() => itemClick(index)}
+                key={index}
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  color: 'var(--Body, #2F3A45)',
+                  fontFamily: 'Montserrat, sans-serif',
+                  fontSize: '12px',
+                  fontStyle: 'normal',
+                  fontWeight: 500,
+                  cursor: 'pointer',
+                  lineHeight: '16px',
+                  paddingBottom: '8px',
+                  borderBottom: activeItem === index ? '2px solid red' : 'none',
+                }}
+              >
+                {formatMessage({ id: `${title}` })}
+              </Box>
+            ))}
+          </Box>
+
           <Box
             sx={{
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
-              gap: '4px',
+              gap: '12px',
             }}
           >
-            <Typography
+            <Box
               sx={{
-                color: 'var(--Body, #2F3A45)',
-                fontFamily: 'Montserrat, sans-serif',
-                fontSize: 12,
-                fontStyle: 'normal',
-                fontWeight: 600,
-                lineHeight: '20px',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                gap: '4px',
               }}
             >
-              {formatMessage({ id: 'Eng' })}
-            </Typography>
-            <Icon icon={CaretIcon} color="#2F3A45" />
+              <Typography
+                sx={{
+                  color: 'var(--Body, #2F3A45)',
+                  fontFamily: 'Montserrat, sans-serif',
+                  fontSize: 12,
+                  fontStyle: 'normal',
+                  fontWeight: 600,
+                  lineHeight: '20px',
+                }}
+              >
+                {formatMessage({ id: 'Eng' })}
+              </Typography>
+              <Icon icon={CaretIcon} color="#2F3A45" />
+            </Box>
+            <ButtonFilled
+              label={formatMessage({ id: 'Make a donation' })}
+              isPrimary={true}
+            ></ButtonFilled>
           </Box>
-          <ButtonFilled
-            label={formatMessage({ id: 'Make a donation' })}
-            isPrimary={true}
-          ></ButtonFilled>
-        </Box>
-        {/* side BAr */}
-        <IconButton
-          sx={{ display: { sm: 'none', md: 'block' } }}
-          onClick={openSidebar}
-        >
-          <Icon icon={MenuIcon} color="#2F3A45" />
-        </IconButton>
-
-        <Sidebar
-          open={sidebarOpen}
-          onClose={closeSidebar}
-          items={items}
-          activeItem={activeItem}
-          onItemClick={itemClick}
-        />
-      </Toolbar>
-    </Box>
+          {/* side BAr */}
+          <IconButton
+            sx={{ display: { desktop: 'none', mobile: 'block' }}}
+            onClick={openSidebar}
+          >
+            <Icon icon={MenuIcon} color="#2F3A45" />
+          </IconButton>
+        </Toolbar>
+      </Box>
+    </>
   );
 }
