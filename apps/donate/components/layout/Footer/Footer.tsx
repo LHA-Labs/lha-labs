@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, IconButton, Typography } from '@mui/material';
 import Image, { StaticImageData } from 'next/image';
 import { useIntl } from 'react-intl';
 import ImgFooter from '../../../assets/ImgFooter.png';
@@ -148,7 +148,7 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {/* <Box
+                <Box
                   sx={{
                     borderRadius: '50%',
                     backgroundColor: '#FFF',
@@ -159,12 +159,12 @@ export default function Footer() {
                     display: 'flex',
                     justifyContent: 'center',
                     alignItems: 'center',
-                  }} */}
-                {/* > */}
-                {/* <IconButton  style={{ color: '#A50000' }}> */}
-                {/* {icon} */}
-                {/* </IconButton> */}
-                {/* </Box> */}
+                  }}
+                >
+                  <IconButton style={{ color: '#A50000' }}>
+                    {/* {icon} */}
+                  </IconButton>
+                </Box>
               </a>
             ))}
           </Box>
