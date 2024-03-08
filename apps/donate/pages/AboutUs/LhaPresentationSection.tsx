@@ -1,11 +1,23 @@
 import { Box } from '@mui/system';
-import { Typography } from '@mui/material';
+import { Divider, Typography } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
 import imgOfTeam1 from '../../assets/imgOfTeam1.png';
 import imgOfTeam2 from '../../assets/imgOfTeam2.png';
 
 export default function LhaPresentationSection() {
+  interface stats {
+    quantity: string;
+    nature: string;
+  }
+  const statistic: stats[] = [
+    { quantity: '+2M', nature: 'Dons reçu' },
+    { quantity: '+100', nature: 'Benevoles' },
+    { quantity: '+6', nature: 'Partenaires' },
+    { quantity: '+500', nature: 'Orphelins' },
+    { quantity: '+15', nature: 'Sponsors' },
+  ];
+
   return (
     <Box
       sx={{
@@ -23,7 +35,7 @@ export default function LhaPresentationSection() {
           gap: '10px',
         }}
       >
-        <Typography variant="h1" component="h2" sx={{ textAlign: 'center' }}>
+        <Typography variant="h1" sx={{ textAlign: 'center' }}>
           Welcome to Let’s Help Association, where passion meets purpose
         </Typography>
         <Typography variant="body1" sx={{ textAlign: 'center' }}>
@@ -68,7 +80,68 @@ export default function LhaPresentationSection() {
           <Image src={imgOfTeam1} alt="Image 4" />
         </Box>
       </Box>
-      <Box>stat</Box>
+      <Box
+        sx={{
+          display: 'flex',
+          width: '100%',
+          padding: '0px 118px',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+        }}
+      >
+        {statistic.map(({ quantity, nature }, index) => (
+          <Box
+            key={index}
+            sx={{
+              display: 'flex',
+              width: '170px',
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              alignItems: 'center',
+            }}
+          >
+            <Box
+              sx={{
+                display: 'flex',
+                width: 'auto',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                alignItems: 'flex-start',
+              }}
+            >
+              <Typography variant="h1" sx={{ color: 'titleActive' }}>
+                {' '}
+                {quantity}{' '}
+              </Typography>
+              <Box
+                // color="primary"
+                sx={{
+                  borderRadius: '4px',
+                  display: 'flex',
+                  padding: '0px 3px',
+                  justifyContent: 'center',
+                  alignItems: 'center',
+                  gap: '10px',
+                  background: 'rgba(220, 0, 0, 0.20)',
+                }}
+              >
+                <Typography
+                  variant="body2"
+                  sx={{
+                    color: 'titleActive',
+                  }}
+                >
+                  {' '}
+                  {nature}{' '}
+                </Typography>
+              </Box>
+            </Box>
+            {index !== statistic.length - 1 && (
+              <Divider orientation="vertical" variant="middle" flexItem />
+            )}
+          </Box>
+        ))}
+      </Box>
     </Box>
   );
 }
