@@ -9,9 +9,7 @@ import LorrainPic from '../../assets/LorrainPic.png';
 import Image, { StaticImageData } from 'next/image';
 import { useIntl } from 'react-intl';
 
-
 export default function OurTeamSection() {
-
   const { formatMessage } = useIntl();
 
   const socialMediaLinks = [
@@ -41,8 +39,7 @@ export default function OurTeamSection() {
     {
       name: 'Lorrain Tchakoumi',
       role: 'roleLorrain',
-      description:
-        'At Let’s help Association, our mission is to empower lives through compassionate initiatives. By promoting education and fostering sustainable solutions, we envision a brighter, more.',
+      description: 'descriptionLorrain',
       linkFacebook: 'lien_facebook',
       linkTwitter: 'lien_twitter',
       linkInstagram: 'lien_instagram',
@@ -83,8 +80,8 @@ export default function OurTeamSection() {
       }}
     >
       <TitleAndSubtitle
-        title="Our Team"
-        subtitle="United by Purpose, Driven by Passion"
+        title={formatMessage({ id: 'ourTeamTitle' })}
+        subtitle={formatMessage({ id: 'ourTeamSubtitle' })}
       />
       {members.map(
         (
@@ -158,7 +155,7 @@ export default function OurTeamSection() {
                     lineHeight: '32px',
                   }}
                 >
-                 {formatMessage({ id:  `${activeMember.role}` })}
+                  {formatMessage({ id: `${activeMember.role}` })}
                 </Typography>
               </Box>
               <Typography
@@ -171,7 +168,7 @@ export default function OurTeamSection() {
                   lineHeight: '28px',
                 }}
               >
-                {activeMember.description}
+                {formatMessage({ id: `${activeMember.description}` })}
               </Typography>
               <Box sx={{ display: 'flex' }}>
                 {socialMediaLinks.map((item, index) => (

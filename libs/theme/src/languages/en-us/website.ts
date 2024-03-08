@@ -1,9 +1,9 @@
 export const website = {
   Hello: 'World',
 
-    //Header
-    home: "Home",
-    donate: "Donate",
+  //Header
+  home: "Home",
+  donate: "Donate",
 
   //Buttons
   makeADonation: "Make a donation",
@@ -16,4 +16,11 @@ export const website = {
   aboutUs: 'About Us',
   partners: 'Partners',
   makeAnonyme: 'Make an anonymous donation',
+
+
+  //our Team
+  roleLorrain: "Technical Team Leader",
+  descriptionLorrain: 'At Let’s help Association, our mission is to empower lives through compassionate initiatives. By promoting education and fostering sustainable solutions, we envision a brighter, more.',
+  ourTeamTitle: 'Our Team',
+  ourTeamSubtitle: 'United by Purpose, Driven by Passion',
 };
