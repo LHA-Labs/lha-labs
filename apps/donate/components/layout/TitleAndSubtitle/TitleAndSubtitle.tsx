@@ -16,34 +16,13 @@ const TitleAndSubtitle: React.FC<TitleAndSubtitleProps> = ({
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        gap: '16px',
+        gap: '12px',
       }}
     >
-      <Typography
-        sx={{
-          color: 'var(--Primary,#A50000)',
-          fontFamily: 'Montserrat, sans-serif',
-          fontSize: '20px',
-          fontStyle: 'normal',
-          fontWeight: 500,
-          lineHeight: '24px',
-          letterSpacing: '-0.3px',
-        }}
-      >
+      <Typography variant="h4" color="primary">
         {title}
       </Typography>
-      <Typography
-        sx={{
-          color: 'var(--title-active,#333333)',
-          textAlign: 'center',
-          fontFamily: 'Montserrat',
-          fontSize: '30px',
-          fontStyle: 'normal',
-          fontWeight: 700,
-          lineHeight: '36px',
-          letterSpacing: '-0.6px',
-        }}
-      >
+      <Typography variant="h1" color="titleActive">
         {subtitle}
       </Typography>
       <Box
@@ -53,7 +32,9 @@ const TitleAndSubtitle: React.FC<TitleAndSubtitleProps> = ({
           strokeWidth: '2px',
           backgroundcolor: 'var(--Primary, #A50000)',
         }}
-      ><hr /></Box>
+      >
+        <hr />
+      </Box>
     </Box>
   );
 };
