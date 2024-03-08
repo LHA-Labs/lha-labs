@@ -4,17 +4,20 @@ import Image from 'next/image';
 import React from 'react';
 import imgOfTeam1 from '../../assets/imgOfTeam1.png';
 import imgOfTeam2 from '../../assets/imgOfTeam2.png';
+import { useIntl } from 'react-intl';
 
 export default function LhaPresentationSection() {
+  const { formatMessage } = useIntl();
+
   interface stats {
     quantity: string;
     nature: string;
   }
   const statistic: stats[] = [
-    { quantity: '+2M', nature: 'Dons reçu' },
+    { quantity: '+2M', nature: 'donsReçu' },
     { quantity: '+100', nature: 'Benevoles' },
-    { quantity: '+6', nature: 'Partenaires' },
-    { quantity: '+500', nature: 'Orphelins' },
+    { quantity: '+6', nature: 'partners' },
+    { quantity: '+500', nature: 'orphans' },
     { quantity: '+15', nature: 'Sponsors' },
   ];
 
@@ -36,13 +39,12 @@ export default function LhaPresentationSection() {
         }}
       >
         <Typography variant="h1" sx={{ textAlign: 'center' }}>
-          Welcome to Let’s Help Association, where passion meets purpose
+          {formatMessage({ id: 'lhaPresentationTitle' })}
         </Typography>
         <Typography variant="body1" sx={{ textAlign: 'center' }}>
-          At the heart of our journey is a commitment to making a meaningful
-          difference. Discover who we are, our story, and the collective{' '}
+          {formatMessage({ id: 'lhaPresentationSubtitle1' })}
           <Typography variant="body1" color="primary">
-            positive change and inspire hope.
+            {formatMessage({ id: 'lhaPresentationSubtitle2' })}
           </Typography>
         </Typography>
       </Box>
@@ -110,8 +112,7 @@ export default function LhaPresentationSection() {
               }}
             >
               <Typography variant="h1" sx={{ color: 'titleActive' }}>
-                {' '}
-                {quantity}{' '}
+                {formatMessage({ id: `${quantity}` })}
               </Typography>
               <Box
                 // color="primary"
@@ -131,8 +132,7 @@ export default function LhaPresentationSection() {
                     color: 'titleActive',
                   }}
                 >
-                  {' '}
-                  {nature}{' '}
+                  {formatMessage({ id: `${nature}` })}
                 </Typography>
               </Box>
             </Box>
