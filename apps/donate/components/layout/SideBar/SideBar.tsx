@@ -1,12 +1,11 @@
 import CaretIcon from '@iconify-icons/fluent/chevron-down-24-regular';
 import { Icon } from '@iconify/react';
-import { Box, Drawer, ImageListItem, Typography } from '@mui/material';
-import LayoutMenu from 'apps/donate/Interface';
+import { Box, Button, Drawer, ImageListItem, Typography } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
 import { useIntl } from 'react-intl';
+import LayoutMenu from '../../../Interface';
 import LogoLha from '../../../assets/LogoLha.png';
-import ButtonFilled from '../Buttons/ButtonFilled';
 
 interface SidebarProps {
   open: boolean;
@@ -37,9 +36,6 @@ const Sidebar: React.FC<SidebarProps> = ({
           justifyItems: 'start',
         }}
       >
-        {/* <IconButton sx={{ alignSelf: 'flex-end' }} onClick={onClose}>
-        <Icon icon={Dismiss}/>
-        </IconButton> */}
         <Box
           sx={{
             display: 'flex',
@@ -108,10 +104,14 @@ const Sidebar: React.FC<SidebarProps> = ({
             </Typography>
             <Icon icon={CaretIcon} color="#2F3A45" />
           </Box>
-          <ButtonFilled
-            label={formatMessage({ id: 'Make a donation' })}
-            isPrimary={true}
-          ></ButtonFilled>
+          <Button
+            variant="contained"
+            size="medium"
+            color="primary"
+            sx={{ borderRadius: '50px' }}
+          >
+            {formatMessage({ id: 'makeADonation' })}
+          </Button>
         </Box>
       </Box>
     </Drawer>
