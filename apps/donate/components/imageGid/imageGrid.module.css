@@ -1,0 +1,71 @@
+/* 
+* initialise variables to use
+*/
+
+.grid_container {
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    padding: 20px 0;
+}
+
+.grid_container > :first-child{
+    border-block: 5px solid #fff;
+    border-left: 5px solid #fff;
+    border-radius: 10% 0 0 10%;
+    box-shadow: 0px 0px 18px -10px red;
+}
+
+
+.grid_container > :last-child{
+    border-block: 5px solid #fff;
+    border-right: 5px solid #fff;
+    border-radius: 0 10% 10% 0;
+    box-shadow: 1px 0px 18px -10px red;
+
+}
+
+.image_item {
+    display: flex;
+    flex-direction: column;
+}
+
+.image_item > :first-child {
+    border-inline: 5px solid #fff;
+    border-top: 5px solid #fff;
+    border-radius: 10% 10% 0 0px;
+    box-shadow: 0px 2px 18px -10px red;
+}
+
+.image_item > :last-child{
+    border-inline: 5px solid #fff;
+    border-bottom: 5px solid #fff;
+    border-radius: 0 0 10% 10%;
+    box-shadow: 0px 5px 18px -10px red;
+}
+
+
+.image_item_centered{
+    border: 5px solid #fff;
+}
+
+/* 
+    style images
+*/
+
+.grid_container > :first-child > img {
+    border-radius: 10% 0 0 10%;
+}
+
+.grid_container > :last-child > img {
+    border-radius: 0 10% 10% 0;
+}
+
+.image_item > :first-child > img {
+    border-radius: 10% 10% 0 0;
+}
+
+.image_item > :last-child > img {
+    border-radius: 0 0 10% 10% ;
+}
+
