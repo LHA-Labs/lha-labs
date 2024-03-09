@@ -1,13 +1,12 @@
-import { useLanguage } from '@lha-labs/theme';
-import { Box, Button, Typography } from '@mui/material';
-import { useIntl } from 'react-intl';
+import { Box } from '@mui/material';
+import Welcome_view from '../components/welcome';
 
 export function Index() {
-  const { formatMessage } = useIntl();
-  const { activeLanguage, languageDispatch } = useLanguage();
+  // const { formatMessage } = useIntl();
+  // const { activeLanguage, languageDispatch } = useLanguage();
   return (
     <Box>
-      <Button
+      {/* <Button
         variant="contained"
         color="primary"
         onClick={() =>
@@ -18,7 +17,8 @@ export function Index() {
       >
         Change Language: {activeLanguage}
       </Button>
-      <Typography variant="h1"> {formatMessage({ id: 'Hello' })}</Typography>
+      <Typography variant="h1"> {formatMessage({ id: 'Hello' })}</Typography> */}
+      <Welcome_view />
     </Box>
   );
 }
