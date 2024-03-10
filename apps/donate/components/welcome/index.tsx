@@ -1,9 +1,9 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Button, Fab, Typography } from "@mui/material";
 import ImageGrid from "../imageGid";
 
 export default function Welcome_view() {
     return (
-        <Box>
+        <Box component='section' sx={{ position: "relative" }}>
             <Typography variant="h2" sx={{
                 fontFamily: "Montserrat",
                 lineHeight: "36px",
@@ -26,7 +26,22 @@ export default function Welcome_view() {
                 <Button variant="contained">Faire un don</Button>
                 <Button variant="contained" color="secondary">Nous joindre</Button>
             </Box>
-            <ImageGrid />
+            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                <ImageGrid />
+            </Box>
+            <Fab variant="extended" color="primary" sx={{
+                position: 'absolute',
+                bottom: '60px',
+                right: '10px',
+                width: "-webkit-fill-available",
+                fontWeight: 600,
+                fontFamily: "Montserrat",
+                fontSize: "18px",
+                lineHeight: "16px",
+                textTransform: "lowercase"
+            }}>
+                Faire un don
+            </Fab>
         </Box>
     )
 }
