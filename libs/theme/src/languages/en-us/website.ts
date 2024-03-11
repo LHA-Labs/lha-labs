@@ -32,4 +32,12 @@ export const website = {
   descriptionLorrain: 'At Let’s help Association, our mission is to empower lives through compassionate initiatives. By promoting education and fostering sustainable solutions, we envision a brighter, more.',
   ourTeamTitle: 'Our Team',
   ourTeamSubtitle: 'United by Purpose, Driven by Passion',
+
+  //our mission vision section
+  mission: 'Mission',
+  value: 'Value',
+  vision: 'Vision',
+  purpose: 'Purpose',
+  visionParagraph: "At Let’s help Association, our mission is to empower lives through compassionate initiatives. By promoting education and fostering sustainable solutions, we envision a brighter, more resilient future. Join us on this journey to build a world of hope and equality. At Let’s help Association, our mission is to empower lives through compassionate initiatives. By promoting education and fostering sustainable solutions, we envision a brighter, more resilient future."
 };
+

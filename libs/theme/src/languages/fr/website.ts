@@ -34,5 +34,13 @@ export const website = {
   ourTeamTitle: 'Notre équipe',
   ourTeamSubtitle: "Unis par l'objectif, animés par la passion",
 
+  //our mission vision section
+  mission: 'Mission',
+  value: 'Valeur',
+  vision: 'Vision',
+  purpose: 'Objectif',
+  visionParagraph: "À l'association Let's help, notre mission est d'améliorer les conditions de vie grâce à des initiatives empreintes de compassion. En promouvant l'éducation et en encourageant les solutions durables, nous envisageons un avenir plus radieux et plus résilient. Rejoignez-nous dans ce voyage pour construire un monde d'espoir et d'égalité. À l'association Let's help, notre mission est d'améliorer les conditions de vie grâce à des initiatives empreintes de compassion. En promouvant l'éducation et en encourageant les solutions durables, nous envisageons un avenir plus radieux et plus résilient.Traduit avec DeepL.com (version gratuite)"
+
+
 
 };

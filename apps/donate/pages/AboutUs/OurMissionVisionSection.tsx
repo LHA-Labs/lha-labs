@@ -13,35 +13,31 @@ export default function OurMissionVisionSection() {
   }
   const element: elmt[] = [
     {
-      title: 'Mission',
-      paragraph:
-        'At Let’s help Association, our mission is to empower lives through compassionate initiatives. By promoting education and fostering sustainable solutions, we envision a brighter, more resilient future. Join us on this journey to build a world of hope and equality.At Let’s help Association, our mission is to empower lives through compassionate initiatives. By promoting education and fostering sustainable solutions, we envision a brighter, more resilient future.',
+      title: 'mission',
+      paragraph: 'visionParagraph',
     },
     {
-      title: 'Value',
-      paragraph:
-        'At Let’s help Association, our mission is to empower lives through compassionate initiatives. By promoting education and fostering sustainable solutions, we envision a brighter, more resilient future. Join us on this journey to build a world of hope and equality. At Let’s help Association, our mission is to empower lives through compassionate initiatives. By promoting education and fostering sustainable solutions, we envision a brighter, more resilient future.',
+      title: 'value',
+      paragraph: 'visionParagraph',
     },
   ];
 
   const redElement: elmt[] = [
     {
-      title: 'Vision',
-      paragraph:
-        'At Let’s help Association, our mission is to empower lives through compassionate initiatives. By promoting education and fostering sustainable solutions, we envision a brighter, more resilient future. Join us on this journey to build a world of hope and equality.At Let’s help Association, our mission is to empower lives through compassionate initiatives. By promoting education and fostering sustainable solutions, we envision a brighter, more resilient future.',
+      title: 'vision',
+      paragraph: 'visionParagraph',
     },
     {
-      title: 'Purpose',
-      paragraph:
-        'At Let’s help Association, our mission is to empower lives through compassionate initiatives. By promoting education and fostering sustainable solutions, we envision a brighter, more resilient future. Join us on this journey to build a world of hope and equality. At Let’s help Association, our mission is to empower lives through compassionate initiatives. By promoting education and fostering sustainable solutions, we envision a brighter, more resilient future.',
+      title: 'purpose',
+      paragraph: 'visionParagraph',
     },
   ];
 
   return (
     <Box
-    sx={{
-      marginBottom: '80px',
-    }}
+      sx={{
+        marginBottom: '80px',
+      }}
     >
       <Box
         sx={{
