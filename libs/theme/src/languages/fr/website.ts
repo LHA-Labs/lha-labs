@@ -29,7 +29,6 @@ export const website = {
   orphans: 'Orphelins',
 
   //our Team section
-
   roleLorrain: "Chef Equipe Technique",
   descriptionLorrain: "À l'association Let's help, notre mission est d'améliorer les conditions de vie grâce à des initiatives empreintes de compassion. En promouvant l'éducation et en encourageant les solutions durables, nous envisageons un avenir plus lumineux, plus...",
   ourTeamTitle: 'Notre équipe',
