@@ -27,6 +27,7 @@ export default function LhaPresentationSection() {
         display: 'grid',
         gap: '30px',
         marginTop: '50px',
+        marginBottom: '80px',
       }}
     >
       <Box
