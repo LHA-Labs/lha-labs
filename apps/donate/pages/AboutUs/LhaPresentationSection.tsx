@@ -51,16 +51,23 @@ export default function LhaPresentationSection() {
       <Box
         sx={{
           display: 'flex',
-          gridTemplateRows: '1fr 2fr 1fr',
-          height: '100%',
-          width: '100%',
           padding: '0px 118px',
-          justifyContent: 'space-between',
-          alignItems: 'center',
           flexDirection: 'row',
+          // gridTemplateRows: '1fr 2fr 1fr',
+          // height: '100%',
+          // width: '100%',
+          // justifyContent: 'space-between',
+          // alignItems: 'center',
         }}
       >
-        <Box sx={{ height: '100%', width: '100%' }}>
+        <Box
+          sx={{
+            height: '100%',
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+          }}
+        >
           <Image src={imgOfTeam1} alt="Image 1" />
         </Box>
 
@@ -68,7 +75,10 @@ export default function LhaPresentationSection() {
           sx={{
             display: 'grid',
             gridTemplateRows: '1fr 1fr',
-            justifyContent: 'space-between',
+
+            alignContent: 'space-between',
+            // display: 'flex',
+            justifyContent: 'center',
             gap: '2px',
             height: '100%',
             width: '100%',
@@ -78,7 +88,14 @@ export default function LhaPresentationSection() {
           <Image src={imgOfTeam2} alt="Image 3" />
         </Box>
 
-        <Box sx={{ height: '100%', width: '100%' }}>
+        <Box
+          sx={{
+            height: '100%',
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'center',
+          }}
+        >
           <Image src={imgOfTeam1} alt="Image 4" />
         </Box>
       </Box>
