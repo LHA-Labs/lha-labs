@@ -77,6 +77,7 @@ export default function OurTeamSection() {
         flexDirection: 'column',
         alignItems: 'center',
         gap: '35px',
+        marginBottom:"80px",
       }}
     >
       <TitleAndSubtitle

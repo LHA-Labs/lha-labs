@@ -12,6 +12,7 @@ export default function JoinUsSection() {
         position: 'relative',
         height: '50vh',
         overflow: 'hidden',
+        marginBottom:"80px"
       }}
     >
       <Image
