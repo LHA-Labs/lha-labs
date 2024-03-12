@@ -39,8 +39,9 @@ export const website = {
   value: 'Valeur',
   vision: 'Vision',
   purpose: 'Objectif',
-  visionParagraph: "À l'association Let's help, notre mission est d'améliorer les conditions de vie grâce à des initiatives empreintes de compassion. En promouvant l'éducation et en encourageant les solutions durables, nous envisageons un avenir plus radieux et plus résilient. Rejoignez-nous dans ce voyage pour construire un monde d'espoir et d'égalité. À l'association Let's help, notre mission est d'améliorer les conditions de vie grâce à des initiatives empreintes de compassion. En promouvant l'éducation et en encourageant les solutions durables, nous envisageons un avenir plus radieux et plus résilient.Traduit avec DeepL.com (version gratuite)"
+  visionParagraph: "À l'association Let's help, notre mission est d'améliorer les conditions de vie grâce à des initiatives empreintes de compassion. En promouvant l'éducation et en encourageant les solutions durables, nous envisageons un avenir plus radieux et plus résilient. Rejoignez-nous dans ce voyage pour construire un monde d'espoir et d'égalité. À l'association Let's help, notre mission est d'améliorer les conditions de vie grâce à des initiatives empreintes de compassion. En promouvant l'éducation et en encourageant les solutions durables, nous envisageons un avenir plus radieux et plus résilient.Traduit avec DeepL.com (version gratuite)",
 
-
+  //Join Us section
+  joinUsTitle: "Rejoignez l'association Let's help, notre mission est de promouvoir l'éducation et vous.",
 
 };

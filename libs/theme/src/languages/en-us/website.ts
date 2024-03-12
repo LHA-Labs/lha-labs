@@ -38,6 +38,9 @@ export const website = {
   value: 'Value',
   vision: 'Vision',
   purpose: 'Purpose',
-  visionParagraph: "At Let’s help Association, our mission is to empower lives through compassionate initiatives. By promoting education and fostering sustainable solutions, we envision a brighter, more resilient future. Join us on this journey to build a world of hope and equality. At Let’s help Association, our mission is to empower lives through compassionate initiatives. By promoting education and fostering sustainable solutions, we envision a brighter, more resilient future."
+  visionParagraph: "At Let’s help Association, our mission is to empower lives through compassionate initiatives. By promoting education and fostering sustainable solutions, we envision a brighter, more resilient future. Join us on this journey to build a world of hope and equality. At Let’s help Association, our mission is to empower lives through compassionate initiatives. By promoting education and fostering sustainable solutions, we envision a brighter, more resilient future.",
+
+  //Join Us section
+  joinUsTitle: "Join Let’s help Association, our mission is moting education and you.",
 };
 

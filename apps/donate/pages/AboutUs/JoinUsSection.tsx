@@ -57,7 +57,7 @@ export default function JoinUsSection() {
           autoComplete="email"
           sx={{
             borderRadius: '50px',
-            backgroundColor: 'rgba(255, 255, 255, 0.3)',
+            backgroundColor: 'rgba(255, 255, 255, 0.2)',
             padding: '6px 16px',
             margin: '10px 0',
             color: '#FFF',
@@ -73,7 +73,7 @@ export default function JoinUsSection() {
           color="secondary"
           sx={{ borderRadius: '50px' }}
         >
-          Join Us
+          {formatMessage({ id: 'joinUs' })}
         </Button>
       </Box>
     </Box>
