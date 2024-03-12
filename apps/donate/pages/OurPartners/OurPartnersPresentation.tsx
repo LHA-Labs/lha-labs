@@ -50,7 +50,7 @@ export default function OurPartnersPresentation() {
         }}
       >
         <Typography variant="h1" color="offWhite" sx={{ color: 'white' }}>
-          {formatMessage({ id: 'partnersTitle' })}
+          {formatMessage({ id: 'ourPartners' })}
         </Typography>
         <Typography variant="h3" color="offWhite" sx={{ color: 'white' }}>
           {formatMessage({ id: 'partnersDescription' })}

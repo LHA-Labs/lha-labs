@@ -44,4 +44,10 @@ export const website = {
   //Join Us section
   joinUsTitle: "Rejoignez l'association Let's help, notre mission est de promouvoir l'éducation et vous.",
 
+
+  //********* OUR PARTNERS PAGE *********
+  ourPartners: "Nos partenaires",
+  partnersDescription: "Nourrir les vies, inspirer les avenirs : Des initiatives transformatrices qui éclairent les chemins, favorisent la croissance, cultivent l'affection et incitent à une vie utile pour tous.",
+
+
 };

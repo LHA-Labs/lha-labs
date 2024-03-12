@@ -42,5 +42,14 @@ export const website = {
 
   //Join Us section
   joinUsTitle: "Join Let’s help Association, our mission is moting education and you.",
+
+
+  //********* OUR PARTNERS PAGE *********
+
+  ourPartners: "Our Partners",
+  partnersDescription: "Nurturing Lives, Inspiring Futures: Transformative Initiatives that Illuminate Paths, Foster Growth, Cultivate Affection, and Instill Purposeful Living for All.",
+
+
+
 };
 
