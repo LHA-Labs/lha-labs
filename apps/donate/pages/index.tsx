@@ -6,7 +6,7 @@ export function Index() {
   // const { formatMessage } = useIntl();
   // const { activeLanguage, languageDispatch } = useLanguage();
   return (
-    <Box sx={{ padding: 1.5 }}>
+    <Box>
       {/* <Button
         variant="contained"
         color="primary"

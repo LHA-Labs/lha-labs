@@ -3,7 +3,7 @@ import ImageGrid from "../imageGid";
 
 export default function Welcome_view() {
     return (
-        <Box component='section' sx={{ position: "relative" }}>
+        <Box component='section' sx={{ position: "relative", padding: 1.45 }}>
             <Typography variant="h2" sx={{
                 fontFamily: "Montserrat",
                 lineHeight: "36px",
