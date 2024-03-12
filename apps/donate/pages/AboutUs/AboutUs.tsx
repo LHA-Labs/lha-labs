@@ -3,6 +3,7 @@ import React from 'react';
 import OurTeamSection from './OurTeamSection';
 import LhaPresentationSection from './LhaPresentationSection';
 import OurMissionVisionSection from './OurMissionVisionSection';
+import JoinUsSection from './JoinUsSection';
 
 export default function AboutUs() {
   return (
@@ -12,6 +13,7 @@ export default function AboutUs() {
       <LhaPresentationSection />
       <OurMissionVisionSection />
       <OurTeamSection />
+      <JoinUsSection />
     </Box>
   );
 }
