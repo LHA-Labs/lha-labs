@@ -10,7 +10,7 @@ export default function OurPartnersPresentation() {
     <Box
       sx={{
         position: 'relative',
-        height: '60vh',
+        height: '40vh',
         overflow: 'hidden',
         marginBottom: '80px',
       }}
