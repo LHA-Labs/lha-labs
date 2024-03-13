@@ -53,6 +53,14 @@ export const website = {
   //Our sponsor section
   glomDescription: "Nurturing Lives, Inspiring Futures: Transformative Initiatives that Illuminate Paths, Foster Growth, Cultivate Affection, and Instill Purposeful Living for All. Nurturing Lives, Inspiring Futures: Transformative Initiatives that Illuminate Paths, Foster Growth, Cultivate Affection, and Instill Purposeful Living for All. Nurturing Lives, Inspiring Futures:",
 
+  // become partners section
+  becomeSponsorSubtitle: "Become a sponsor Help the association",
+  formTitle: "Send us our motivation",
+  inputName: "Enter your name",
+  inputEmail: "Enter your email",
+  inputPhone: "Enter your phone number",
+  inputMotivation: "Enter your Motivation",
+  contactTitle: "Contact Information",
 
 };
 

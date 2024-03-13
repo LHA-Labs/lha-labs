@@ -54,5 +54,13 @@ export const website = {
   //Our sponsor section
   glomDescription: "Nourrir les vies, inspirer les avenirs : Des initiatives transformatrices qui éclairent les chemins, favorisent la croissance, cultivent l'affection et incitent à une vie utile pour tous. Nourrir les vies, inspirer les avenirs : Des initiatives transformatrices qui éclairent les chemins, favorisent la croissance, cultivent l'affection et incitent à une vie utile pour tous. Nourrir les vies, inspirer les avenirs.",
 
+  // become partners section
+  becomeSponsorSubtitle: "Devenir Sponsor Let’s help Association",
+  formTitle: "Envoyez-nous notre motivation",
+  inputName: "Entrez votre nom",
+  inputEmail: "Entrez votre email",
+  inputPhone: "Entrez votre numéro de téléphone",
+  inputMotivation: "Entrez votre motivation",
+  contactTitle: "Informations sur le contact",
 
 };

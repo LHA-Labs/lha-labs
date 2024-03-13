@@ -1,3 +1,11 @@
+import call from '@iconify-icons/fluent/call-24-regular';
+import location from '@iconify-icons/fluent/location-24-regular';
+import mail from '@iconify-icons/fluent/mail-24-regular';
+import { Icon, IconifyIcon } from '@iconify/react';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
 import {
   Box,
   Divider,
@@ -6,27 +14,21 @@ import {
   Typography,
 } from '@mui/material';
 import Image from 'next/image';
+import { useIntl } from 'react-intl';
 import SendIcon from '../../assets/SendIcon.png';
 import sendEmailIcon from '../../assets/send-mail-icon.svg';
 import TitleAndSubtitle from '../../components/layout/TitleAndSubtitle/TitleAndSubtitle';
-import call from '@iconify-icons/fluent/call-24-regular';
-import { Icon, IconifyIcon } from '@iconify/react';
-import location from '@iconify-icons/fluent/location-24-regular';
-import mail from '@iconify-icons/fluent/mail-24-regular';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
 
 export default function BecomeSponsorsSection() {
+  const { formatMessage } = useIntl();
   interface input {
     placeholder: string;
   }
   const inputs: input[] = [
-    { placeholder: 'Enter your name' },
-    { placeholder: 'Enter your email' },
-    { placeholder: 'Enter your phone number' },
-    { placeholder: 'Enter your motivation' },
+    { placeholder: 'inputName' },
+    { placeholder: 'inputEmail' },
+    { placeholder: 'inputPhone' },
+    { placeholder: 'inputMotivation' },
   ];
 
   interface contact {
@@ -53,7 +55,7 @@ export default function BecomeSponsorsSection() {
     >
       <TitleAndSubtitle
         title=""
-        subtitle="Devenir Sponsor Let’s help Association"
+        subtitle={formatMessage({ id: 'becomeSponsorSubtitle' })}
       />
       <Box
         sx={{
@@ -76,7 +78,6 @@ export default function BecomeSponsorsSection() {
             borderRadius: '10px 0px 0px 10px',
             border: '2px solid var(--line)',
             width: '56vw',
-
           }}
         >
           <Box
@@ -97,7 +98,9 @@ export default function BecomeSponsorsSection() {
                 marginBottom: '28px',
               }}
             >
-              <Typography variant="h3">Send us our motivation</Typography>
+              <Typography variant="h3">
+                {formatMessage({ id: 'formTitle' })}
+              </Typography>
               <Image src={sendEmailIcon} alt="send email icon" />
             </Box>
             <Box
@@ -114,7 +117,7 @@ export default function BecomeSponsorsSection() {
                 <OutlinedInput
                   key={index}
                   autoComplete="true"
-                  placeholder={input.placeholder}
+                  placeholder={formatMessage({ id: `${input.placeholder}` })}
                   sx={{ width: '100%' }}
                 />
               ))}
@@ -127,7 +130,7 @@ export default function BecomeSponsorsSection() {
               alignItems: 'center',
               alignSelf: 'stretch',
               position: 'relative',
-              marginTop:"35px",
+              marginTop: '35px',
             }}
           >
             <Divider
@@ -144,7 +147,7 @@ export default function BecomeSponsorsSection() {
                 borderRadius: '50px',
                 position: 'relative',
                 background: 'var(--primary)',
-                cursor:"pointer",
+                cursor: 'pointer',
               }}
             >
               <Image src={SendIcon} alt="Send Icon" />
@@ -175,7 +178,7 @@ export default function BecomeSponsorsSection() {
               variant="h3"
               sx={{ color: '#fff', marginBottom: '30px' }}
             >
-              Contact Information
+              {formatMessage({ id: 'contactTitle' })}
             </Typography>
             <Box
               sx={{
