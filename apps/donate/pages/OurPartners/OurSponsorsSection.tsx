@@ -28,8 +28,20 @@ export default function OurSponsorsSection() {
       },
       name: 'Lorrain Tchakoumi',
       role: 'CEO GLOM',
-      description:
-        'Nurturing Lives, Inspiring Futures: Transformative Initiatives that Illuminate Paths, Foster Growth, Cultivate Affection, and Instill Purposeful Living for All. Nurturing Lives, Inspiring Futures: Transformative Initiatives that Illuminate Paths, Foster Growth, Cultivate Affection, and Instill Purposefu Living for All. Nurturing Lives, Inspiring Futures:',
+      description: 'glomDescription',
+      logo: {
+        src: logoGlom,
+        alt: 'Logo Glom',
+      },
+    },
+    {
+      picture: {
+        src: LorrainPic,
+        alt: 'Image de Lorrain',
+      },
+      name: 'Lorrain Tchakoumi',
+      role: 'CEO GLOM',
+      description: 'glomDescription',
       logo: {
         src: logoGlom,
         alt: 'Logo Glom',
@@ -142,7 +154,9 @@ export default function OurSponsorsSection() {
                 <Image src={logo.src} alt={logo.alt} />
               </Box>
             </Box>
-            <Divider variant="middle" component="li" sx={{ width: '70vw' }} />
+            {index !== sponsors.length - 1 && (
+              <Divider variant="middle" component="li" sx={{ width: '70vw' }} />
+            )}
           </Box>
         ))}
       </Box>

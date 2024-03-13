@@ -46,9 +46,12 @@ export const website = {
 
   //********* OUR PARTNERS PAGE *********
 
+  //our partners presentation section
   ourPartners: "Our Partners",
   partnersDescription: "Nurturing Lives, Inspiring Futures: Transformative Initiatives that Illuminate Paths, Foster Growth, Cultivate Affection, and Instill Purposeful Living for All.",
 
+  //Our sponsor section
+  glomDescription: "Nurturing Lives, Inspiring Futures: Transformative Initiatives that Illuminate Paths, Foster Growth, Cultivate Affection, and Instill Purposeful Living for All. Nurturing Lives, Inspiring Futures: Transformative Initiatives that Illuminate Paths, Foster Growth, Cultivate Affection, and Instill Purposeful Living for All. Nurturing Lives, Inspiring Futures:",
 
 
 };

@@ -46,8 +46,13 @@ export const website = {
 
 
   //********* OUR PARTNERS PAGE *********
+
+  //our partners presentation section
   ourPartners: "Nos partenaires",
   partnersDescription: "Nourrir les vies, inspirer les avenirs : Des initiatives transformatrices qui éclairent les chemins, favorisent la croissance, cultivent l'affection et incitent à une vie utile pour tous.",
+
+  //Our sponsor section
+  glomDescription: "Nourrir les vies, inspirer les avenirs : Des initiatives transformatrices qui éclairent les chemins, favorisent la croissance, cultivent l'affection et incitent à une vie utile pour tous. Nourrir les vies, inspirer les avenirs : Des initiatives transformatrices qui éclairent les chemins, favorisent la croissance, cultivent l'affection et incitent à une vie utile pour tous. Nourrir les vies, inspirer les avenirs.",
 
 
 };
