@@ -76,5 +76,10 @@ export const website = {
   NameOfCampaign: "1 Orphan 1 School pack",
   campaignNameText: " Here you'll find all the details about the campaign and I don't know what else to write, LOL",
 
+  //statistic section
+  montantEspere: "EXPECTED AMOUNT",
+  date: "UNTIL 10-02-2024",
+  totalEnCaisse: "TOTAL CASH ON HAND",
+  entreeMensuelle: "MONTHLY ENTRY",
 };
 

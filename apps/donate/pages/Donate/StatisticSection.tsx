@@ -1,8 +1,10 @@
 import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import porteMonnaie from '../../assets/porteMonnaie.png';
+import { useIntl } from 'react-intl';
 
 export default function StatisticSection() {
+  const {formatMessage}= useIntl();
   return (
     <Box
       sx={{
@@ -42,7 +44,7 @@ export default function StatisticSection() {
             }}
           >
             <Typography variant="h3" sx={{ color: 'var(--body)' }}>
-              MONTANT ESPERE
+              {formatMessage({id:"montantEspere"})}
             </Typography>
             <Box
               sx={{
@@ -59,7 +61,7 @@ export default function StatisticSection() {
               </Typography>
             </Box>
             <Typography variant="body2" sx={{ color: 'var(--placeholder)' }}>
-              JUSQU’AU 10-02-2024
+              {formatMessage({id:"date"})}
             </Typography>
           </Box>
         </Box>
@@ -79,7 +81,7 @@ export default function StatisticSection() {
             }}
           >
             <Typography variant="h5" sx={{ color: 'var(--placeholder)' }}>
-              TOTAL EN CAISSE
+              {formatMessage({id:"totalEnCaisse"})}
             </Typography>
             <Typography variant="h2" sx={{ color: 'var(--success)' }}>
               500 000fCFA
@@ -94,7 +96,7 @@ export default function StatisticSection() {
             }}
           >
             <Typography variant="h5" sx={{ color: 'var(--placeholder)' }}>
-              ENTREE MENSUELLE
+              {formatMessage({id:"entreeMensuelle"})}
             </Typography>
             <Typography variant="h2">50 000fCFA</Typography>
           </Box>

@@ -77,5 +77,9 @@ export const website = {
   NameOfCampaign: "1 Orphelin 1 Pack scolaire",
   campaignNameText: " Ici vous aurez tous les details sur la campagne ainsi que je ne sais pas quoi ecrire dáutre, LOL",
 
-
+  //statistic section
+  montantEspere: "MONTANT ESPERE",
+  date: "JUSQU’AU 10-02-2024",
+  totalEnCaisse: "TOTAL EN CAISSE",
+  entreeMensuelle: "ENTREE MENSUELLE",
 };
