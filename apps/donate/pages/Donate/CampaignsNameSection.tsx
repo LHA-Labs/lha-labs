@@ -28,7 +28,7 @@ export default function CampaignsNameSection() {
           {formatMessage({ id: 'campaignsName' })}
         </Typography>
         <Typography variant="h2" sx={{ color: 'var(--titleActive)' }}>
-          {formatMessage({id:"NameOfCampaign"})}
+          {formatMessage({ id: 'NameOfCampaign' })}
         </Typography>
       </Box>
       <Box
@@ -50,8 +50,7 @@ export default function CampaignsNameSection() {
           }}
         >
           <Typography variant="body2" sx={{ textAlign: 'center' }}>
-            {formatMessage({id:"campaignNameText"})}
-           L{' '}
+            {formatMessage({ id: 'campaignNameText' })}L{' '}
           </Typography>
           <Button
             variant="contained"
@@ -59,7 +58,7 @@ export default function CampaignsNameSection() {
             size="small"
             sx={{ borderRadius: '50px' }}
           >
-           {formatMessage({id:"viewObjective"})} 
+            {formatMessage({ id: 'viewObjective' })}
           </Button>
         </Box>
       </Box>
