@@ -8,7 +8,9 @@ export const website = {
   //Buttons
   makeADonation: "Make a donation",
   joinUs: "Join Us",
+  viewObjective: "View Objectives",
 
+  //Footer
   textFooter: 'The Lets Help association, dedicated to compassion and social impact, is committed to providing meaningful assistance to communities.',
   getInvolved: 'Get involved',
   getInTouch: 'Get In Touch',
@@ -61,6 +63,18 @@ export const website = {
   inputPhone: "Enter your phone number",
   inputMotivation: "Enter your Motivation",
   contactTitle: "Contact Information",
+
+
+  //********* DONATE PAGE *********
+
+  //Donate presentation section
+
+  contributionCollective: "Contribution Collective : Suivi des Dons et Objectif Atteignable",
+
+  //Campaigns Name Section
+  campaignsName: "Campaigns Name",
+  NameOfCampaign: "1 Orphan 1 School pack",
+  campaignNameText: " Here you'll find all the details about the campaign and I don't know what else to write, LOL",
 
 };
 

@@ -8,6 +8,8 @@ export const website = {
   //Buttons
   makeADonation: "Faire un don",
   joinUs: "Nous rejoindre",
+  viewObjective: "Voir les objectifs",
+
 
   //Footer
   getInvolved: "S'impliquer",
@@ -62,5 +64,18 @@ export const website = {
   inputPhone: "Entrez votre numéro de téléphone",
   inputMotivation: "Entrez votre motivation",
   contactTitle: "Informations sur le contact",
+
+
+  //********* DONATE PAGE *********
+
+  //Donate presentation section
+
+  contributionCollective: "Contribution Collective : Suivi des Dons et Objectif Atteignable",
+
+  //Campaigns Name Section
+  campaignsName: "Nom de la campagne",
+  NameOfCampaign: "1 Orphelin 1 Pack scolaire",
+  campaignNameText: " Ici vous aurez tous les details sur la campagne ainsi que je ne sais pas quoi ecrire dáutre, LOL",
+
 
 };
