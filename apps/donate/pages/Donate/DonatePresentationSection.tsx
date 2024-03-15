@@ -12,7 +12,7 @@ export default function DonatePresentationSection() {
         position: 'relative',
         height: '30vh',
         overflow: 'hidden',
-        marginBottom: '80px',
+        marginBottom: '45px',
       }}
     >
       <Image

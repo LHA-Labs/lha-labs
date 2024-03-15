@@ -13,6 +13,7 @@ export default function CampaignsNameSection() {
         justifyContent: 'space-between',
         alignItems: 'center',
         padding: '0px 118px',
+        marginBottom: '45px',
       }}
     >
       <Box
