@@ -2,6 +2,7 @@ import { Box } from '@mui/material';
 import Welcome_view from '../components/welcome';
 import About_us from '../components/about_us';
 import OurCampaigns from '../components/campaigns';
+import Gallery_view from '../components/gallery/inde';
 
 export function Index() {
   // const { formatMessage } = useIntl();
@@ -23,6 +24,7 @@ export function Index() {
       <Welcome_view />
       <About_us />
       <OurCampaigns />
+      <Gallery_view />
     </Box>
   );
 }
