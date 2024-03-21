@@ -3,6 +3,7 @@ import Welcome_view from '../components/welcome';
 import About_us from '../components/about_us';
 import OurCampaigns from '../components/campaigns';
 import Gallery_view from '../components/gallery/inde';
+import OurBienfaiteurs from '../components/bienfaiteurs';
 
 export function Index() {
   // const { formatMessage } = useIntl();
@@ -25,6 +26,7 @@ export function Index() {
       <About_us />
       <OurCampaigns />
       <Gallery_view />
+      <OurBienfaiteurs />
     </Box>
   );
 }
