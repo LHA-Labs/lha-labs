@@ -10,6 +10,7 @@ export default function Welcome_view() {
                 fontSize: "30px",
                 letterSpacing: "-0.02em",
                 textAlign: "left",
+                color: 'var(--titleActive)'
             }}> Giving Hope, Emplowerment, Love and Purpose.</Typography>
             <Typography variant="h5" sx={{
                 fontFamily: "Montserrat",
@@ -17,7 +18,8 @@ export default function Welcome_view() {
                 fontSize: "12px",
                 fontWeight: "600",
                 letterSpacing: "0em",
-                textAlign: "left"
+                textAlign: "left",
+                color: 'var(--body)'
             }}> Nurturing Lives, Inspiring Futures: Transformative Initiative That Illuminate Paths, Foster Growth, Cultivate Affection, And Instill Purposeful Living For.</Typography>
             <Box sx={{
                 display: 'flex',
