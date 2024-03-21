@@ -1,5 +1,5 @@
 import { theme } from "@lha-labs/theme";
-import { Box, Tab, Tabs } from "@mui/material";
+import { Box, Button, ImageList, ImageListItem, Tab, Tabs } from "@mui/material";
 import * as React from 'react';
 import { useState } from "react";
 import SectionTitle from "../title_section";
@@ -10,24 +10,24 @@ interface TabPanelProps {
     value: number
 }
 
-// const itemData = [
-//     {
-//         img: '/assets/International-Day-of-the-African-Child-781x441.jpg',
-//         title: 'Bed',
-//     },
-//     {
-//         img: '/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg',
-//         title: 'Books',
-//     },
-//     {
-//         img: '/assets/UN0640668.jpeg',
-//         title: 'Sink',
-//     },
-//     {
-//         img: '/assets/téléchargement.jpeg',
-//         title: 'Kitchen',
-//     }
-// ];
+const itemData = [
+    {
+        img: '/assets/International-Day-of-the-African-Child-781x441.jpg',
+        title: 'Bed',
+    },
+    {
+        img: '/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg',
+        title: 'Books',
+    },
+    {
+        img: '/assets/UN0640668.jpeg',
+        title: 'Sink',
+    },
+    {
+        img: '/assets/téléchargement.jpeg',
+        title: 'Kitchen',
+    }
+];
 function CustomTabPanel(props: TabPanelProps) {
     const { children, index, value } = props
     return (
@@ -72,24 +72,25 @@ export default function Gallery_view() {
                     </Tabs>
                 </Box>
                 <CustomTabPanel value={value} index={0}>
-                    hello 1
-                    {/* <Box sx={{ width: 500, height: 450, overflowY: 'scroll' }}>
-                        <ImageList variant="masonry" cols={3} gap={8}>
+                    <Box sx={{ width: 'auto', height: 'auto', overflowY: 'scroll' }}>
+                        <ImageList variant="masonry" cols={2} gap={8}>
                             {itemData.map((item) => (
-                                <ImageListItem key={item.img}>
-                                    <Image
-                                        src={item.img}
+                                <ImageListItem key={item.img} >
+                                    <img
+                                        srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+                                        src={`${item.img}?w=248&fit=crop&auto=format`}
                                         alt={item.title}
                                         loading="lazy"
-                                        width={188}
-                                        height={250}
                                     />
                                 </ImageListItem>
                             ))}
                         </ImageList>
-                    </Box> */}
+                    </Box>
                 </CustomTabPanel>
                 <CustomTabPanel value={value} index={1}>hello 2</CustomTabPanel>
+            </Box>
+            <Box display='flex' justifyContent='center' padding={3}>
+                <Button variant="outlined" color="primary" > View all</Button>
             </Box>
         </Box>
     );
