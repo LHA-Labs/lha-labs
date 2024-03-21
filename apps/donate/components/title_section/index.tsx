@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 
-function SectionTitle({ title, label }: { title: string, label: string }) {
+function SectionTitle({ title, label }: { title: string, label?: string }) {
     return (
         <Box sx={{
             display: 'flex',
@@ -19,7 +19,7 @@ function SectionTitle({ title, label }: { title: string, label: string }) {
                 lineHeight: '24px',
                 color: 'var(--titleActive)'
 
-            }}>{`${label}`}</Typography>
+            }}>{`${label ?? ''}`}</Typography>
             <Box component='span' sx={{
                 border: '1px solid var(--primary)',
                 width: '90px',
