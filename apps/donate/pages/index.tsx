@@ -5,6 +5,7 @@ import OurCampaigns from '../components/campaigns';
 import Gallery_view from '../components/gallery/inde';
 import OurBienfaiteurs from '../components/bienfaiteurs';
 import Sponsors from '../components/sponsors';
+import Join_us from '../components/join_us';
 
 export function Index() {
   // const { formatMessage } = useIntl();
@@ -29,6 +30,7 @@ export function Index() {
       <Gallery_view />
       <OurBienfaiteurs />
       <Sponsors />
+      <Join_us />
     </Box>
   );
 }
