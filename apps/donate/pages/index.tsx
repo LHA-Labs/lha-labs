@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import Welcome_view from '../components/welcome';
+import HeroSection from '../components/welcome';
 
 export function Index() {
   // const { formatMessage } = useIntl();
@@ -18,7 +18,7 @@ export function Index() {
         Change Language: {activeLanguage}
       </Button>
       <Typography variant="h1"> {formatMessage({ id: 'Hello' })}</Typography> */}
-      <Welcome_view />
+      <HeroSection />
     </Box>
   );
 }
