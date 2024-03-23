@@ -12,6 +12,7 @@ export default function Footer() {
         width: '100%',
         display: 'grid',
         rowGap: { laptop: '56px', mobile: '32px' },
+        backgroundColor: '#F5F5F5',
       }}
     >
       <Box
