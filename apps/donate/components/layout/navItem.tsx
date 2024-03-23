@@ -30,8 +30,6 @@ export function NavItem({
           color: '#2F3A45',
           fontSize: '12px',
           fontWeight: 500,
-          cursor: 'pointer',
-          lineHeight: '16px',
         },
         '&::before': {
           transition: '0.2s',
