@@ -31,7 +31,10 @@ export default function Organisation() {
       </Typography>
       <Box sx={{ display: 'grid', rowGap: 1 }}>
         {listOrganisation.map((title, index) => (
-          <Typography key={index} sx={{ fontWeight: 600, fontSize: '14px' }}>
+          <Typography
+            key={index}
+            sx={{ fontWeight: 600, fontSize: '14px', color: '#333' }}
+          >
             {formatMessage({ id: `${title}` })}
           </Typography>
         ))}
@@ -39,7 +42,7 @@ export default function Organisation() {
           component="a"
           target="_blank"
           href="mailto:letshelp@gmail.com"
-          sx={{ fontWeight: 600, fontSize: '14px' }}
+          sx={{ fontWeight: 600, fontSize: '14px', color: '#333' }}
         >
           letshelp@gmail.com
         </Typography>

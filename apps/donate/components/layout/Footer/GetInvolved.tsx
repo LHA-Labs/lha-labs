@@ -53,7 +53,7 @@ export default function GetInvolved() {
         <Button
           variant="contained"
           color="inherit"
-          sx={{ borderRadius: '20px' }}
+          sx={{ borderRadius: '20px', color: '#333' }}
           disableElevation
         >
           {formatMessage({ id: 'joinUs' })}

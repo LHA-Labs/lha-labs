@@ -53,7 +53,9 @@ export default function GetInTouch() {
               }}
             >
               {icon}
-              <Typography variant="body2">{handle}</Typography>
+              <Typography variant="body2" sx={{ color: '#333' }}>
+                {handle}
+              </Typography>
             </Box>
           </a>
         ))}
