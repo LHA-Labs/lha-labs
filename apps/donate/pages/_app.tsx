@@ -4,7 +4,11 @@ import { LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import DonateLayout from './components/layout/Index';
+import '../public/styles/global.scss';
+import '../public/styles/notifGlobalStyles.css';
+import '../public/styles/reset.css';
+import '../public/styles/root.scss';
+import DonateLayout from '../components/layout/Index';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
