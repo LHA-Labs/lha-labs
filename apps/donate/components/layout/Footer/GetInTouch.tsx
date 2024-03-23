@@ -1,22 +1,33 @@
 import { Box, Typography } from '@mui/material';
 import { useIntl } from 'react-intl';
+import { Instagram, Linkedin } from './SocialIcons';
 
 export default function GetInTouch() {
   const { formatMessage } = useIntl();
 
-  const socialMediaLinks: { icon: unknown; link: string }[] = [];
-
-  const getRandomSize = () => {
-    const sizes = ['32px', '48px', '64px', '80px'];
-    const randomIndex = Math.floor(Math.random() * sizes.length);
-    return sizes[randomIndex];
-  };
+  const socialMediaLinks: {
+    icon: JSX.Element;
+    link: string;
+    handle: string;
+  }[] = [
+    {
+      icon: <Linkedin socialHandle="@LHA" sx={{ fontSize: '50px' }} />,
+      link: 'https://google.com',
+      handle: '@LHA',
+    },
+    {
+      icon: <Instagram socialHandle="@LHA" sx={{ fontSize: '50px' }} />,
+      link: 'https://google.com',
+      handle: '@LHA',
+    },
+  ];
 
   return (
     <Box
       sx={{
         display: 'grid',
         gridTemplateRows: 'auto 1fr auto',
+        rowGap: 2,
       }}
     >
       <Typography
@@ -30,28 +41,19 @@ export default function GetInTouch() {
       >
         {formatMessage({ id: 'Get in touch' })}
       </Typography>
-      <Box sx={{ display: 'flex' }}>
-        {socialMediaLinks.map((item, index) => (
-          <a
-            key={index}
-            href={item.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+      <Box sx={{ display: 'grid', rowGap: 0, alignContent: 'start' }}>
+        {socialMediaLinks.map(({ icon, link, handle }, index) => (
+          <a key={index} href={link} target="_blank">
             <Box
               sx={{
-                borderRadius: '50%',
-                backgroundColor: '#FFF',
-                boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)',
-                padding: '8px',
-                width: getRandomSize(),
-                height: getRandomSize(),
-                display: 'flex',
-                justifyContent: 'center',
+                display: 'grid',
+                gridTemplateColumns: 'auto 1fr',
                 alignItems: 'center',
+                columnGap: 0.5,
               }}
             >
-              {/* {item.icon} */}
+              {icon}
+              <Typography variant="body2">{handle}</Typography>
             </Box>
           </a>
         ))}
