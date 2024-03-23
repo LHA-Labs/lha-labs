@@ -3,7 +3,7 @@ import HeroSection from '../components/HeroSection/HeroSection';
 
 export function Index() {
   return (
-    <Box sx={{ padding: 4 }}>
+    <Box sx={{ padding: '32px 0' }}>
       <HeroSection />
     </Box>
   );
