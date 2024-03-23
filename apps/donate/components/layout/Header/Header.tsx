@@ -46,7 +46,10 @@ export default function Header() {
           justifyContent: 'space-between',
           alignItems: 'center',
           backgroundColor: '#F5F5F5',
-          padding: '12px 94px',
+          padding: {
+            laptop: '12px 94px',
+            mobile: '12px 24px',
+          },
         }}
       >
         <Toolbar
@@ -61,12 +64,23 @@ export default function Header() {
             width: '100%',
           }}
         >
-          <Image
-            onClick={() => push('/')}
-            src={LogoLHA}
-            alt="Logo LHA"
-            style={{ width: '167px', height: '63px', cursor: 'pointer' }}
-          />
+          <Box sx={{ display: { laptop: 'block', mobile: 'none' } }}>
+            <Image
+              onClick={() => push('/')}
+              src={LogoLHA}
+              alt="Logo LHA"
+              style={{ width: '167px', height: '63px', cursor: 'pointer' }}
+            />
+          </Box>
+          <Box sx={{ display: { laptop: 'none', mobile: 'block' } }}>
+            <Image
+              onClick={() => push('/')}
+              src={LogoLHA}
+              alt="Logo LHA"
+              style={{ width: 'auto', height: '45px', cursor: 'pointer' }}
+            />
+          </Box>
+
           <Box
             sx={{
               display: { laptop: 'grid', mobile: 'none' },
