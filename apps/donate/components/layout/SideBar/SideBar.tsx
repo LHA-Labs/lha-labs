@@ -63,7 +63,11 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose, navItems }) => {
         </Box>
         <Box sx={{ display: 'grid', rowGap: 1, justifyItems: 'center' }}>
           <LanguageSwapper />
-          <Button variant="contained" color="primary">
+          <Button
+            variant="contained"
+            color="primary"
+            sx={{ borderRadius: '20px' }}
+          >
             {formatMessage({ id: 'makeADonation' })}
           </Button>
         </Box>

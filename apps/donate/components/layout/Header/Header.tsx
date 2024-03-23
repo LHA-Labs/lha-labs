@@ -89,7 +89,7 @@ export default function Header() {
             }}
           >
             <LanguageSwapper />
-            <Button variant="contained" color="primary">
+            <Button variant="contained" color="primary" sx={{borderRadius:'20px'}}>
               {formatMessage({ id: 'makeADonation' })}
             </Button>
           </Box>
