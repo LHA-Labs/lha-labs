@@ -1,19 +1,21 @@
 import { theme } from '@lha-labs/theme';
 import { Box, Button, Typography } from '@mui/material';
+import { useIntl } from 'react-intl';
 import styles from './about_us.module.css';
 
 interface ILetsHelpStat {
   label: string;
   value: number;
+  unit?: string;
 }
 function AboutUs() {
+  const { formatMessage } = useIntl();
   const letsHelpStatistics: ILetsHelpStat[] = [
-    { label: 'Benevoles', value: 100 },
-    { label: 'Sponsors', value: 15 },
-    { label: 'Orphelins', value: 500 },
-    { label: 'Don reçu', value: 2000000 },
-    { label: 'Partenaires', value: 16 },
-    { label: 'Dons émis', value: 2000000 },
+    { label: 'donors', value: 100 },
+    { label: 'sponsors', value: 15 },
+    { label: 'orphans', value: 500 },
+    { label: 'receivedDonations', value: 2000000, unit: 'XAF' },
+    { label: 'partners', value: 16 },
   ];
   return (
     <Box
@@ -50,12 +52,12 @@ function AboutUs() {
         </Button>
       </Box>
       <Box className={styles.rate}>
-        {letsHelpStatistics.map(({ label, value }, index) => (
+        {letsHelpStatistics.map(({ label, value, unit }, index) => (
           <Box key={index}>
             <Typography
               sx={{ fontSize: '30px', lineHeight: '36px', fontWeight: 'bold' }}
             >
-              +{value > 999999 ? `2M` : value}
+              +{`${value > 999999 ? `2M` : value} ${unit ?? ''}`}
             </Typography>
             <Typography
               sx={{
@@ -66,7 +68,7 @@ function AboutUs() {
               }}
               className={styles.text_specification}
             >
-              {label}
+              {formatMessage({ id: label })}
             </Typography>
           </Box>
         ))}

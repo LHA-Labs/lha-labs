@@ -19,4 +19,8 @@ export const website = {
   itIsTime: "It's Time",
   toChangeA: 'To change A',
   childsLife: "Child's Life",
+  donors: 'Donors',
+  sponsors: 'Sponsors',
+  orphans: 'Orphans',
+  receivedDonations: 'Donation Received',
 };
