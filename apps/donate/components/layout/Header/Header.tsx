@@ -1,12 +1,6 @@
 import MenuIcon from '@iconify-icons/fluent/line-horizontal-3-20-regular';
 import { Icon } from '@iconify/react';
-import {
-  Box,
-  Button,
-  IconButton,
-  ImageListItem,
-  Toolbar
-} from '@mui/material';
+import { Box, Button, IconButton, Toolbar } from '@mui/material';
 import Image from 'next/image';
 import { useState } from 'react';
 import { useIntl } from 'react-intl';
@@ -63,15 +57,11 @@ export default function Header() {
             width: '100%',
           }}
         >
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            <ImageListItem sx={{ width: '167px', height: '63px' }}>
-              <Image
-                src={LogoLHA}
-                alt="Logo LHA"
-                style={{ width: '167px', height: '63px' }}
-              />
-            </ImageListItem>
-          </Box>
+          <Image
+            src={LogoLHA}
+            alt="Logo LHA"
+            style={{ width: '167px', height: '63px' }}
+          />
           <Box
             sx={{
               display: { laptop: 'grid', mobile: 'none' },
@@ -105,7 +95,7 @@ export default function Header() {
               columnGap: 1.5,
             }}
           >
-           <LanguageSwapper />
+            <LanguageSwapper />
             <Button variant="contained" color="primary">
               {formatMessage({ id: 'makeADonation' })}
             </Button>

@@ -45,15 +45,11 @@ const Sidebar: React.FC<SidebarProps> = ({
             gap: '45px',
           }}
         >
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            <ImageListItem sx={{ width: '119px', height: '45px' }}>
-              <Image
-                src={LogoLha}
-                alt="Logo LHA"
-                style={{ width: '119px', height: 'auto' }}
-              />
-            </ImageListItem>
-          </Box>
+          <Image
+            src={LogoLha}
+            alt="Logo LHA"
+            style={{ width: '119px', height: 'auto' }}
+          />
           <Box
             sx={{
               display: 'flex',
