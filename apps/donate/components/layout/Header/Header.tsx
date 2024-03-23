@@ -1,7 +1,10 @@
+import MenuIcon from '@iconify-icons/fluent/line-horizontal-3-20-regular';
+import { Icon } from '@iconify/react';
 import { supportedLanguages, useLanguage } from '@lha-labs/theme';
 import {
   Box,
   Button,
+  IconButton,
   ImageListItem,
   MenuItem,
   TextField,
@@ -11,6 +14,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { useIntl } from 'react-intl';
 import LogoLHA from '../../../assets/LogoLha.png';
+import Sidebar from '../SideBar/SideBar';
 
 export default function Header() {
   const { formatMessage } = useIntl();
@@ -45,7 +49,10 @@ export default function Header() {
       <Toolbar
         sx={{
           display: 'grid',
-          gridTemplateColumns: 'auto 1fr auto',
+          gridTemplateColumns: {
+            laptop: 'auto 1fr auto',
+            mobile: 'auto 1fr',
+          },
           justifyItems: 'center',
           alignItems: 'center',
           width: '100%',
@@ -60,24 +67,9 @@ export default function Header() {
             />
           </ImageListItem>
         </Box>
-        {/* side BAr
-        <IconButton
-          // sx={{ display: { laptop: 'none', mobile: 'block' } }}
-          onClick={openSidebar}
-        >
-          <Icon icon={MenuIcon} color="#2F3A45" />
-        </IconButton> */}
-
-        {/* <Sidebar
-          open={sidebarOpen}
-          onClose={closeSidebar}
-          items={items}
-          activeItem={activeItem}
-          onItemClick={itemClick}
-        /> */}
         <Box
           sx={{
-            display: 'grid',
+            display: { laptop: 'grid', mobile: 'none' },
             alignItems: 'center',
             gridAutoFlow: 'column',
             columnGap: 3,
@@ -102,7 +94,7 @@ export default function Header() {
 
         <Box
           sx={{
-            display: 'grid',
+            display: { laptop: 'grid', mobile: 'none' },
             gridAutoFlow: 'column',
             alignItems: 'center',
             columnGap: 1.5,
@@ -144,6 +136,15 @@ export default function Header() {
             {formatMessage({ id: 'makeADonation' })}
           </Button>
         </Box>
+        <IconButton
+          sx={{
+            display: { laptop: 'none', mobile: 'block' },
+            justifySelf: 'end',
+          }}
+          onClick={openSidebar}
+        >
+          <Icon icon={MenuIcon} color="#2F3A45" />
+        </IconButton>
       </Toolbar>
     </Box>
   );
