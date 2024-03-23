@@ -45,7 +45,7 @@ export default function Header() {
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          backgroundColor: 'var(--background, #F5F5F5)',
+          backgroundColor: '#F5F5F5',
           padding: '12px 94px',
         }}
       >
@@ -89,7 +89,11 @@ export default function Header() {
             }}
           >
             <LanguageSwapper />
-            <Button variant="contained" color="primary" sx={{borderRadius:'20px'}}>
+            <Button
+              variant="contained"
+              color="primary"
+              sx={{ borderRadius: '20px' }}
+            >
               {formatMessage({ id: 'makeADonation' })}
             </Button>
           </Box>
