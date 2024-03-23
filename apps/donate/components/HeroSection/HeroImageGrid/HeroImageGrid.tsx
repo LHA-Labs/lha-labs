@@ -7,7 +7,7 @@ export default function HeroImageGrid() {
   const { formatMessage } = useIntl();
   return (
     <>
-      <Box sx={{ display: { laptop: 'block', mobile: 'none' } }}>
+      <Box sx={{ display: { tablet: 'block', mobile: 'none' } }}>
         <Box className={styles.grid_container}>
           <Box sx={{ boxShadow: 'none !important', position: 'relative' }}>
             <Box
@@ -110,7 +110,7 @@ export default function HeroImageGrid() {
         </Box>
       </Box>
 
-      <Box sx={{ display: { laptop: 'none', mobile: 'block' } }}>
+      <Box sx={{ display: { tablet: 'none', mobile: 'block' } }}>
         <Box className={styles.grid_container}>
           <Box>
             <Image
