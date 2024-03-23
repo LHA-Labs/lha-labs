@@ -3,7 +3,7 @@ import { Typography } from '@mui/material';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl';
-import { INavItem } from './Header/Header';
+import { INavItem } from './Header';
 
 interface INavItemProps {
   navItem: INavItem;

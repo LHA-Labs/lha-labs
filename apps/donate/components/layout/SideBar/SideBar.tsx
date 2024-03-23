@@ -5,7 +5,7 @@ import React from 'react';
 import { useIntl } from 'react-intl';
 import LogoLha from '../../../assets/LogoLha.png';
 import LanguageSwapper from '../LanguageSwapper';
-import { NavItem } from '../navItem';
+import { NavItem } from '../Header/navItem';
 import { INavItem } from '../Header/Header';
 
 interface SidebarProps {
