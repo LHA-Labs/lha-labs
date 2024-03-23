@@ -9,7 +9,7 @@ export default function LanguageSwapper() {
     <TextField
       size="small"
       select
-      defaultValue={activeLanguage}
+      value={activeLanguage}
       onChange={() =>
         languageDispatch({
           type: activeLanguage === 'en' ? 'USE_FRENCH' : 'USE_ENGLISH',
