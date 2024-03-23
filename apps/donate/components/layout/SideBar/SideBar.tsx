@@ -37,9 +37,10 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose, navItems }) => {
           }}
         >
           <Image
+            onClick={() => push('/')}
             src={LogoLha}
             alt="Logo LHA"
-            style={{ width: '119px', height: 'auto' }}
+            style={{ width: '119px', height: 'auto', cursor: 'pointer' }}
           />
           <Box
             sx={{

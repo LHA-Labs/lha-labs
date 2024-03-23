@@ -2,6 +2,7 @@ import MenuIcon from '@iconify-icons/fluent/line-horizontal-3-20-regular';
 import { Icon } from '@iconify/react';
 import { Box, Button, IconButton, Toolbar } from '@mui/material';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { useIntl } from 'react-intl';
 import LogoLHA from '../../../assets/LogoLha.png';
@@ -16,6 +17,7 @@ export interface INavItem {
 
 export default function Header() {
   const { formatMessage } = useIntl();
+  const { push } = useRouter();
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -60,9 +62,10 @@ export default function Header() {
           }}
         >
           <Image
+            onClick={() => push('/')}
             src={LogoLHA}
             alt="Logo LHA"
-            style={{ width: '167px', height: '63px' }}
+            style={{ width: '167px', height: '63px', cursor: 'pointer' }}
           />
           <Box
             sx={{
