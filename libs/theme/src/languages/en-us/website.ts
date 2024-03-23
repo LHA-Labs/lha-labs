@@ -23,4 +23,5 @@ export const website = {
   sponsors: 'Sponsors',
   orphans: 'Orphans',
   receivedDonations: 'Donation Received',
+  moreAboutUs: 'More about us',
 };

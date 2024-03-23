@@ -41,15 +41,26 @@ function AboutUs() {
       </Typography>
       <Box
         sx={{
-          display: 'flex',
-          justifyContent: 'space-between',
+          display: 'grid',
+          gridAutoFlow: 'column',
+          alignItems: 'center',
+          columnGap: 2,
         }}
       >
-        <Button variant="contained" className={styles.button}>
-          Nous joindre
+        <Button
+          variant="contained"
+          disableElevation
+          sx={{ borderRadius: '20px' }}
+        >
+          {formatMessage({ id: 'joinUs' })}
         </Button>
-        <Button variant="contained" color="secondary" className={styles.button}>
-          More about us
+        <Button
+          variant="contained"
+          color="secondary"
+          disableElevation
+          sx={{ borderRadius: '20px' }}
+        >
+          {formatMessage({ id: 'moreAboutUs' })}
         </Button>
       </Box>
       <Box className={styles.rate}>
