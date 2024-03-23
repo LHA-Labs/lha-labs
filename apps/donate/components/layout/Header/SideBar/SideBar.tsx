@@ -3,10 +3,10 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { useIntl } from 'react-intl';
-import LogoLha from '../../../assets/LogoLha.png';
-import LanguageSwapper from '../LanguageSwapper';
-import { NavItem } from '../Header/navItem';
-import { INavItem } from '../Header/Header';
+import LanguageSwapper from '../../LanguageSwapper';
+import LogoLha from '../../../../assets/LogoLha.png';
+import { NavItem } from '../navItem';
+import { INavItem } from '../Header';
 
 interface SidebarProps {
   open: boolean;
