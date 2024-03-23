@@ -3,15 +3,16 @@ import MenuIcon from '@iconify-icons/fluent/line-horizontal-3-20-regular';
 import { Icon } from '@iconify/react';
 import {
   Box,
+  Button,
   IconButton,
   ImageListItem,
   Toolbar,
   Typography,
 } from '@mui/material';
-import LayoutMenu from 'apps/donate/Interface';
 import Image from 'next/image';
 import { useState } from 'react';
 import { useIntl } from 'react-intl';
+import LayoutMenu from '../../../Interface';
 import LogoLHA from '../../../assets/LogoLha.png';
 import ButtonFilled from '../Buttons/ButtonFilled';
 import Sidebar from '../SideBar/SideBar';
@@ -62,16 +63,16 @@ export default function Header() {
         justifyContent: 'space-between',
         alignItems: 'center',
         backgroundColor: 'var(--background, #F5F5F5)',
-        padding: '24px 94px',
+        padding: '12px 94px',
       }}
     >
       <Toolbar
         sx={{
-          display: 'flex',
-          justifyContent: 'space-between',
+          display: 'grid',
+          gridTemplateColumns: 'auto 1fr auto',
+          justifyItems: 'center',
+          alignItems: 'center',
           width: '100%',
-          paddingRight: '0px',
-          paddingLeft: '0px',
         }}
       >
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
@@ -83,45 +84,39 @@ export default function Header() {
             />
           </ImageListItem>
         </Box>
-        {/* side BAr */}
+        {/* side BAr
         <IconButton
-          sx={{ display: { sm: 'none', md: 'block' } }}
+          // sx={{ display: { laptop: 'none', mobile: 'block' } }}
           onClick={openSidebar}
         >
           <Icon icon={MenuIcon} color="#2F3A45" />
-        </IconButton>
+        </IconButton> */}
 
-        <Sidebar
+        {/* <Sidebar
           open={sidebarOpen}
           onClose={closeSidebar}
           items={items}
           activeItem={activeItem}
           onItemClick={itemClick}
-        />
+        /> */}
         <Box
           sx={{
-            display: 'flex',
+            display: 'grid',
             alignItems: 'center',
-            gap: '24px',
+            gridAutoFlow: 'column',
+            columnGap: 3,
           }}
         >
-          {items.map(({ title, active }, index) => (
+          {items.map(({ title }, index) => (
             <Box
               onClick={() => itemClick(index)}
               key={index}
               sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
                 color: 'var(--Body, #2F3A45)',
-                fontFamily: 'Montserrat, sans-serif',
                 fontSize: '12px',
-                fontStyle: 'normal',
                 fontWeight: 500,
                 cursor: 'pointer',
                 lineHeight: '16px',
-                paddingBottom: '8px',
-                borderBottom: activeItem === index ? '2px solid red' : 'none',
               }}
             >
               {formatMessage({ id: `${title}` })}
@@ -131,10 +126,10 @@ export default function Header() {
 
         <Box
           sx={{
-            display: 'flex',
-            justifyContent: 'center',
+            display: 'grid',
+            gridAutoFlow: 'column',
             alignItems: 'center',
-            gap: '12px',
+            columnGap: 1.5,
           }}
         >
           <Box
