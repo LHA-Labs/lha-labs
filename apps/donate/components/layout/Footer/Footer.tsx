@@ -10,17 +10,17 @@ export default function Footer() {
     <Box
       sx={{
         width: '100%',
-        padding: { laptop: '0 118px 56px 118px', mobile: '0 24px 12px 24px' },
         display: 'grid',
-        rowGap: '56px',
+        rowGap: { laptop: '56px', mobile: '32px' },
       }}
     >
       <Box
         sx={{
           display: 'grid',
           gridTemplateColumns: '1fr auto 1fr',
-          columnGap: {laptop:5, mobile: 3},
+          columnGap: { laptop: 5, mobile: 3 },
           alignItems: 'center',
+          padding: { laptop: '0 118px 56px 118px', mobile: '0' },
         }}
       >
         <Divider
@@ -40,12 +40,12 @@ export default function Footer() {
       <Box
         sx={{
           display: 'grid',
+          padding: { laptop: '0 118px 56px 118px', mobile: '0 24px 12px 24px' },
           gridTemplateColumns: {
             mobile: 'none',
             laptop: '4.7fr 3.1fr 2.2fr',
           },
           rowGap: 5,
-          // gridAutoFlow: 'column',
           columnGap: 3,
         }}
       >
