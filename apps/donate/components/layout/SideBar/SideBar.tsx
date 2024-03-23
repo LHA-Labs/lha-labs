@@ -26,17 +26,12 @@ const Sidebar: React.FC<SidebarProps> = ({
     <Drawer anchor="right" open={open} onClose={onClose}>
       <Box
         sx={{
-          width: 258,
           padding: '41px 40px',
           height: '100%',
           display: 'grid',
-          alignContent: 'space-between',
-          justifyItems: 'start',
+          gridTemplateRows: '1fr auto',
         }}
       >
-        {/* <IconButton sx={{ alignSelf: 'flex-end' }} onClick={onClose}>
-        <Icon icon={Dismiss}/>
-        </IconButton> */}
         <Box
           sx={{
             display: 'flex',
@@ -52,10 +47,9 @@ const Sidebar: React.FC<SidebarProps> = ({
           />
           <Box
             sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'flex-start',
-              gap: '40px',
+              display: 'grid',
+              justifyItems: 'start',
+              rowGap: 5,
             }}
           >
             {navItems.map((navItem, index) => (
