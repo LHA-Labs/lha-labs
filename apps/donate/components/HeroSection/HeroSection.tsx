@@ -33,7 +33,7 @@ export default function HeroSection() {
           variant="h5"
           sx={{
             lineHeight: { mobile: '20px', tablet: '24px', laptop: '28px' },
-            fontSize: { mobile: '12px', tablet: '15px', laptop: '18px' },
+            fontSize: { mobile: '14px', tablet: '15px', laptop: '18px' },
             fontWeight: '600',
             color: '#666',
           }}
