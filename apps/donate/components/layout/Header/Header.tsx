@@ -65,7 +65,7 @@ export default function Header() {
               <Box
                 key={index}
                 sx={{
-                  color: 'var(--Body, #2F3A45)',
+                  color: '#2F3A45',
                   fontSize: '12px',
                   fontWeight: 500,
                   cursor: 'pointer',
