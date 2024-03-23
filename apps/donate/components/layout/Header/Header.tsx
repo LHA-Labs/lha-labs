@@ -15,10 +15,6 @@ export default function Header() {
 
   const navItems: string[] = ['home', 'aboutUs', 'partners', 'donate'];
 
-  const itemClick = (index: number) => {
-    closeSidebar();
-  };
-
   const openSidebar = () => {
     setSidebarOpen(true);
   };
@@ -29,12 +25,7 @@ export default function Header() {
 
   return (
     <>
-      <Sidebar
-        open={sidebarOpen}
-        onClose={closeSidebar}
-        navItems={navItems}
-        onItemClick={itemClick}
-      />
+      <Sidebar open={sidebarOpen} onClose={closeSidebar} navItems={navItems} />
 
       <Box
         sx={{
@@ -72,7 +63,6 @@ export default function Header() {
           >
             {navItems.map((navItem, index) => (
               <Box
-                onClick={() => itemClick(index)}
                 key={index}
                 sx={{
                   color: 'var(--Body, #2F3A45)',

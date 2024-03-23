@@ -1,6 +1,4 @@
-import CaretIcon from '@iconify-icons/fluent/chevron-down-24-regular';
-import { Icon } from '@iconify/react';
-import { Box, Button, Drawer, ImageListItem, Typography } from '@mui/material';
+import { Box, Button, Drawer } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
 import { useIntl } from 'react-intl';
@@ -11,15 +9,9 @@ interface SidebarProps {
   open: boolean;
   onClose: () => void;
   navItems: string[];
-  onItemClick: (index: number) => void;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({
-  open,
-  onClose,
-  navItems,
-  onItemClick,
-}) => {
+const Sidebar: React.FC<SidebarProps> = ({ open, onClose, navItems }) => {
   const { formatMessage } = useIntl();
 
   return (
@@ -54,7 +46,7 @@ const Sidebar: React.FC<SidebarProps> = ({
           >
             {navItems.map((navItem, index) => (
               <Box
-                onClick={() => onItemClick(index)}
+                onClick={onClose}
                 key={index}
                 sx={{
                   color: '#2F3A45',
