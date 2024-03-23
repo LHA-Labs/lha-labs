@@ -1,3 +1,3 @@
 export const website = {
-  Hello: 'World',
+  makeADonation: 'Make a donation',
 };

@@ -154,10 +154,9 @@ export default function Header() {
             </Typography>
             <Icon icon={CaretIcon} color="#2F3A45" />
           </Box>
-          <ButtonFilled
-            label={formatMessage({ id: 'Make a donation' })}
-            isPrimary={true}
-          ></ButtonFilled>
+          <Button variant="contained" color="primary">
+            {formatMessage({ id: 'makeADonation' })}
+          </Button>
         </Box>
       </Toolbar>
     </Box>
