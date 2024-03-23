@@ -1,4 +1,5 @@
 import { theme } from '@lha-labs/theme';
+import { shortenNumber } from '@lha-labs/utils';
 import { Box, Button, Typography } from '@mui/material';
 import { useIntl } from 'react-intl';
 import styles from './about_us.module.css';
@@ -57,7 +58,7 @@ function AboutUs() {
             <Typography
               sx={{ fontSize: '30px', lineHeight: '36px', fontWeight: 'bold' }}
             >
-              +{`${value > 999999 ? `2M` : value} ${unit ?? ''}`}
+              +{`${shortenNumber(value)} ${unit ?? ''}`}
             </Typography>
             <Typography
               sx={{
