@@ -1,6 +1,6 @@
 import { theme } from '@lha-labs/theme';
 import { shortenNumber } from '@lha-labs/utils';
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, Divider, Typography } from '@mui/material';
 import { useIntl } from 'react-intl';
 
 interface ILetsHelpStat {
@@ -24,10 +24,9 @@ function AboutUs() {
     >
       <Box
         sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
           padding: '10px 0',
+          display: 'grid',
+          justifyItems: 'center',
         }}
       >
         <Typography color="primary">
@@ -44,8 +43,7 @@ function AboutUs() {
         >
           {formatMessage({ id: 'aboutUsSectionSubtitle' })}
         </Typography>
-        <Box
-          component="span"
+        <Divider
           sx={{
             border: '1px solid var(--primary)',
             width: '90px',
