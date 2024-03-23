@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import HeroSection from '../components/welcome';
+import HeroSection from '../components/HeroSection/HeroSection';
 
 export function Index() {
   // const { formatMessage } = useIntl();
