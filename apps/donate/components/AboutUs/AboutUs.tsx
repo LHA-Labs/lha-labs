@@ -24,7 +24,9 @@ function AboutUs() {
       sx={{ backgroundColor: theme.common.inputBackground, padding: 1.5 }}
     >
       <Box className={styles.about_us_title}>
-        <Typography color="primary">About Us</Typography>
+        <Typography color="primary">
+          {formatMessage({ id: 'aboutUs' })}
+        </Typography>
         <Typography
           textAlign="center"
           sx={{
@@ -33,11 +35,13 @@ function AboutUs() {
             fontSize: '17px',
             lineHeight: '24px',
           }}
-        >{`Welcome to the Let's Help Association`}</Typography>
+        >
+          {formatMessage({ id: 'aboutUsSectionSubtitle' })}
+        </Typography>
         <Box component="span"></Box>
       </Box>
       <Typography className={styles.what_about_us}>
-        {`Let's Help Association, devoted to compassion and social impact, is committed to providing meaningful assistance to communities in need. Through diverse humanitarian initiatives, the association aims to make a positive difference by offering tangible support, whether through the provision of essential resources, education, or the promotion of well-being. Together, we build bridges to a better future, one act at a time, fostering a spirit of unity and solidarity`}
+        {formatMessage({ id: 'aboutUsMessage' })}
       </Typography>
       <Box
         sx={{
