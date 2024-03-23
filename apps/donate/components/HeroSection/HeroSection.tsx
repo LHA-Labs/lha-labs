@@ -1,5 +1,5 @@
 import { Box, Button, Fab, Typography } from '@mui/material';
-import ImageGrid from '../imageGid';
+import HeroImageGrid from './HeroImageGrid/HeroImageGrid';
 import { useIntl } from 'react-intl';
 
 export default function HeroSection() {
@@ -41,7 +41,7 @@ export default function HeroSection() {
         </Button>
       </Box>
       <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-        <ImageGrid />
+        <HeroImageGrid />
       </Box>
       <Fab
         variant="extended"

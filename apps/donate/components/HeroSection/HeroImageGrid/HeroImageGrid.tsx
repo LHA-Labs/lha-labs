@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { useIntl } from 'react-intl';
 import styles from './imageGrid.module.css';
 
-export default function ImageGrid() {
+export default function HeroImageGrid() {
   const { formatMessage } = useIntl();
   return (
     <Box className={styles.grid_container}>
