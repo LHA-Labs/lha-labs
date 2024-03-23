@@ -85,11 +85,21 @@ export default function Footer() {
               gap: '16px',
             }}
           >
-            <Button variant="contained" color="primary">
-              {formatMessage({ id: 'Make a donation' })}
+            <Button
+              variant="contained"
+              color="primary"
+              sx={{ borderRadius: '20px' }}
+              disableElevation
+            >
+              {formatMessage({ id: 'makeADonation' })}
             </Button>
-            <Button variant="contained" color="inherit">
-              {formatMessage({ id: 'Nous joindre' })}
+            <Button
+              variant="contained"
+              color="inherit"
+              sx={{ borderRadius: '20px' }}
+              disableElevation
+            >
+              {formatMessage({ id: 'joinUs' })}
             </Button>
           </Box>
         </Box>
@@ -181,7 +191,7 @@ export default function Footer() {
           ))}
           <Typography
             component="a"
-            target='_blank'
+            target="_blank"
             href="mailto:letshelp@gmail.com"
             sx={{ fontWeight: 600 }}
           >

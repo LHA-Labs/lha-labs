@@ -6,4 +6,5 @@ export const website = {
   makeADonation: 'Make a donation',
   en: 'En',
   fr: 'Fr',
+  joinUs:'Join us'
 };
