@@ -39,7 +39,7 @@ export default function GetInTouch() {
           color: '#333',
         }}
       >
-        {formatMessage({ id: 'Get in touch' })}
+        {formatMessage({ id: 'getInTouch' })}
       </Typography>
       <Box sx={{ display: 'grid', rowGap: 0, alignContent: 'start' }}>
         {socialMediaLinks.map(({ icon, link, handle }, index) => (

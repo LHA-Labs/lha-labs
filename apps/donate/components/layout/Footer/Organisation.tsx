@@ -27,7 +27,7 @@ export default function Organisation() {
           color: '#333',
         }}
       >
-        {formatMessage({ id: 'Organisation' })}
+        {formatMessage({ id: 'organisation' })}
       </Typography>
       <Box sx={{ display: 'grid', rowGap: 1 }}>
         {listOrganisation.map((title, index) => (

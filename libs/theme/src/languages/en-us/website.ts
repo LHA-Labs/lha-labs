@@ -11,4 +11,6 @@ export const website = {
   getInvolvedMessage:
     'Lets Help Association, devoted to compassion and social impact, is committed to providing meaningful assistance to communities.',
   makeAnonymousDonation: 'Make an anonymous donation',
+  getInTouch: 'Get in touch',
+  organisation: 'Organisation',
 };
