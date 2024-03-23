@@ -31,12 +31,25 @@ export default function HeroSection() {
       </Typography>
       <Box
         sx={{
-          display: 'flex',
-          justifyContent: 'space-between',
+          display: 'grid',
+          gridAutoFlow: 'column',
+          alignItems: 'center',
+          columnGap: 2,
         }}
       >
-        <Button variant="contained">{formatMessage({ id: 'donate' })}</Button>
-        <Button variant="contained" color="secondary">
+        <Button
+          variant="contained"
+          sx={{ borderRadius: '20px' }}
+          disableElevation
+        >
+          {formatMessage({ id: 'donate' })}
+        </Button>
+        <Button
+          variant="contained"
+          sx={{ borderRadius: '20px' }}
+          disableElevation
+          color="secondary"
+        >
           {formatMessage({ id: 'joinUs' })}
         </Button>
       </Box>
