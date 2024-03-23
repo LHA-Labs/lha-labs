@@ -1,7 +1,9 @@
 import { Box, Button, Fab, Typography } from '@mui/material';
 import ImageGrid from '../imageGid';
+import { useIntl } from 'react-intl';
 
 export default function HeroSection() {
+  const { formatMessage } = useIntl();
   return (
     <Box component="section" sx={{ position: 'relative' }}>
       <Typography
@@ -13,7 +15,7 @@ export default function HeroSection() {
           textAlign: 'left',
         }}
       >
-        Giving Hope, Emplowerment, Love and Purpose.
+        {formatMessage({ id: 'heroSectionTitle' })}
       </Typography>
       <Typography
         variant="h5"
@@ -25,10 +27,7 @@ export default function HeroSection() {
           textAlign: 'left',
         }}
       >
-        {' '}
-        Nurturing Lives, Inspiring Futures: Transformative Initiative That
-        Illuminate Paths, Foster Growth, Cultivate Affection, And Instill
-        Purposeful Living For.
+        {formatMessage({ id: 'heroSectionSubtitle' })}
       </Typography>
       <Box
         sx={{
@@ -36,9 +35,9 @@ export default function HeroSection() {
           justifyContent: 'space-between',
         }}
       >
-        <Button variant="contained">Faire un don</Button>
+        <Button variant="contained">{formatMessage({ id: 'donate' })}</Button>
         <Button variant="contained" color="secondary">
-          Nous joindre
+          {formatMessage({ id: 'joinUs' })}
         </Button>
       </Box>
       <Box sx={{ display: 'flex', justifyContent: 'center' }}>
@@ -59,7 +58,7 @@ export default function HeroSection() {
           textTransform: 'lowercase',
         }}
       >
-        Faire un don
+        {formatMessage({ id: 'donate' })}
       </Fab>
     </Box>
   );

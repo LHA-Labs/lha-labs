@@ -13,4 +13,7 @@ export const website = {
   makeAnonymousDonation: 'Make an anonymous donation',
   getInTouch: 'Get in touch',
   organisation: 'Organisation',
+  heroSectionTitle: 'Giving Hope, Emplowerment, Love and Purpose.',
+  heroSectionSubtitle:
+    'Nurturing Lives, Inspiring Futures: Transformative Initiative That Illuminate Paths, Foster Growth, Cultivate Affection, And Instill Purposeful Living For.',
 };
