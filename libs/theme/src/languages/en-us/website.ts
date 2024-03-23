@@ -6,5 +6,9 @@ export const website = {
   makeADonation: 'Make a donation',
   en: 'En',
   fr: 'Fr',
-  joinUs:'Join us'
+  joinUs: 'Join us',
+  getInvolved: 'Get Involved',
+  getInvolvedMessage:
+    'Lets Help Association, devoted to compassion and social impact, is committed to providing meaningful assistance to communities.',
+  makeAnonymousDonation: 'Make an anonymous donation',
 };
