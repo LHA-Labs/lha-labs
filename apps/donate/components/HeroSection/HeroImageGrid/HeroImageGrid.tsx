@@ -9,13 +9,34 @@ export default function HeroImageGrid() {
     <>
       <Box sx={{ display: { laptop: 'block', mobile: 'none' } }}>
         <Box className={styles.grid_container}>
-          <Box>
+          <Box sx={{ boxShadow: 'none !important', position: 'relative' }}>
+            <Box
+              sx={{
+                borderBlock: '5px solid #fff',
+                borderLeft: '5px solid #fff',
+                borderRadius: '10% 0 0 10%',
+                boxShadow: '0px 0px 18px -10px red',
+              }}
+            >
+              <Image
+                src="/assets/child1.jpg"
+                alt="child needing help"
+                style={{
+                  objectFit: 'cover',
+                  borderTopLeftRadius: '10%',
+                  borderBottomLeftRadius: '10%',
+                }}
+                width={140}
+                height={140}
+              />
+            </Box>
+
             <Image
-              src="/assets/child1.jpg"
-              alt="child needing help"
-              style={{ objectFit: 'cover' }}
-              width={140}
-              height={140}
+              src="/assets/heroStar.png"
+              width={100}
+              height={100}
+              alt="star"
+              style={{ position: 'absolute', left: -60, bottom: '-140px' }}
             />
           </Box>
           <Box className={styles.image_item}>
@@ -88,6 +109,7 @@ export default function HeroImageGrid() {
           {/* <Image src="/assets/3031c3fd3a0775273647780e4e0a3523.png" alt="Image 7" width={30} height={30} /> */}
         </Box>
       </Box>
+
       <Box sx={{ display: { laptop: 'none', mobile: 'block' } }}>
         <Box className={styles.grid_container}>
           <Box>
