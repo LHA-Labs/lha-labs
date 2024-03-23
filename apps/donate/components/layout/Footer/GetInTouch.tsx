@@ -60,6 +60,7 @@ export default function GetInTouch() {
       </Box>
       <Typography
         sx={{
+          display: { laptop: 'block', mobile: 'none' },
           fontSize: '12px',
           fontWeight: 500,
           color: '#333',

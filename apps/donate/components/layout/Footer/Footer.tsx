@@ -10,7 +10,7 @@ export default function Footer() {
     <Box
       sx={{
         width: '100%',
-        padding: '0 118px 56px 118px',
+        padding: { laptop: '0 118px 56px 118px', mobile: '0 24px 12px 24px' },
         display: 'grid',
         rowGap: '56px',
       }}
@@ -19,7 +19,7 @@ export default function Footer() {
         sx={{
           display: 'grid',
           gridTemplateColumns: '1fr auto 1fr',
-          columnGap: 5,
+          columnGap: {laptop:5, mobile: 3},
           alignItems: 'center',
         }}
       >
@@ -40,7 +40,12 @@ export default function Footer() {
       <Box
         sx={{
           display: 'grid',
-          gridTemplateColumns: '4.7fr 3.1fr 2.2fr',
+          gridTemplateColumns: {
+            mobile: 'none',
+            laptop: '4.7fr 3.1fr 2.2fr',
+          },
+          rowGap: 5,
+          // gridAutoFlow: 'column',
           columnGap: 3,
         }}
       >
