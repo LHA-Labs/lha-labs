@@ -1,12 +1,12 @@
 import { Box } from '@mui/material';
 import HeroSection from '../components/HeroSection/HeroSection';
-import About_us from '../components/about_us';
+import AboutUs from '../components/AboutUs/AboutUs';
 
 export function Index() {
   return (
     <Box sx={{ padding: '32px 0' }}>
       <HeroSection />
-      <About_us />
+      <AboutUs />
     </Box>
   );
 }

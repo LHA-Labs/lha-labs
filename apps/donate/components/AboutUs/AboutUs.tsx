@@ -2,7 +2,7 @@ import { Box, Button, Typography } from "@mui/material";
 import styles from './about_us.module.css'
 import { theme } from "@lha-labs/theme";
 
-function About_us() {
+function AboutUs() {
     const about_us_infos: { label: string, value: number }[] = [
         { label: "Benevoles", value: 100 },
         { label: "Sponsors", value: 15 },
@@ -45,4 +45,4 @@ function About_us() {
     );
 }
 
-export default About_us;
+export default AboutUs;
