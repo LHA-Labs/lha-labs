@@ -13,6 +13,7 @@ export default function HeroSection() {
           fontSize: '30px',
           letterSpacing: '-0.02em',
           textAlign: 'left',
+          color: '#333',
         }}
       >
         {formatMessage({ id: 'heroSectionTitle' })}
@@ -25,6 +26,7 @@ export default function HeroSection() {
           fontWeight: '600',
           letterSpacing: '0em',
           textAlign: 'left',
+          color:'#666'
         }}
       >
         {formatMessage({ id: 'heroSectionSubtitle' })}
