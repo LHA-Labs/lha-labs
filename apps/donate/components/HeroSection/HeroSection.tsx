@@ -1,11 +1,11 @@
-import { Box, Button, Fab, Typography } from '@mui/material';
-import HeroImageGrid from './HeroImageGrid/HeroImageGrid';
+import { Box, Button, Typography } from '@mui/material';
 import { useIntl } from 'react-intl';
+import HeroImageGrid from './HeroImageGrid/HeroImageGrid';
 
 export default function HeroSection() {
   const { formatMessage } = useIntl();
   return (
-    <Box component="section" sx={{ position: 'relative' }}>
+    <Box component="section">
       <Typography
         variant="h2"
         sx={{
@@ -26,7 +26,7 @@ export default function HeroSection() {
           fontWeight: '600',
           letterSpacing: '0em',
           textAlign: 'left',
-          color:'#666'
+          color: '#666',
         }}
       >
         {formatMessage({ id: 'heroSectionSubtitle' })}
@@ -58,23 +58,6 @@ export default function HeroSection() {
       <Box sx={{ display: 'flex', justifyContent: 'center' }}>
         <HeroImageGrid />
       </Box>
-      <Fab
-        variant="extended"
-        color="primary"
-        sx={{
-          position: 'absolute',
-          bottom: '60px',
-          right: '10px',
-          width: '-webkit-fill-available',
-          fontWeight: 600,
-          fontFamily: 'Montserrat',
-          fontSize: '18px',
-          lineHeight: '16px',
-          textTransform: 'lowercase',
-        }}
-      >
-        {formatMessage({ id: 'donate' })}
-      </Fab>
     </Box>
   );
 }
