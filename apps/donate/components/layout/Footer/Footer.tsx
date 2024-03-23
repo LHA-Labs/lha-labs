@@ -1,29 +1,18 @@
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import { Box, IconButton, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import Image from 'next/image';
 import { useIntl } from 'react-intl';
 import ImgFooter from '../../../assets/ImgFooter.png';
-import ButtonFilled from '../Buttons/ButtonFilled';
 
 export default function Footer() {
   const { formatMessage } = useIntl();
 
-  const listOrganisation = [
-    'About Us',
-    'Partners',
-    'Make an anonymous donation',
-    'let’shelp@gmail.com',
+  const listOrganisation: string[] = [
+    'aboutUs',
+    'partners',
+    'makeAnonymousDonation',
   ];
 
-  const socialMediaLinks = [
-    { icon: <FacebookIcon />, link: 'lien_facebook' },
-    { icon: <TwitterIcon />, link: 'lien_twitter' },
-    { icon: <InstagramIcon />, link: 'lien_instagram' },
-    { icon: <LinkedInIcon />, link: 'lien_linkedin' },
-  ];
+  const socialMediaLinks: { icon: unknown; link: string }[] = [];
 
   const getRandomSize = () => {
     const sizes = ['32px', '48px', '64px', '80px'];
@@ -96,8 +85,12 @@ export default function Footer() {
               gap: '16px',
             }}
           >
-            <ButtonFilled label={formatMessage({ id: "Make a donation"})} isPrimary={true}></ButtonFilled>
-            <ButtonFilled label={formatMessage({ id: "Nous joindre"})} isPrimary={false}></ButtonFilled>
+            <Button variant="contained" color="primary">
+              {formatMessage({ id: 'Make a donation' })}
+            </Button>
+            <Button variant="contained" color="inherit">
+              {formatMessage({ id: 'Nous joindre' })}
+            </Button>
           </Box>
         </Box>
 
@@ -143,7 +136,7 @@ export default function Footer() {
                     alignItems: 'center',
                   }}
                 >
-                  <IconButton color="error">{item.icon}</IconButton>
+                  {/* {item.icon} */}
                 </Box>
               </a>
             ))}
@@ -163,10 +156,9 @@ export default function Footer() {
 
         <Box
           sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-            // width:"33%",
+            display: 'grid',
+            alignContent: 'start',
+            rowGap: 2,
           }}
         >
           <Typography
@@ -183,20 +175,18 @@ export default function Footer() {
             {formatMessage({ id: 'Organisation' })}
           </Typography>
           {listOrganisation.map((title, index) => (
-            <Typography
-              key={index}
-              sx={{
-                color: 'var(--body, #666)',
-                fontFamily: 'Montserrat, sans-serif',
-                fontSize: '16px',
-                fontStyle: 'normal',
-                fontWeight: 600,
-                lineHeight: '28px',
-              }}
-            >
+            <Typography key={index} sx={{ fontWeight: 600 }}>
               {formatMessage({ id: `${title}` })}
             </Typography>
           ))}
+          <Typography
+            component="a"
+            target='_blank'
+            href="mailto:letshelp@gmail.com"
+            sx={{ fontWeight: 600 }}
+          >
+            letshelp@gmail.com
+          </Typography>
         </Box>
       </Box>
     </Box>
