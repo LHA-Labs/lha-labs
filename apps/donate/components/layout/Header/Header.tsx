@@ -1,24 +1,20 @@
-import CaretIcon from '@iconify-icons/fluent/chevron-down-24-regular';
-import MenuIcon from '@iconify-icons/fluent/line-horizontal-3-20-regular';
-import { Icon } from '@iconify/react';
+import { supportedLanguages, useLanguage } from '@lha-labs/theme';
 import {
   Box,
   Button,
-  IconButton,
   ImageListItem,
-  Toolbar,
-  Typography,
+  MenuItem,
+  TextField,
+  Toolbar
 } from '@mui/material';
 import Image from 'next/image';
 import { useState } from 'react';
 import { useIntl } from 'react-intl';
-import LayoutMenu from '../../../Interface';
 import LogoLHA from '../../../assets/LogoLha.png';
-import ButtonFilled from '../Buttons/ButtonFilled';
-import Sidebar from '../SideBar/SideBar';
 
 export default function Header() {
   const { formatMessage } = useIntl();
+  const { activeLanguage, languageDispatch } = useLanguage();
 
   const [activeItem, setActiveItem] = useState(0);
 
@@ -115,28 +111,38 @@ export default function Header() {
             columnGap: 1.5,
           }}
         >
-          <Box
+          <TextField
+            size="small"
+            select
+            defaultValue={activeLanguage}
+            onChange={() =>
+              languageDispatch({
+                type: activeLanguage === 'en' ? 'USE_FRENCH' : 'USE_ENGLISH',
+              })
+            }
             sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              gap: '4px',
+              '&.MuiFormControl-root': {
+                background: 'transparent',
+              },
+              '& .MuiInputBase-root': {
+                background: 'transparent',
+              },
+              '& .MuiOutlinedInput-notchedOutline': {
+                border: 'none !important',
+              },
+              '& .MuiSelect-select': {
+                color: '#2F3A45',
+                fontSize: 12,
+                fontWeight: 600,
+              },
             }}
           >
-            <Typography
-              sx={{
-                color: 'var(--Body, #2F3A45)',
-                fontFamily: 'Montserrat, sans-serif',
-                fontSize: 12,
-                fontStyle: 'normal',
-                fontWeight: 600,
-                lineHeight: '20px',
-              }}
-            >
-              {formatMessage({ id: 'Eng' })}
-            </Typography>
-            <Icon icon={CaretIcon} color="#2F3A45" />
-          </Box>
+            {supportedLanguages.map((language, index) => (
+              <MenuItem key={index} value={language}>
+                {formatMessage({ id: language })}
+              </MenuItem>
+            ))}
+          </TextField>
           <Button variant="contained" color="primary">
             {formatMessage({ id: 'makeADonation' })}
           </Button>

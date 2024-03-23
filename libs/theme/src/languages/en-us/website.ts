@@ -4,4 +4,6 @@ export const website = {
   partners: 'Partners',
   donate: 'Donate',
   makeADonation: 'Make a donation',
+  en: 'En',
+  fr: 'Fr',
 };
