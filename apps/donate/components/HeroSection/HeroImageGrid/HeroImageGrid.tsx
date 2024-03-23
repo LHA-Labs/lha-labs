@@ -11,6 +11,7 @@ export default function HeroImageGrid() {
         <Image
           src="/assets/International-Day-of-the-African-Child-781x441.jpg"
           alt="Image 1"
+          style={{ objectFit: 'cover' }}
           width={100}
           height={100}
         />
@@ -20,6 +21,7 @@ export default function HeroImageGrid() {
           <Image
             src="/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg"
             alt="Image 2"
+            style={{ objectFit: 'cover' }}
             width={100}
             height={100}
           />
@@ -28,6 +30,7 @@ export default function HeroImageGrid() {
           <Image
             src="/assets/portrait-little-smiley-boy-outdoor_23-2148852691.jpg"
             alt="Image 3"
+            style={{ objectFit: 'cover' }}
             width={100}
             height={100}
           />
@@ -36,6 +39,7 @@ export default function HeroImageGrid() {
           <Image
             src="/assets/téléchargement.jpeg"
             alt="Image 4"
+            style={{ objectFit: 'cover' }}
             width={100}
             height={100}
           />
@@ -45,6 +49,7 @@ export default function HeroImageGrid() {
         <Image
           src="/assets/UN0640668.jpeg"
           alt="Image 5"
+          style={{ objectFit: 'cover' }}
           width={100}
           height={100}
         />
