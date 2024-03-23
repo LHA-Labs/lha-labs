@@ -9,8 +9,8 @@ export default function HeroImageGrid() {
     <Box className={styles.grid_container}>
       <Box>
         <Image
-          src="/assets/International-Day-of-the-African-Child-781x441.jpg"
-          alt="Image 1"
+          src="/assets/child1.jpg"
+          alt="child needing help"
           style={{ objectFit: 'cover' }}
           width={100}
           height={100}
@@ -19,8 +19,8 @@ export default function HeroImageGrid() {
       <Box className={styles.image_item}>
         <Box>
           <Image
-            src="/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg"
-            alt="Image 2"
+            src="/assets/child2.jpg"
+            alt="child needing help"
             style={{ objectFit: 'cover' }}
             width={100}
             height={100}
@@ -28,8 +28,8 @@ export default function HeroImageGrid() {
         </Box>
         <Box className={styles.image_item_centered}>
           <Image
-            src="/assets/portrait-little-smiley-boy-outdoor_23-2148852691.jpg"
-            alt="Image 3"
+            src="/assets/child3.jpg"
+            alt="child needing help"
             style={{ objectFit: 'cover' }}
             width={100}
             height={100}
@@ -37,8 +37,8 @@ export default function HeroImageGrid() {
         </Box>
         <Box>
           <Image
-            src="/assets/téléchargement.jpeg"
-            alt="Image 4"
+            src="/assets/child5.jpeg"
+            alt="child needing help"
             style={{ objectFit: 'cover' }}
             width={100}
             height={100}
@@ -47,8 +47,8 @@ export default function HeroImageGrid() {
       </Box>
       <Box className={styles.flexbox_img}>
         <Image
-          src="/assets/UN0640668.jpeg"
-          alt="Image 5"
+          src="/assets/child4.jpeg"
+          alt="child needing help"
           style={{ objectFit: 'cover' }}
           width={100}
           height={100}
@@ -56,8 +56,8 @@ export default function HeroImageGrid() {
       </Box>
       <Box className={styles.support_msg}>
         <Image
-          src="/assets/91e902c4aaf9e2b81b6b8c4fec3a99e8.png"
-          alt="Image 6"
+          src="/assets/heart.png"
+          alt="love heart"
           width={20}
           height={20}
         />
