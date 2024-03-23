@@ -1,12 +1,11 @@
 import CaretIcon from '@iconify-icons/fluent/chevron-down-24-regular';
 import { Icon } from '@iconify/react';
-import { Box, Drawer, ImageListItem, Typography } from '@mui/material';
-import LayoutMenu from 'apps/donate/Interface';
+import { Box, Button, Drawer, ImageListItem, Typography } from '@mui/material';
 import Image from 'next/image';
 import React from 'react';
 import { useIntl } from 'react-intl';
 import LogoLha from '../../../assets/LogoLha.png';
-import ButtonFilled from '../Buttons/ButtonFilled';
+import LanguageSwapper from '../LanguageSwapper';
 
 interface SidebarProps {
   open: boolean;
@@ -79,34 +78,11 @@ const Sidebar: React.FC<SidebarProps> = ({
             ))}
           </Box>
         </Box>
-        <Box sx={{ gap: '10px' }}>
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              gap: '4px',
-              paddingBottom: '10px',
-            }}
-          >
-            <Typography
-              sx={{
-                color: 'var(--Body, #2F3A45)',
-                fontFamily: 'Montserrat, sans-serif',
-                fontSize: 12,
-                fontStyle: 'normal',
-                fontWeight: 600,
-                lineHeight: '20px',
-              }}
-            >
-              {formatMessage({ id: 'Eng' })}
-            </Typography>
-            <Icon icon={CaretIcon} color="#2F3A45" />
-          </Box>
-          <ButtonFilled
-            label={formatMessage({ id: 'Make a donation' })}
-            isPrimary={true}
-          ></ButtonFilled>
+        <Box sx={{ display: 'grid', rowGap: 1, justifyItems: 'center' }}>
+          <LanguageSwapper />
+          <Button variant="contained" color="primary">
+            {formatMessage({ id: 'makeADonation' })}
+          </Button>
         </Box>
       </Box>
     </Drawer>

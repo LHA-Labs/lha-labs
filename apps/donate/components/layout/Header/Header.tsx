@@ -1,24 +1,21 @@
 import MenuIcon from '@iconify-icons/fluent/line-horizontal-3-20-regular';
 import { Icon } from '@iconify/react';
-import { supportedLanguages, useLanguage } from '@lha-labs/theme';
 import {
   Box,
   Button,
   IconButton,
   ImageListItem,
-  MenuItem,
-  TextField,
-  Toolbar,
+  Toolbar
 } from '@mui/material';
 import Image from 'next/image';
 import { useState } from 'react';
 import { useIntl } from 'react-intl';
 import LogoLHA from '../../../assets/LogoLha.png';
+import LanguageSwapper from '../LanguageSwapper';
 import Sidebar from '../SideBar/SideBar';
 
 export default function Header() {
   const { formatMessage } = useIntl();
-  const { activeLanguage, languageDispatch } = useLanguage();
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -108,38 +105,7 @@ export default function Header() {
               columnGap: 1.5,
             }}
           >
-            <TextField
-              size="small"
-              select
-              defaultValue={activeLanguage}
-              onChange={() =>
-                languageDispatch({
-                  type: activeLanguage === 'en' ? 'USE_FRENCH' : 'USE_ENGLISH',
-                })
-              }
-              sx={{
-                '&.MuiFormControl-root': {
-                  background: 'transparent',
-                },
-                '& .MuiInputBase-root': {
-                  background: 'transparent',
-                },
-                '& .MuiOutlinedInput-notchedOutline': {
-                  border: 'none !important',
-                },
-                '& .MuiSelect-select': {
-                  color: '#2F3A45',
-                  fontSize: 12,
-                  fontWeight: 600,
-                },
-              }}
-            >
-              {supportedLanguages.map((language, index) => (
-                <MenuItem key={index} value={language}>
-                  {formatMessage({ id: language })}
-                </MenuItem>
-              ))}
-            </TextField>
+           <LanguageSwapper />
             <Button variant="contained" color="primary">
               {formatMessage({ id: 'makeADonation' })}
             </Button>
