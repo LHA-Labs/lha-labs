@@ -24,24 +24,7 @@ export default function Header() {
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  const items: LayoutMenu[] = [
-    {
-      title: 'Home',
-      active: true,
-    },
-    {
-      title: 'About Us',
-      active: false,
-    },
-    {
-      title: 'Partners',
-      active: false,
-    },
-    {
-      title: 'Donate',
-      active: false,
-    },
-  ];
+  const navItems: string[] = ['home', 'aboutUs', 'partners', 'donate'];
 
   const itemClick = (index: number) => {
     setActiveItem(index);
@@ -107,7 +90,7 @@ export default function Header() {
             columnGap: 3,
           }}
         >
-          {items.map(({ title }, index) => (
+          {navItems.map((navItem, index) => (
             <Box
               onClick={() => itemClick(index)}
               key={index}
@@ -119,7 +102,7 @@ export default function Header() {
                 lineHeight: '16px',
               }}
             >
-              {formatMessage({ id: `${title}` })}
+              {formatMessage({ id: `${navItem}` })}
             </Box>
           ))}
         </Box>
