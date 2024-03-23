@@ -5,7 +5,7 @@ import {
   ImageListItem,
   MenuItem,
   TextField,
-  Toolbar
+  Toolbar,
 } from '@mui/material';
 import Image from 'next/image';
 import { useState } from 'react';
@@ -16,14 +16,11 @@ export default function Header() {
   const { formatMessage } = useIntl();
   const { activeLanguage, languageDispatch } = useLanguage();
 
-  const [activeItem, setActiveItem] = useState(0);
-
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   const navItems: string[] = ['home', 'aboutUs', 'partners', 'donate'];
 
   const itemClick = (index: number) => {
-    setActiveItem(index);
     closeSidebar();
   };
 
