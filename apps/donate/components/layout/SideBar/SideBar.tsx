@@ -11,16 +11,14 @@ import ButtonFilled from '../Buttons/ButtonFilled';
 interface SidebarProps {
   open: boolean;
   onClose: () => void;
-  items: LayoutMenu[];
-  activeItem: number;
+  navItems: string[];
   onItemClick: (index: number) => void;
 }
 
 const Sidebar: React.FC<SidebarProps> = ({
   open,
   onClose,
-  items,
-  activeItem,
+  navItems,
   onItemClick,
 }) => {
   const { formatMessage } = useIntl();
@@ -65,21 +63,18 @@ const Sidebar: React.FC<SidebarProps> = ({
               gap: '40px',
             }}
           >
-            {items.map(({ title }, index) => (
+            {navItems.map((navItem, index) => (
               <Box
                 onClick={() => onItemClick(index)}
                 key={index}
                 sx={{
-                  display: 'flex',
-                  color: 'var(--Body, #2F3A45)',
-                  fontFamily: 'Montserrat, sans-serif',
+                  color: '#2F3A45',
                   fontSize: '12px',
                   lineHeight: '16px',
-                  fontWeight: activeItem === index ? 600 : 500,
                   cursor: 'pointer',
                 }}
               >
-                {formatMessage({ id: `${title}` })}
+                {formatMessage({ id: `${navItem}` })}
               </Box>
             ))}
           </Box>

@@ -37,115 +37,124 @@ export default function Header() {
   };
 
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'center',
-        backgroundColor: 'var(--background, #F5F5F5)',
-        padding: '12px 94px',
-      }}
-    >
-      <Toolbar
+    <>
+      <Sidebar
+        open={sidebarOpen}
+        onClose={closeSidebar}
+        navItems={navItems}
+        onItemClick={itemClick}
+      />
+
+      <Box
         sx={{
-          display: 'grid',
-          gridTemplateColumns: {
-            laptop: 'auto 1fr auto',
-            mobile: 'auto 1fr',
-          },
-          justifyItems: 'center',
+          display: 'flex',
+          justifyContent: 'space-between',
           alignItems: 'center',
-          width: '100%',
+          backgroundColor: 'var(--background, #F5F5F5)',
+          padding: '12px 94px',
         }}
       >
-        <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <ImageListItem sx={{ width: '167px', height: '63px' }}>
-            <Image
-              src={LogoLHA}
-              alt="Logo LHA"
-              style={{ width: '167px', height: '63px' }}
-            />
-          </ImageListItem>
-        </Box>
-        <Box
+        <Toolbar
           sx={{
-            display: { laptop: 'grid', mobile: 'none' },
+            display: 'grid',
+            gridTemplateColumns: {
+              laptop: 'auto 1fr auto',
+              mobile: 'auto 1fr',
+            },
+            justifyItems: 'center',
             alignItems: 'center',
-            gridAutoFlow: 'column',
-            columnGap: 3,
+            width: '100%',
           }}
         >
-          {navItems.map((navItem, index) => (
-            <Box
-              onClick={() => itemClick(index)}
-              key={index}
-              sx={{
-                color: 'var(--Body, #2F3A45)',
-                fontSize: '12px',
-                fontWeight: 500,
-                cursor: 'pointer',
-                lineHeight: '16px',
-              }}
-            >
-              {formatMessage({ id: `${navItem}` })}
-            </Box>
-          ))}
-        </Box>
-
-        <Box
-          sx={{
-            display: { laptop: 'grid', mobile: 'none' },
-            gridAutoFlow: 'column',
-            alignItems: 'center',
-            columnGap: 1.5,
-          }}
-        >
-          <TextField
-            size="small"
-            select
-            defaultValue={activeLanguage}
-            onChange={() =>
-              languageDispatch({
-                type: activeLanguage === 'en' ? 'USE_FRENCH' : 'USE_ENGLISH',
-              })
-            }
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <ImageListItem sx={{ width: '167px', height: '63px' }}>
+              <Image
+                src={LogoLHA}
+                alt="Logo LHA"
+                style={{ width: '167px', height: '63px' }}
+              />
+            </ImageListItem>
+          </Box>
+          <Box
             sx={{
-              '&.MuiFormControl-root': {
-                background: 'transparent',
-              },
-              '& .MuiInputBase-root': {
-                background: 'transparent',
-              },
-              '& .MuiOutlinedInput-notchedOutline': {
-                border: 'none !important',
-              },
-              '& .MuiSelect-select': {
-                color: '#2F3A45',
-                fontSize: 12,
-                fontWeight: 600,
-              },
+              display: { laptop: 'grid', mobile: 'none' },
+              alignItems: 'center',
+              gridAutoFlow: 'column',
+              columnGap: 3,
             }}
           >
-            {supportedLanguages.map((language, index) => (
-              <MenuItem key={index} value={language}>
-                {formatMessage({ id: language })}
-              </MenuItem>
+            {navItems.map((navItem, index) => (
+              <Box
+                onClick={() => itemClick(index)}
+                key={index}
+                sx={{
+                  color: 'var(--Body, #2F3A45)',
+                  fontSize: '12px',
+                  fontWeight: 500,
+                  cursor: 'pointer',
+                  lineHeight: '16px',
+                }}
+              >
+                {formatMessage({ id: `${navItem}` })}
+              </Box>
             ))}
-          </TextField>
-          <Button variant="contained" color="primary">
-            {formatMessage({ id: 'makeADonation' })}
-          </Button>
-        </Box>
-        <IconButton
-          sx={{
-            display: { laptop: 'none', mobile: 'block' },
-            justifySelf: 'end',
-          }}
-          onClick={openSidebar}
-        >
-          <Icon icon={MenuIcon} color="#2F3A45" />
-        </IconButton>
-      </Toolbar>
-    </Box>
+          </Box>
+
+          <Box
+            sx={{
+              display: { laptop: 'grid', mobile: 'none' },
+              gridAutoFlow: 'column',
+              alignItems: 'center',
+              columnGap: 1.5,
+            }}
+          >
+            <TextField
+              size="small"
+              select
+              defaultValue={activeLanguage}
+              onChange={() =>
+                languageDispatch({
+                  type: activeLanguage === 'en' ? 'USE_FRENCH' : 'USE_ENGLISH',
+                })
+              }
+              sx={{
+                '&.MuiFormControl-root': {
+                  background: 'transparent',
+                },
+                '& .MuiInputBase-root': {
+                  background: 'transparent',
+                },
+                '& .MuiOutlinedInput-notchedOutline': {
+                  border: 'none !important',
+                },
+                '& .MuiSelect-select': {
+                  color: '#2F3A45',
+                  fontSize: 12,
+                  fontWeight: 600,
+                },
+              }}
+            >
+              {supportedLanguages.map((language, index) => (
+                <MenuItem key={index} value={language}>
+                  {formatMessage({ id: language })}
+                </MenuItem>
+              ))}
+            </TextField>
+            <Button variant="contained" color="primary">
+              {formatMessage({ id: 'makeADonation' })}
+            </Button>
+          </Box>
+          <IconButton
+            sx={{
+              display: { laptop: 'none', mobile: 'block' },
+              justifySelf: 'end',
+            }}
+            onClick={openSidebar}
+          >
+            <Icon icon={MenuIcon} color="#2F3A45" />
+          </IconButton>
+        </Toolbar>
+      </Box>
+    </>
   );
 }
