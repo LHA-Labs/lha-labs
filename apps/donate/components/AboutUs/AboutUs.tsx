@@ -2,7 +2,6 @@ import { theme } from '@lha-labs/theme';
 import { shortenNumber } from '@lha-labs/utils';
 import { Box, Button, Typography } from '@mui/material';
 import { useIntl } from 'react-intl';
-import styles from './about_us.module.css';
 
 interface ILetsHelpStat {
   label: string;
@@ -23,7 +22,14 @@ function AboutUs() {
       component="section"
       sx={{ backgroundColor: theme.common.inputBackground, padding: 1.5 }}
     >
-      <Box className={styles.about_us_title}>
+      <Box
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          padding: '10px 0',
+        }}
+      >
         <Typography color="primary">
           {formatMessage({ id: 'aboutUs' })}
         </Typography>
@@ -38,9 +44,23 @@ function AboutUs() {
         >
           {formatMessage({ id: 'aboutUsSectionSubtitle' })}
         </Typography>
-        <Box component="span"></Box>
+        <Box
+          component="span"
+          sx={{
+            border: '1px solid var(--primary)',
+            width: '90px',
+            marginTop: '10px',
+          }}
+        />
       </Box>
-      <Typography className={styles.what_about_us}>
+      <Typography
+        sx={{
+          fontSize: '14px',
+          fontWeight: 'var(--semiBold)',
+          padding: '20px 0',
+          lineHeight: '24px',
+        }}
+      >
         {formatMessage({ id: 'aboutUsMessage' })}
       </Typography>
       <Box
@@ -67,7 +87,16 @@ function AboutUs() {
           {formatMessage({ id: 'moreAboutUs' })}
         </Button>
       </Box>
-      <Box className={styles.rate}>
+      <Box
+        sx={{
+          display: 'grid',
+          gridTemplateColumns: 'auto auto auto',
+          backgroundColor: '#fff',
+          gap: '20px',
+          margin: '20px 0',
+          padding: '10px',
+        }}
+      >
         {letsHelpStatistics.map(({ label, value, unit }, index) => (
           <Box key={index}>
             <Typography
@@ -81,8 +110,8 @@ function AboutUs() {
                 fontWeight: 'var(--semiBold)',
                 lineHeight: '12px',
                 padding: '3px',
+                backgroundColor: 'rgba(165, 0, 0, 0.2)',
               }}
-              className={styles.text_specification}
             >
               {formatMessage({ id: label })}
             </Typography>
