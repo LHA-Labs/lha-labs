@@ -1,18 +1,22 @@
 import { Box, Button, Drawer } from '@mui/material';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import React from 'react';
 import { useIntl } from 'react-intl';
 import LogoLha from '../../../assets/LogoLha.png';
 import LanguageSwapper from '../LanguageSwapper';
+import { NavItem } from '../navItem';
+import { INavItem } from '../Header/Header';
 
 interface SidebarProps {
   open: boolean;
   onClose: () => void;
-  navItems: string[];
+  navItems: INavItem[];
 }
 
 const Sidebar: React.FC<SidebarProps> = ({ open, onClose, navItems }) => {
   const { formatMessage } = useIntl();
+  const { push } = useRouter();
 
   return (
     <Drawer anchor="right" open={open} onClose={onClose}>
@@ -45,18 +49,14 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose, navItems }) => {
             }}
           >
             {navItems.map((navItem, index) => (
-              <Box
-                onClick={onClose}
+              <NavItem
                 key={index}
-                sx={{
-                  color: '#2F3A45',
-                  fontSize: '12px',
-                  lineHeight: '16px',
-                  cursor: 'pointer',
+                navItem={navItem}
+                handleLink={() => {
+                  push(navItem.route);
+                  onClose();
                 }}
-              >
-                {formatMessage({ id: `${navItem}` })}
-              </Box>
+              />
             ))}
           </Box>
         </Box>

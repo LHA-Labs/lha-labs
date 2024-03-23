@@ -7,13 +7,24 @@ import { useIntl } from 'react-intl';
 import LogoLHA from '../../../assets/LogoLha.png';
 import LanguageSwapper from '../LanguageSwapper';
 import Sidebar from '../SideBar/SideBar';
+import { NavItem } from '../navItem';
+
+export interface INavItem {
+  item: string;
+  route: string;
+}
 
 export default function Header() {
   const { formatMessage } = useIntl();
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  const navItems: string[] = ['home', 'aboutUs', 'partners', 'donate'];
+  const navItems: INavItem[] = [
+    { item: 'home', route: '/' },
+    { item: 'aboutUs', route: '/about-us' },
+    { item: 'partners', route: '/partners' },
+    { item: 'donate', route: '/donate' },
+  ];
 
   const openSidebar = () => {
     setSidebarOpen(true);
@@ -62,18 +73,7 @@ export default function Header() {
             }}
           >
             {navItems.map((navItem, index) => (
-              <Box
-                key={index}
-                sx={{
-                  color: '#2F3A45',
-                  fontSize: '12px',
-                  fontWeight: 500,
-                  cursor: 'pointer',
-                  lineHeight: '16px',
-                }}
-              >
-                {formatMessage({ id: `${navItem}` })}
-              </Box>
+              <NavItem navItem={navItem} key={index} />
             ))}
           </Box>
 
