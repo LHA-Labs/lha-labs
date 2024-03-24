@@ -48,19 +48,8 @@ export default function HeroSection() {
             columnGap: 2,
           }}
         >
-          <Button
-            variant="contained"
-            sx={{ borderRadius: '20px' }}
-            disableElevation
-          >
-            {formatMessage({ id: 'donate' })}
-          </Button>
-          <Button
-            variant="contained"
-            sx={{ borderRadius: '20px' }}
-            disableElevation
-            color="secondary"
-          >
+          <Button variant="contained">{formatMessage({ id: 'donate' })}</Button>
+          <Button variant="contained" color="secondary">
             {formatMessage({ id: 'joinUs' })}
           </Button>
         </Box>
