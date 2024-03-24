@@ -1,5 +1,7 @@
+import location from '@iconify-icons/fluent/location-24-regular';
+import calendar from '@iconify/icons-fluent/calendar-arrow-counterclockwise-24-regular';
+import { Icon } from '@iconify/react';
 import { Box, Button, Typography } from '@mui/material';
-import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl';
 import CampaignImg from './campaignImgs';
@@ -36,12 +38,7 @@ export default function CampaignCard({
         </Typography>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <Box sx={{ display: 'flex', gap: '5px', alignItems: 'center' }}>
-            <Image
-              src="/assets/ic_fluent_calendar_clock_24_regular.png"
-              alt="calendar"
-              width={16}
-              height={16}
-            />
+            <Icon icon={calendar} fontSize={24} color="var(--primary)" />
             <Typography
               sx={{
                 fontWeight: 'var(--medium)',
@@ -60,12 +57,7 @@ export default function CampaignCard({
               paddingLeft: '20px',
             }}
           >
-            <Image
-              src="/assets/ic_fluent_location_24_regular.png"
-              alt="location"
-              width={16}
-              height={16}
-            />
+            <Icon icon={location} fontSize={24} color="var(--primary)" />
             <Typography
               sx={{
                 fontWeight: 'var(--medium)',

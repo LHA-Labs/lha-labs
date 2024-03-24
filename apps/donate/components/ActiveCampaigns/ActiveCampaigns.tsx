@@ -7,7 +7,7 @@ function ActiveCampaigns() {
   const campaigns: Campaign[] = [
     {
       title: 'Opération 1 orphelin = 1 pack scolaire',
-      date: new Date('14 Aout 2022 8:00'),
+      date: new Date('14 August 2022 8:00'),
       images: [],
       link: 'https://google.com',
       place: 'Douala, Cameroun',
