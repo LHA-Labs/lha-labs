@@ -1,55 +1,47 @@
 import { Box } from '@mui/material';
 import SectionHeader from '../Landing/SectionHeader';
-import InfoBienfaiteur from '../infoBienfaiteur';
+import DonorCard from './DonorCard';
 
-interface BienfaiteursInterface {
+export interface Donor {
   name: string;
   image: string;
-  profession: string;
 }
 
-const bienfaiteurData: BienfaiteursInterface[] = [
+const donors: Donor[] = [
   {
     name: 'Poukam pierre',
     image: '/assets/International-Day-of-the-African-Child-781x441.jpg',
-    profession: 'Software developer',
   },
   {
     name: 'Cyntiche nguemete',
     image: '/assets/UN0640668.jpeg',
-    profession: 'Entrepreneur',
   },
   {
     name: 'Jessica Nguena',
     image:
       '/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg',
-    profession: 'DEV',
   },
   {
     name: 'Poukam pierre',
     image: '/assets/International-Day-of-the-African-Child-781x441.jpg',
-    profession: 'Software developer',
   },
   {
     name: 'Cyntiche nguemete',
     image: '/assets/UN0640668.jpeg',
-    profession: 'Entrepreneur',
   },
   {
     name: 'Jessica Nguena',
     image:
       '/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg',
-    profession: 'DEV',
   },
   {
     name: 'Jessica Nguena',
     image:
       '/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg',
-    profession: 'DEV',
   },
 ];
 
-function OurBienfaiteurs() {
+function DonorsSection() {
   return (
     <Box p={1.5}>
       <SectionHeader
@@ -65,13 +57,8 @@ function OurBienfaiteurs() {
           margin: '20px 0',
         }}
       >
-        {bienfaiteurData.map(({ name, image, profession }, index) => (
-          <InfoBienfaiteur
-            key={index}
-            name={name}
-            image={image}
-            profession={profession}
-          />
+        {donors.map(({ name, image }, index) => (
+          <DonorCard key={index} name={name} image={image} />
         ))}
         <Box
           sx={{
@@ -100,4 +87,4 @@ function OurBienfaiteurs() {
   );
 }
 
-export default OurBienfaiteurs;
+export default DonorsSection;

@@ -3,7 +3,7 @@ import AboutUs from '../components/AboutUs/AboutUs';
 import ActiveCampaigns from '../components/ActiveCampaigns/ActiveCampaigns';
 import GallerySection from '../components/Gallery/Gallery';
 import HeroSection from '../components/HeroSection/HeroSection';
-import OurBienfaiteurs from '../components/bienfaiteurs';
+import DonorsSection from '../components/Donors/Donors';
 
 export function Index() {
   return (
@@ -12,7 +12,7 @@ export function Index() {
       <AboutUs />
       <ActiveCampaigns />
       <GallerySection />
-      <OurBienfaiteurs />
+      <DonorsSection />
     </Box>
   );
 }
