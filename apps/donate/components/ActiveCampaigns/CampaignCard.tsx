@@ -27,75 +27,96 @@ export default function CampaignCard({
     <Box
       sx={{
         display: 'grid',
-        rowGap: 2,
+        gridTemplateColumns: { laptop: '4.5fr 5.5fr', mobile: 'none' },
+        alignContent: 'start',
+        alignItems: 'start',
+        columnGap: 7,
       }}
     >
-      <Box sx={{ justifySelf: 'center', display: 'grid', rowGap: 0.5 }}>
+      <Box
+        sx={{
+          display: 'grid',
+          rowGap: 2,
+        }}
+      >
+        <Box
+          sx={{
+            justifySelf: { mobile: 'center', laptop: 'start' },
+            display: 'grid',
+            rowGap: 0.5,
+          }}
+        >
+          <Typography
+            sx={{
+              fontWeight: 'var(--semiBold)',
+              fontSize: '16px',
+              lineHeight: '24px',
+              color: 'var(--titleActive)',
+              textAlign: 'center',
+            }}
+          >
+            {title}
+          </Typography>
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <Box sx={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
+              <Icon icon={calendar} fontSize={24} color="var(--primary)" />
+              <Typography
+                sx={{
+                  fontWeight: 'var(--medium)',
+                  fontSize: '12px',
+                  lineHeight: '16px',
+                }}
+              >
+                {formatDate(date, {
+                  year: 'numeric',
+                  day: 'numeric',
+                  month: 'short',
+                  hour: 'numeric',
+                  minute: 'numeric',
+                })}
+              </Typography>
+            </Box>
+            <Box
+              sx={{
+                display: 'flex',
+                gap: '5px',
+                alignItems: 'center',
+                paddingLeft: '20px',
+              }}
+            >
+              <Icon icon={location} fontSize={24} color="var(--primary)" />
+              <Typography
+                sx={{
+                  fontWeight: 'var(--medium)',
+                  fontSize: '12px',
+                  lineHeight: '16px',
+                }}
+              >
+                {place}
+              </Typography>
+            </Box>
+          </Box>
+        </Box>
         <Typography
           sx={{
             fontWeight: 'var(--semiBold)',
-            fontSize: '16px',
+            fontSize: '14px',
             lineHeight: '24px',
-            color: 'var(--titleActive)',
-            textAlign: 'center',
+            color: 'var(--body)',
+            padding: '0 0 10px',
           }}
         >
-          {title}
+          {description}
         </Typography>
-        <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <Box sx={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
-            <Icon icon={calendar} fontSize={24} color="var(--primary)" />
-            <Typography
-              sx={{
-                fontWeight: 'var(--medium)',
-                fontSize: '12px',
-                lineHeight: '16px',
-              }}
-            >
-              {formatDate(date, {
-                year: 'numeric',
-                day: 'numeric',
-                month: 'short',
-                hour: 'numeric',
-                minute: 'numeric',
-              })}
-            </Typography>
-          </Box>
-          <Box
-            sx={{
-              display: 'flex',
-              gap: '5px',
-              alignItems: 'center',
-              paddingLeft: '20px',
-            }}
-          >
-            <Icon icon={location} fontSize={24} color="var(--primary)" />
-            <Typography
-              sx={{
-                fontWeight: 'var(--medium)',
-                fontSize: '12px',
-                lineHeight: '16px',
-              }}
-            >
-              {place}
-            </Typography>
-          </Box>
-        </Box>
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => push(link)}
+          sx={{ justifySelf: { laptop: 'start', mobile: 'stretch' } }}
+        >
+          {formatMessage({ id: 'participate' })}
+        </Button>
       </Box>
-      <Typography
-        sx={{
-          fontWeight: 'var(--semiBold)',
-          fontSize: '14px',
-          lineHeight: '24px',
-          color: 'var(--body)',
-          padding: '0 0 10px',
-        }}
-      >
-        {description}
-      </Typography>
-      <Button variant="contained" color="primary" onClick={() => push(link)}>
-        {formatMessage({ id: 'participate' })}
-      </Button>
       <CampaignImg />
     </Box>
   );

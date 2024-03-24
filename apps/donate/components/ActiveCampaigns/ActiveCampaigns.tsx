@@ -17,7 +17,11 @@ function ActiveCampaigns() {
   return (
     <Box
       component="section"
-      sx={{ padding: { mobile: '12px 32px', laptop: '48px 118px' } }}
+      sx={{
+        padding: { mobile: '12px 32px', laptop: '48px 118px' },
+        display:'grid',
+        rowGap:{laptop:4, mobile:2.6}
+      }}
     >
       <SectionHeader
         title="activeCampaigns"
