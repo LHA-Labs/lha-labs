@@ -21,7 +21,7 @@ interface CampaignCardProps {
 export default function CampaignCard({
   campaign: { title, date, link, place, description },
 }: CampaignCardProps) {
-  const { formatMessage } = useIntl();
+  const { formatMessage, formatDate } = useIntl();
   const { push } = useRouter();
   return (
     <Box>
@@ -46,7 +46,13 @@ export default function CampaignCard({
                 lineHeight: '16px',
               }}
             >
-              {date.toDateString()}
+              {formatDate(date, {
+                year: 'numeric',
+                day: 'numeric',
+                month: 'short',
+                hour: 'numeric',
+                minute: 'numeric',
+              })}
             </Typography>
           </Box>
           <Box
