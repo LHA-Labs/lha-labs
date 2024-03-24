@@ -10,34 +10,31 @@ export interface Donor {
 const donors: Donor[] = [
   {
     name: 'Poukam pierre',
-    image: '/assets/International-Day-of-the-African-Child-781x441.jpg',
+    image: '/assets/child1.jpg',
   },
   {
     name: 'Cyntiche nguemete',
-    image: '/assets/UN0640668.jpeg',
+    image: '/assets/child4.jpeg',
   },
   {
     name: 'Jessica Nguena',
-    image:
-      '/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg',
+    image: '/assets/child1.jpg',
   },
   {
     name: 'Poukam pierre',
-    image: '/assets/International-Day-of-the-African-Child-781x441.jpg',
+    image: '/assets/child1.jpg',
   },
   {
     name: 'Cyntiche nguemete',
-    image: '/assets/UN0640668.jpeg',
+    image: '/assets/child4.jpeg',
   },
   {
     name: 'Jessica Nguena',
-    image:
-      '/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg',
+    image: '/assets/child1.jpg',
   },
   {
     name: 'Jessica Nguena',
-    image:
-      '/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg',
+    image: '/assets/child1.jpg',
   },
 ];
 
@@ -57,13 +54,15 @@ function DonorsSection() {
           margin: '20px 0',
         }}
       >
-        {donors.map(({ name, image }, index) => (
-          <DonorCard key={index} name={name} image={image} />
-        ))}
+        <Box sx={{ display: 'grid', rowGap: 2 }}>
+          {donors.map(({ name, image }, index) => (
+            <DonorCard key={index} name={name} image={image} />
+          ))}
+        </Box>
         <Box
           sx={{
             backgroundColor: 'var(--primary)',
-            width: '80px',
+            width: '70px',
             position: 'absolute',
             left: 0,
             height: '100%',

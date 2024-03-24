@@ -1,5 +1,5 @@
-import { Box, Typography } from '@mui/material';
-import Image from 'next/image';
+import { getFirstTwoNameInitials } from '@lha-labs/utils';
+import { Avatar, Box, Typography } from '@mui/material';
 import { Donor } from './Donors';
 
 function DonorCard({ name, image }: Donor) {
@@ -7,22 +7,21 @@ function DonorCard({ name, image }: Donor) {
     <Box
       sx={{
         bgcolor: 'var(--background)',
-        height: '80px',
         display: 'grid',
         gridTemplateColumns: 'auto 1fr',
         columnGap: 2,
         alignItems: 'center',
         borderRadius: '52px',
-        padding: '10px 20px',
+        padding: '10px',
       }}
     >
-      <Image
+      <Avatar
         src={image}
         alt={`Donor ${name}`}
-        width={50}
-        height={50}
-        style={{ borderRadius: '50%', objectFit: 'cover' }}
-      />
+        sx={{ height: '50px', width: '50px' }}
+      >
+        {getFirstTwoNameInitials(name)}
+      </Avatar>
       <Typography variant="h4" color="var(--titleActive)" sx={{ padding: 0 }}>
         {name}
       </Typography>
