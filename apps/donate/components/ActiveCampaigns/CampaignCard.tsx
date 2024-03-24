@@ -24,20 +24,26 @@ export default function CampaignCard({
   const { formatMessage, formatDate } = useIntl();
   const { push } = useRouter();
   return (
-    <Box>
-      <Box padding="12px 0">
+    <Box
+      sx={{
+        display: 'grid',
+        rowGap: 2,
+      }}
+    >
+      <Box sx={{ justifySelf: 'center', display: 'grid', rowGap: 0.5 }}>
         <Typography
           sx={{
             fontWeight: 'var(--semiBold)',
             fontSize: '16px',
             lineHeight: '24px',
             color: 'var(--titleActive)',
+            textAlign: 'center',
           }}
         >
           {title}
         </Typography>
         <Box sx={{ display: 'flex', alignItems: 'center' }}>
-          <Box sx={{ display: 'flex', gap: '5px', alignItems: 'center' }}>
+          <Box sx={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
             <Icon icon={calendar} fontSize={24} color="var(--primary)" />
             <Typography
               sx={{
@@ -87,7 +93,12 @@ export default function CampaignCard({
       >
         {description}
       </Typography>
-      <Button variant="contained" color="primary" onClick={() => push(link)}>
+      <Button
+        variant="contained"
+        color="primary"
+        onClick={() => push(link)}
+        sx={{ borderRadius: '20px' }}
+      >
         {formatMessage({ id: 'participate' })}
       </Button>
       <CampaignImg />

@@ -16,7 +16,10 @@ function ActiveCampaigns() {
     },
   ];
   return (
-    <Box component="section" sx={{ padding: 1.5 }}>
+    <Box
+      component="section"
+      sx={{ padding: { laptop: '0 118px', mobile: '0 32px' } }}
+    >
       <Box
         sx={{
           display: 'flex',
