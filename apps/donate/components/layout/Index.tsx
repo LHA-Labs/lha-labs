@@ -1,9 +1,10 @@
-import { Box } from '@mui/material';
-import { PropsWithChildren } from 'react';
-import Footer from './Footer/Footer';
-import Header from './Header/Header';
+import { Box, Typography } from '@mui/material';
 
-export default function DonateLayout({ children }: PropsWithChildren) {
+export default function DonateLayout({ children }: { children: JSX.Element }) {
+  /* TODO: this function will receive
+    the header, footer and makeof it the layout,
+    such that other components just load into it
+  */
   return (
     <Box
       sx={{
@@ -13,9 +14,9 @@ export default function DonateLayout({ children }: PropsWithChildren) {
         rowGap: 1,
       }}
     >
-      <Header />
+      <Typography>Layout Header</Typography>
       {children}
-      <Footer />
+      <Typography>Layout Footer</Typography>
     </Box>
   );
 }
