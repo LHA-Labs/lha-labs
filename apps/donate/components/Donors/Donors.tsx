@@ -1,7 +1,8 @@
 import { Box } from '@mui/material';
+import Scrollbars from 'rc-scrollbars';
+import { useIntl } from 'react-intl';
 import SectionHeader from '../Landing/SectionHeader';
 import DonorCard from './DonorCard';
-import { useIntl } from 'react-intl';
 
 export interface Donor {
   name: string;
@@ -40,12 +41,12 @@ const donors: Donor[] = [
 ];
 
 function DonorsSection() {
-  const {formatMessage} = useIntl()
+  const { formatMessage } = useIntl();
   return (
     <Box sx={{ padding: { mobile: '12px 32px', laptop: '48px 118px' } }}>
       <SectionHeader
-        title={formatMessage({id:'ourDonors'})}
-        subtitle={formatMessage({id:'ourDonorsSubtitle'})}
+        title={formatMessage({ id: 'ourDonors' })}
+        subtitle={formatMessage({ id: 'ourDonorsSubtitle' })}
       />
       <Box
         sx={{
@@ -56,11 +57,17 @@ function DonorsSection() {
           margin: '20px 0',
         }}
       >
-        <Box sx={{ display: 'grid', rowGap: 2 }}>
-          {donors.map(({ name, image }, index) => (
-            <DonorCard key={index} name={name} image={image} />
-          ))}
-        </Box>
+        <Scrollbars
+          universal
+          autoHide
+          style={{ height: donors.length > 7 ? '587px' : donors.length * 86 }}
+        >
+          <Box sx={{ display: 'grid', rowGap: 2 }}>
+            {donors.map(({ name, image }, index) => (
+              <DonorCard key={index} name={name} image={image} />
+            ))}
+          </Box>
+        </Scrollbars>
         <Box
           sx={{
             backgroundColor: 'var(--primary)',
