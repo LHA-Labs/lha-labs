@@ -43,18 +43,20 @@ const donors: Donor[] = [
 function DonorsSection() {
   const { formatMessage } = useIntl();
   return (
-    <Box sx={{ padding: { mobile: '12px 32px', laptop: '48px 118px' } }}>
+    <Box
+      sx={{
+        display: 'grid',
+        rowGap: 3,
+        padding: { mobile: '12px 32px', laptop: '48px 118px' },
+      }}
+    >
       <SectionHeader
         title={formatMessage({ id: 'ourDonors' })}
         subtitle={formatMessage({ id: 'ourDonorsSubtitle' })}
       />
       <Box
         sx={{
-          height: '100%',
-          width: '100%',
-          backgroundColor: 'inherit',
           position: 'relative',
-          margin: '20px 0',
         }}
       >
         <Scrollbars
