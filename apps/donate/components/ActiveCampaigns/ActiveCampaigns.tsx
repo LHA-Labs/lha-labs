@@ -2,7 +2,7 @@ import { Box, Button, Typography } from "@mui/material";
 import Image from "next/image";
 import CampaignImg from "./campaignImgs";
 
-function OurCampaigns() {
+function ActiveCampaigns() {
     return (
         <Box component='section' sx={{ padding: 1.5 }}>
             <Box sx={{
@@ -60,4 +60,4 @@ function OurCampaigns() {
     );
 }
 
-export default OurCampaigns;
+export default ActiveCampaigns;
