@@ -1,6 +1,7 @@
 import { Box } from '@mui/material';
 import SectionHeader from '../Landing/SectionHeader';
 import DonorCard from './DonorCard';
+import { useIntl } from 'react-intl';
 
 export interface Donor {
   name: string;
@@ -39,11 +40,12 @@ const donors: Donor[] = [
 ];
 
 function DonorsSection() {
+  const {formatMessage} = useIntl()
   return (
-    <Box p={1.5}>
+    <Box sx={{ padding: { mobile: '12px 32px', laptop: '48px 118px' } }}>
       <SectionHeader
-        title="Our Bienfaiteurs"
-        subtitle="Supporting Hands: Our Generous Donors"
+        title={formatMessage({id:'ourDonors'})}
+        subtitle={formatMessage({id:'ourDonorsSubtitle'})}
       />
       <Box
         sx={{
