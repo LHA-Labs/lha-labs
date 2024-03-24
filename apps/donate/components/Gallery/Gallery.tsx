@@ -1,51 +1,42 @@
 /* eslint-disable @next/next/no-img-element */
 import { theme } from '@lha-labs/theme';
-import {
-  Box,
-  Button,
-  ImageList,
-  ImageListItem,
-  Tab,
-  Tabs,
-} from '@mui/material';
-import * as React from 'react';
-import { useState } from 'react';
+import { Box, Button, ImageListItem, Tab, Tabs } from '@mui/material';
+import { ReactNode, useState } from 'react';
 import { useIntl } from 'react-intl';
+import ResponsiveImageList from '../../utils/ResponsiveImageList';
 import SectionHeader from '../Landing/SectionHeader';
 
-const galleryImages = [
-  '/assets/child1.jpg',
-  '/assets/child2.jpg',
-  '/assets/child3.jpg',
-  '/assets/child4.jpeg',
-  '/assets/child1.jpg',
-  '/assets/child2.jpg',
-  '/assets/child3.jpg',
-  '/assets/child4.jpeg',
-];
-
+type TabComponent = Record<number, ReactNode>;
 export default function GallerySection() {
   const { formatMessage } = useIntl();
   const [activeTabIndex, setActiveTabIndex] = useState<number>(0);
 
   const tabTitles = ['photos', 'videos'];
+  const galleryImages = [
+    '/assets/child1.jpg',
+    '/assets/child2.jpg',
+    '/assets/child3.jpg',
+    '/assets/child4.jpeg',
+    '/assets/child1.jpg',
+    '/assets/child2.jpg',
+    '/assets/child3.jpg',
+    '/assets/child4.jpeg',
+  ];
 
-  const tabComponent: Record<number, React.ReactNode> = {
+  const tabComponent: TabComponent = {
     0: (
-      <Box sx={{ width: 'auto', height: 'auto', overflowY: 'scroll' }}>
-        <ImageList variant="masonry" cols={3} gap={8}>
-          {galleryImages.map((imageRef, index) => (
-            <ImageListItem key={index}>
-              <img
-                srcSet={`${imageRef}`}
-                src={`${imageRef}`}
-                alt="Let's help association gallery picture"
-                loading="lazy"
-              />
-            </ImageListItem>
-          ))}
-        </ImageList>
-      </Box>
+      <ResponsiveImageList>
+        {galleryImages.map((imageRef, index) => (
+          <ImageListItem key={index}>
+            <img
+              srcSet={`${imageRef}`}
+              src={`${imageRef}`}
+              alt="Let's help association gallery picture"
+              loading="lazy"
+            />
+          </ImageListItem>
+        ))}
+      </ResponsiveImageList>
     ),
     1: 'Hello world',
   };
