@@ -11,7 +11,7 @@ export default function GallerySection() {
   const { formatMessage } = useIntl();
   const [activeTabIndex, setActiveTabIndex] = useState<number>(0);
 
-  const tabTitles = ['photos', 'videos'];
+  const tabTitles = ['photos'];
   const galleryImages = [
     '/assets/child1.jpg',
     '/assets/child2.jpg',
@@ -38,7 +38,6 @@ export default function GallerySection() {
         ))}
       </ResponsiveImageList>
     ),
-    1: 'Hello world',
   };
 
   return (
@@ -63,7 +62,11 @@ export default function GallerySection() {
           indicatorColor="primary"
         >
           {tabTitles.map((tabTitle, index) => (
-            <Tab key={index} label={formatMessage({ id: tabTitle })} />
+            <Tab
+              disableRipple
+              key={index}
+              label={formatMessage({ id: tabTitle })}
+            />
           ))}
         </Tabs>
         {tabComponent[activeTabIndex]}
