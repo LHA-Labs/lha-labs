@@ -1,27 +1,13 @@
 import { Box } from '@mui/material';
-import Welcome_view from '../components/welcome';
-import About_us from '../components/about_us';
+import AboutUs from '../components/AboutUs/AboutUs';
+import HeroSection from '../components/HeroSection/HeroSection';
 import OurCampaigns from '../components/campaigns';
 
 export function Index() {
-  // const { formatMessage } = useIntl();
-  // const { activeLanguage, languageDispatch } = useLanguage();
   return (
-    <Box>
-      {/* <Button
-        variant="contained"
-        color="primary"
-        onClick={() =>
-          languageDispatch({
-            type: activeLanguage === 'en' ? 'USE_FRENCH' : 'USE_ENGLISH',
-          })
-        }
-      >
-        Change Language: {activeLanguage}
-      </Button>
-      <Typography variant="h1"> {formatMessage({ id: 'Hello' })}</Typography> */}
-      <Welcome_view />
-      <About_us />
+    <Box sx={{ padding: '32px 0' }}>
+      <HeroSection />
+      <AboutUs />
       <OurCampaigns />
     </Box>
   );
