@@ -93,12 +93,7 @@ export default function CampaignCard({
       >
         {description}
       </Typography>
-      <Button
-        variant="contained"
-        color="primary"
-        onClick={() => push(link)}
-        sx={{ borderRadius: '20px' }}
-      >
+      <Button variant="contained" color="primary" onClick={() => push(link)}>
         {formatMessage({ id: 'participate' })}
       </Button>
       <CampaignImg />

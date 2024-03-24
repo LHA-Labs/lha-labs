@@ -192,9 +192,12 @@ export function generateTheme(newTheme?: ThemeOptions): Theme {
     components: {
       // FOR EVERY COMPONENT, DESTRUCTURE AND ADD ...newTheme?.components?.componentName
       MuiButton: {
+        defaultProps:{
+          disableElevation:true
+        },
         styleOverrides: {
           root: ({ theme }) => ({
-            borderRadius: '8px',
+            borderRadius: '20px',
             textTransform: 'none',
             fontWeight: 'var(--semiBold)',
             lineHeight: '14px',

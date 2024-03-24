@@ -106,7 +106,7 @@ export default function Header() {
             <Button
               variant="contained"
               color="primary"
-              sx={{ borderRadius: '20px' }}
+              disableElevation={false}
             >
               {formatMessage({ id: 'makeADonation' })}
             </Button>

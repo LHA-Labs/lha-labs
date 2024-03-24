@@ -42,20 +42,10 @@ export default function GetInvolved() {
           justifySelf: 'start',
         }}
       >
-        <Button
-          variant="contained"
-          color="primary"
-          sx={{ borderRadius: '20px' }}
-          disableElevation
-        >
+        <Button variant="contained" color="primary">
           {formatMessage({ id: 'makeADonation' })}
         </Button>
-        <Button
-          variant="contained"
-          color="inherit"
-          sx={{ borderRadius: '20px', color: '#333' }}
-          disableElevation
-        >
+        <Button variant="contained" color="inherit" sx={{ color: '#333' }}>
           {formatMessage({ id: 'joinUs' })}
         </Button>
       </Box>

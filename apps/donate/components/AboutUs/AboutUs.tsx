@@ -55,19 +55,10 @@ function AboutUs() {
               columnGap: 2,
             }}
           >
-            <Button
-              variant="contained"
-              disableElevation
-              sx={{ borderRadius: '20px' }}
-            >
+            <Button variant="contained">
               {formatMessage({ id: 'joinUs' })}
             </Button>
-            <Button
-              variant="contained"
-              color="secondary"
-              disableElevation
-              sx={{ borderRadius: '20px' }}
-            >
+            <Button variant="contained" color="secondary">
               {formatMessage({ id: 'moreAboutUs' })}
             </Button>
           </Box>
