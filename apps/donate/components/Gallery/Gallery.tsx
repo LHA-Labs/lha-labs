@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import { theme } from '@lha-labs/theme';
 import {
   Box,
@@ -9,7 +10,8 @@ import {
 } from '@mui/material';
 import * as React from 'react';
 import { useState } from 'react';
-import SectionTitle from '../title_section';
+import { useIntl } from 'react-intl';
+import SectionHeader from '../Landing/SectionHeader';
 
 interface TabPanelProps {
   children: React.ReactNode;
@@ -17,23 +19,15 @@ interface TabPanelProps {
   value: number;
 }
 
-const itemData = [
-  {
-    img: '/assets/International-Day-of-the-African-Child-781x441.jpg',
-    title: 'Bed',
-  },
-  {
-    img: '/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg',
-    title: 'Books',
-  },
-  {
-    img: '/assets/UN0640668.jpeg',
-    title: 'Sink',
-  },
-  {
-    img: '/assets/téléchargement.jpeg',
-    title: 'Kitchen',
-  },
+const galleryImages = [
+  '/assets/International-Day-of-the-African-Child-781x441.jpg',
+  '/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg',
+  '/assets/UN0640668.jpeg',
+  '/assets/téléchargement.jpeg',
+  '/assets/International-Day-of-the-African-Child-781x441.jpg',
+  '/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg',
+  '/assets/UN0640668.jpeg',
+  '/assets/téléchargement.jpeg',
 ];
 function CustomTabPanel(props: TabPanelProps) {
   const { children, index, value } = props;
@@ -45,6 +39,7 @@ function CustomTabPanel(props: TabPanelProps) {
 }
 
 export default function GallerySection() {
+  const { formatMessage } = useIntl();
   const [value, setValue] = useState<number>(0);
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
@@ -53,11 +48,14 @@ export default function GallerySection() {
   return (
     <Box
       component="section"
-      sx={{ backgroundColor: theme.common.inputBackground }}
+      sx={{
+        backgroundColor: theme.common.inputBackground,
+        padding: { mobile: '12px 32px', laptop: '48px 118px' },
+      }}
     >
-      <SectionTitle
-        title="Gallery"
-        label="Our Valued PartnerShips in Making a Difference"
+      <SectionHeader
+        title={formatMessage({ id: 'gallery' })}
+        subtitle={formatMessage({ id: 'gallerySectionSubtitle' })}
       />
       <Box>
         <Box sx={{ padding: 1.5 }}>
@@ -80,13 +78,13 @@ export default function GallerySection() {
         </Box>
         <CustomTabPanel value={value} index={0}>
           <Box sx={{ width: 'auto', height: 'auto', overflowY: 'scroll' }}>
-            <ImageList variant="masonry" cols={2} gap={8}>
-              {itemData.map((item) => (
-                <ImageListItem key={item.img}>
+            <ImageList variant="masonry" cols={3} gap={8}>
+              {galleryImages.map((imageRef, index) => (
+                <ImageListItem key={index}>
                   <img
-                    srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-                    src={`${item.img}?w=248&fit=crop&auto=format`}
-                    alt={item.title}
+                    srcSet={`${imageRef}`}
+                    src={`${imageRef}`}
+                    alt="Let's help association gallery picture"
                     loading="lazy"
                   />
                 </ImageListItem>
@@ -100,7 +98,6 @@ export default function GallerySection() {
       </Box>
       <Box display="flex" justifyContent="center" padding={3}>
         <Button variant="outlined" color="primary">
-          {' '}
           View all
         </Button>
       </Box>

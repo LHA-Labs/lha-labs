@@ -34,4 +34,6 @@ export const website = {
   previous: 'Previous',
   next: 'Next',
   viewAll: 'View all',
+  gallery: 'Gallery',
+  gallerySectionSubtitle: 'Our Valued PartnerShips in Making a Difference',
 };
