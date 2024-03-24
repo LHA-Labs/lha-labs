@@ -117,7 +117,9 @@ export default function CampaignCard({
           {formatMessage({ id: 'participate' })}
         </Button>
       </Box>
-      <CampaignImg />
+      <Box sx={{ justifySelf: 'center' }}>
+        <CampaignImg />
+      </Box>
     </Box>
   );
 }
