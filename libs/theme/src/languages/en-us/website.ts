@@ -38,4 +38,6 @@ export const website = {
   gallerySectionSubtitle: 'Our Valued PartnerShips in Making a Difference',
   photos: 'Photos',
   videos: 'Videos',
+  ourDonorsSubtitle: 'Supporting Hands: Our Generous Donors',
+  ourDonors: 'Our Donors',
 };

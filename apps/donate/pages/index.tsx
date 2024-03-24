@@ -1,8 +1,9 @@
 import { Box } from '@mui/material';
 import AboutUs from '../components/AboutUs/AboutUs';
 import ActiveCampaigns from '../components/ActiveCampaigns/ActiveCampaigns';
-import HeroSection from '../components/HeroSection/HeroSection';
+import DonorsSection from '../components/Donors/Donors';
 import GallerySection from '../components/Gallery/Gallery';
+import HeroSection from '../components/HeroSection/HeroSection';
 
 export function Index() {
   return (
@@ -11,6 +12,7 @@ export function Index() {
       <AboutUs />
       <ActiveCampaigns />
       <GallerySection />
+      <DonorsSection />
     </Box>
   );
 }
