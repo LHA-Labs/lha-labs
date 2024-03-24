@@ -52,27 +52,39 @@ const bienfaiteurData: BienfaiteursInterface[] = [
 function OurBienfaiteurs() {
   return (
     <Box p={1.5}>
-      <SectionHeader title="Our Bienfaiteurs" subtitle=" " />
+      <SectionHeader
+        title="Our Bienfaiteurs"
+        subtitle="Supporting Hands: Our Generous Donors"
+      />
       <Box
         sx={{
           height: '100%',
           width: '100%',
           backgroundColor: 'inherit',
-          backgroundImage:
-            'linear-gradient(to right, var(--primary) 27%, rgba(0,0,0,0) 27%)',
           position: 'relative',
           margin: '20px 0',
         }}
       >
         {bienfaiteurData.map(({ name, image, profession }, index) => (
-          <Box key={index}>
-            <InfoBienfaiteur
-              name={name}
-              image={image}
-              profession={profession}
-            />
-          </Box>
+          <InfoBienfaiteur
+            key={index}
+            name={name}
+            image={image}
+            profession={profession}
+          />
         ))}
+        <Box
+          sx={{
+            backgroundColor: 'var(--primary)',
+            width: '80px',
+            position: 'absolute',
+            left: 0,
+            height: '100%',
+            borderRadius: '52px',
+            top: 0,
+            zIndex: -100,
+          }}
+        />
         <Box
           sx={{
             width: '100%',
@@ -82,7 +94,7 @@ function OurBienfaiteurs() {
             backgroundImage:
               'linear-gradient(to top, white 10%, rgba(0,0,0,0) )',
           }}
-        ></Box>
+        />
       </Box>
     </Box>
   );
