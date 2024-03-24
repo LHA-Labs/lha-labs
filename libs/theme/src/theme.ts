@@ -88,7 +88,7 @@ declare module '@mui/material/styles' {
 }
 
 const BACKGROUND = '#F5F5F5';
-const LINE = '#E0E0E0'
+const LINE = '#E0E0E0';
 
 export function generateTheme(newTheme?: ThemeOptions): Theme {
   return createTheme({
@@ -126,7 +126,7 @@ export function generateTheme(newTheme?: ThemeOptions): Theme {
     },
     typography: {
       ...{
-        fontFamily: ['Montserrat','Inter', 'sans-serif'].join(','),
+        fontFamily: ['Montserrat', 'Inter', 'sans-serif'].join(','),
         h1: {
           fontSize: '30px',
           lineHeight: '36px',
@@ -191,9 +191,14 @@ export function generateTheme(newTheme?: ThemeOptions): Theme {
     },
     components: {
       // FOR EVERY COMPONENT, DESTRUCTURE AND ADD ...newTheme?.components?.componentName
+      MuiTooltip: {
+        defaultProps: {
+          arrow: true,
+        },
+      },
       MuiButton: {
-        defaultProps:{
-          disableElevation:true
+        defaultProps: {
+          disableElevation: true,
         },
         styleOverrides: {
           root: ({ theme }) => ({
