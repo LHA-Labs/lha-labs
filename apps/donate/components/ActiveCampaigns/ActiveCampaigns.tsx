@@ -1,8 +1,10 @@
 import { Box, Button, Typography } from "@mui/material";
 import Image from "next/image";
 import CampaignImg from "./campaignImgs";
+import { useIntl } from "react-intl";
 
 function ActiveCampaigns() {
+    const {formatMessage} = useIntl()
     return (
         <Box component='section' sx={{ padding: 1.5 }}>
             <Box sx={{
@@ -14,7 +16,7 @@ function ActiveCampaigns() {
                 <Typography sx={{
                     color: 'var(--primary)',
                     fontWeight: 'var(--medium)',
-                }}>Our Campaigns</Typography>
+                }}>{formatMessage({id:'activeCampaigns'})}</Typography>
                 <Typography sx={{
                     textAlign: 'center',
                     fontWeight: 'var(--semiBold)',
@@ -22,7 +24,7 @@ function ActiveCampaigns() {
                     lineHeight: '24px',
                     color: 'var(--titleActive)'
 
-                }}>Transform Lives, Build Futures: Explore Our Impactful Campaigns</Typography>
+                }}>{formatMessage({id:'activeCampaignsSubtitle'})}</Typography>
                 <Box component='span' sx={{
                     border: '1px solid var(--primary)',
                     width: '90px',
