@@ -63,6 +63,8 @@ function ActiveCampaigns() {
         padding: { mobile: '12px 32px', laptop: '48px 118px' },
         display: 'grid',
         rowGap: { laptop: 4, mobile: 2.6 },
+        backgroundImage: 'url(/assets/campaigns_bg.png)',
+        backgroundPosition: '0 -280px',
       }}
     >
       <SectionHeader
