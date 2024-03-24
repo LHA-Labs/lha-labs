@@ -1,9 +1,8 @@
-import { Box, Divider, Typography } from '@mui/material';
-import { useIntl } from 'react-intl';
+import { Box } from '@mui/material';
+import SectionHeader from '../Landing/SectionHeader';
 import CampaignCard, { Campaign } from './CampaignCard';
 
 function ActiveCampaigns() {
-  const { formatMessage } = useIntl();
   const campaigns: Campaign[] = [
     {
       title: 'Opération 1 orphelin = 1 pack scolaire',
@@ -18,43 +17,12 @@ function ActiveCampaigns() {
   return (
     <Box
       component="section"
-      sx={{ padding: { laptop: '0 118px', mobile: '0 32px' } }}
+      sx={{ padding: { mobile: '12px 32px', laptop: '48px 118px' } }}
     >
-      <Box
-        sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          padding: '10px 0',
-        }}
-      >
-        <Typography
-          sx={{
-            color: 'var(--primary)',
-            fontWeight: 'var(--medium)',
-          }}
-        >
-          {formatMessage({ id: 'activeCampaigns' })}
-        </Typography>
-        <Typography
-          sx={{
-            textAlign: 'center',
-            fontWeight: 'var(--semiBold)',
-            fontSize: '20px',
-            lineHeight: '24px',
-            color: 'var(--titleActive)',
-          }}
-        >
-          {formatMessage({ id: 'activeCampaignsSubtitle' })}
-        </Typography>
-        <Divider
-          sx={{
-            border: '1px solid var(--primary)',
-            width: '90px',
-            marginTop: '10px',
-          }}
-        />
-      </Box>
+      <SectionHeader
+        title="activeCampaigns"
+        subtitle="activeCampaignsSubtitle"
+      />
       {campaigns.map((campaign, index) => (
         <CampaignCard key={index} campaign={campaign} />
       ))}

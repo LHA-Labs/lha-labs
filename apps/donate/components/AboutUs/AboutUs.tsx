@@ -1,7 +1,8 @@
 import { theme } from '@lha-labs/theme';
 import { shortenNumber } from '@lha-labs/utils';
-import { Box, Button, Divider, Typography } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 import { useIntl } from 'react-intl';
+import SectionHeader from '../Landing/SectionHeader';
 
 interface ILetsHelpStat {
   label: string;
@@ -25,35 +26,7 @@ function AboutUs() {
         padding: { mobile: '12px 32px', laptop: '48px 118px' },
       }}
     >
-      <Box
-        sx={{
-          padding: '10px 0',
-          display: 'grid',
-          justifyItems: 'center',
-        }}
-      >
-        <Typography color="primary">
-          {formatMessage({ id: 'aboutUs' })}
-        </Typography>
-        <Typography
-          textAlign="center"
-          sx={{
-            textAlign: 'center',
-            fontWeight: 'var(--bold)',
-            fontSize: '17px',
-            lineHeight: '24px',
-          }}
-        >
-          {formatMessage({ id: 'aboutUsSectionSubtitle' })}
-        </Typography>
-        <Divider
-          sx={{
-            border: '1px solid var(--primary)',
-            width: '90px',
-            marginTop: '10px',
-          }}
-        />
-      </Box>
+      <SectionHeader title={'aboutUs'} subtitle="aboutUsSectionSubtitle" />
       <Box
         sx={{
           display: 'grid',
