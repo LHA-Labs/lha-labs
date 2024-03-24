@@ -22,7 +22,16 @@ function DonorCard({ name, image }: Donor) {
       >
         {getFirstTwoNameInitials(name)}
       </Avatar>
-      <Typography variant="h4" color="var(--titleActive)" sx={{ padding: 0 }}>
+      <Typography
+        variant="h4"
+        color="var(--titleActive)"
+        sx={{
+          padding: 0,
+          overflow: 'hidden',
+          textWrap: 'nowrap',
+          textOverflow: 'ellipsis',
+        }}
+      >
         {name}
       </Typography>
     </Box>
