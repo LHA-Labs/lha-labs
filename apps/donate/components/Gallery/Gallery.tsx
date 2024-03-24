@@ -13,12 +13,6 @@ import { useState } from 'react';
 import { useIntl } from 'react-intl';
 import SectionHeader from '../Landing/SectionHeader';
 
-interface TabPanelProps {
-  children: React.ReactNode;
-  index: number;
-  value: number;
-}
-
 const galleryImages = [
   '/assets/International-Day-of-the-African-Child-781x441.jpg',
   '/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg',
@@ -29,20 +23,31 @@ const galleryImages = [
   '/assets/UN0640668.jpeg',
   '/assets/téléchargement.jpeg',
 ];
-function CustomTabPanel(props: TabPanelProps) {
-  const { children, index, value } = props;
-  return (
-    <Box role="tabpanel" hidden={value !== index}>
-      {value === index && <Box>{children}</Box>}
-    </Box>
-  );
-}
 
 export default function GallerySection() {
   const { formatMessage } = useIntl();
-  const [value, setValue] = useState<number>(0);
-  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
+  const [activeTabIndex, setActiveTabIndex] = useState<number>(0);
+
+  const tabTitles = ['photos', 'videos'];
+
+  const tabComponent: Record<number, React.ReactNode> = {
+    0: (
+      <Box sx={{ width: 'auto', height: 'auto', overflowY: 'scroll' }}>
+        <ImageList variant="masonry" cols={3} gap={8}>
+          {galleryImages.map((imageRef, index) => (
+            <ImageListItem key={index}>
+              <img
+                srcSet={`${imageRef}`}
+                src={`${imageRef}`}
+                alt="Let's help association gallery picture"
+                loading="lazy"
+              />
+            </ImageListItem>
+          ))}
+        </ImageList>
+      </Box>
+    ),
+    1: 'Hello world',
   };
 
   return (
@@ -51,56 +56,30 @@ export default function GallerySection() {
       sx={{
         backgroundColor: theme.common.inputBackground,
         padding: { mobile: '12px 32px', laptop: '48px 118px' },
+        display: 'grid',
+        rowGap: 2,
       }}
     >
       <SectionHeader
         title={formatMessage({ id: 'gallery' })}
         subtitle={formatMessage({ id: 'gallerySectionSubtitle' })}
       />
-      <Box>
-        <Box sx={{ padding: 1.5 }}>
-          <Tabs
-            value={value}
-            onChange={handleChange}
-            textColor="primary"
-            indicatorColor="primary"
-          >
-            <Tab
-              label="Photos"
-              sx={{
-                '.MuiTab-labelIcon': {
-                  fontWeight: 'var(--semiBold)',
-                },
-              }}
-            />
-            <Tab label="Vidéos" />
-          </Tabs>
-        </Box>
-        <CustomTabPanel value={value} index={0}>
-          <Box sx={{ width: 'auto', height: 'auto', overflowY: 'scroll' }}>
-            <ImageList variant="masonry" cols={3} gap={8}>
-              {galleryImages.map((imageRef, index) => (
-                <ImageListItem key={index}>
-                  <img
-                    srcSet={`${imageRef}`}
-                    src={`${imageRef}`}
-                    alt="Let's help association gallery picture"
-                    loading="lazy"
-                  />
-                </ImageListItem>
-              ))}
-            </ImageList>
-          </Box>
-        </CustomTabPanel>
-        <CustomTabPanel value={value} index={1}>
-          hello 2
-        </CustomTabPanel>
+      <Box sx={{ display: 'grid', rowGap: 2 }}>
+        <Tabs
+          value={activeTabIndex}
+          onChange={(_, tabIndex) => setActiveTabIndex(tabIndex)}
+          textColor="primary"
+          indicatorColor="primary"
+        >
+          {tabTitles.map((tabTitle, index) => (
+            <Tab key={index} label={formatMessage({ id: tabTitle })} />
+          ))}
+        </Tabs>
+        {tabComponent[activeTabIndex]}
       </Box>
-      <Box display="flex" justifyContent="center" padding={3}>
-        <Button variant="outlined" color="primary">
-          View all
-        </Button>
-      </Box>
+      <Button variant="outlined" color="primary" sx={{ justifySelf: 'center' }}>
+        {formatMessage({ id: 'viewAll' })}
+      </Button>
     </Box>
   );
 }
