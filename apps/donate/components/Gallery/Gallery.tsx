@@ -44,7 +44,7 @@ function CustomTabPanel(props: TabPanelProps) {
   );
 }
 
-export default function Gallery_view() {
+export default function GallerySection() {
   const [value, setValue] = useState<number>(0);
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);

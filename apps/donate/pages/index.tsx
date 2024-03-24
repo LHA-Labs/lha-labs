@@ -2,7 +2,7 @@ import { Box } from '@mui/material';
 import AboutUs from '../components/AboutUs/AboutUs';
 import ActiveCampaigns from '../components/ActiveCampaigns/ActiveCampaigns';
 import HeroSection from '../components/HeroSection/HeroSection';
-import Gallery_view from '../components/gallery/inde';
+import GallerySection from '../components/Gallery/Gallery';
 
 export function Index() {
   return (
@@ -10,7 +10,7 @@ export function Index() {
       <HeroSection />
       <AboutUs />
       <ActiveCampaigns />
-      <Gallery_view />
+      <GallerySection />
     </Box>
   );
 }
