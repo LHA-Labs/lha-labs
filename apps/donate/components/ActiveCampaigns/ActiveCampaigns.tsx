@@ -1,7 +1,13 @@
 import previous from '@iconify-icons/fluent/chevron-left-32-regular';
 import next from '@iconify-icons/fluent/chevron-right-32-regular';
 import { Icon } from '@iconify/react';
-import { Box, IconButton, LinearProgress, Tooltip } from '@mui/material';
+import {
+  Box,
+  Button,
+  IconButton,
+  LinearProgress,
+  Tooltip,
+} from '@mui/material';
 import { useState } from 'react';
 import { useIntl } from 'react-intl';
 import SectionHeader from '../Landing/SectionHeader';
@@ -101,6 +107,13 @@ function ActiveCampaigns() {
             </IconButton>
           </Tooltip>
         </Box>
+        <Button
+          variant="outlined"
+          color="primary"
+          sx={{ justifySelf: 'center' }}
+        >
+          {formatMessage({ id: 'viewAll' })}
+        </Button>
       </Box>
     </Box>
   );

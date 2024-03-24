@@ -33,4 +33,5 @@ export const website = {
   participate: 'Participate',
   previous: 'Previous',
   next: 'Next',
+  viewAll: 'View all',
 };
