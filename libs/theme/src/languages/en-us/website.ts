@@ -30,4 +30,5 @@ export const website = {
   activeCampaigns: 'Active Campaigns',
   activeCampaignsSubtitle:
     'Transform Lives, Build Futures: Explore Our Impactful Campaigns',
+  participate: 'Participate',
 };
