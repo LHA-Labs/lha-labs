@@ -1,8 +1,8 @@
+import * as React from 'react';
 import { Reducer, useContext, useReducer } from 'react';
-import { Action, Language, LanguageType, State } from './language.interface';
 import LanguageContext from './languageContext';
 
-export const supportedLanguages: LanguageType[] = ['en', 'fr'];
+import { Action, Language, LanguageType, State } from './language.interface';
 
 const languageReducer: Reducer<Language, Action> = (
   state: State,
