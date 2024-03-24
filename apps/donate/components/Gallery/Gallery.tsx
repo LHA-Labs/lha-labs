@@ -48,6 +48,9 @@ export default function GallerySection() {
         padding: { mobile: '12px 32px', laptop: '48px 118px' },
         display: 'grid',
         rowGap: 2,
+        backgroundImage: 'url(/assets/gallery_bg.png)',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: '0px 50%',
       }}
     >
       <SectionHeader
