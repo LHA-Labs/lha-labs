@@ -14,14 +14,14 @@ import { useIntl } from 'react-intl';
 import SectionHeader from '../Landing/SectionHeader';
 
 const galleryImages = [
-  '/assets/International-Day-of-the-African-Child-781x441.jpg',
-  '/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg',
-  '/assets/UN0640668.jpeg',
-  '/assets/téléchargement.jpeg',
-  '/assets/International-Day-of-the-African-Child-781x441.jpg',
-  '/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg',
-  '/assets/UN0640668.jpeg',
-  '/assets/téléchargement.jpeg',
+  '/assets/child1.jpg',
+  '/assets/child2.jpg',
+  '/assets/child3.jpg',
+  '/assets/child4.jpeg',
+  '/assets/child1.jpg',
+  '/assets/child2.jpg',
+  '/assets/child3.jpg',
+  '/assets/child4.jpeg',
 ];
 
 export default function GallerySection() {
