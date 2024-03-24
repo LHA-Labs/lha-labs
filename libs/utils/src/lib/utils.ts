@@ -98,3 +98,17 @@ export function generatePassword(useSpecialChar: boolean = false, length = 8) {
   }
   return retVal;
 }
+
+/**
+ * get the initials of the first two names
+ *
+ * @param {string} name - the name whose initials we want
+ * @returns {string} - two character initials
+ */
+export function getFirstTwoNameInitials(name: string) {
+  return name
+    .split(' ')
+    .splice(0, 2)
+    .map((_) => _[0].toUpperCase())
+    .join('');
+}
