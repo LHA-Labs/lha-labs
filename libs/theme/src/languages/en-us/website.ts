@@ -40,4 +40,6 @@ export const website = {
   videos: 'Videos',
   ourDonorsSubtitle: 'Supporting Hands: Our Generous Donors',
   ourDonors: 'Our Donors',
+  ourSponsors: 'Our Sponsors',
+  ourSponsorsSectionSubtitle: 'Our Valued Partnerships in Making a Difference',
 };
