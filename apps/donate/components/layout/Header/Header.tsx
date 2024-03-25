@@ -1,0 +1,185 @@
+import CaretIcon from '@iconify-icons/fluent/chevron-down-24-regular';
+import MenuIcon from '@iconify-icons/fluent/line-horizontal-3-20-regular';
+import { Icon } from '@iconify/react';
+import { useLanguage } from '@lha-labs/theme';
+import {
+  Box,
+  Button,
+  IconButton,
+  ImageListItem,
+  Toolbar,
+  Typography,
+} from '@mui/material';
+import Image from 'next/image';
+import { useState } from 'react';
+import { useIntl } from 'react-intl';
+import LayoutMenu from '../../../Interface';
+import LogoLHA from '../../../assets/LogoLha.png';
+import Sidebar from '../SideBar/SideBar';
+
+export default function Header() {
+  const { formatMessage } = useIntl();
+
+  const { activeLanguage, languageDispatch } = useLanguage();
+
+  const [activeItem, setActiveItem] = useState(0);
+
+  const [sidebarOpen, setSidebarOpen] = useState(false);
+
+  const items: LayoutMenu[] = [
+    {
+      title: 'home',
+      active: true,
+    },
+    {
+      title: 'aboutUs',
+      active: false,
+    },
+    {
+      title: 'partners',
+      active: false,
+    },
+    {
+      title: 'donate',
+      active: false,
+    },
+  ];
+
+  const itemClick = (index: number) => {
+    setActiveItem(index);
+    closeSidebar();
+  };
+
+  const openSidebar = () => {
+    setSidebarOpen(true);
+  };
+
+  const closeSidebar = () => {
+    setSidebarOpen(false);
+  };
+
+  return (
+    <>
+      <Sidebar
+        open={sidebarOpen}
+        onClose={closeSidebar}
+        items={items}
+        activeItem={activeItem}
+        onItemClick={itemClick}
+      />
+      <Box
+        sx={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          alignItems: 'center',
+          backgroundColor: 'var(--background, #F5F5F5)',
+          padding: '24px 94px',
+        }}
+      >
+        <Toolbar
+          sx={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            width: '100%',
+            paddingRight: '0px',
+            paddingLeft: '0px',
+          }}
+        >
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <ImageListItem sx={{ width: '167px', height: '63px' }}>
+              <Image
+                src={LogoLHA}
+                alt="Logo LHA"
+                style={{ width: '167px', height: '63px' }}
+              />
+            </ImageListItem>
+          </Box>
+
+          <Box
+            sx={{
+              display: { desktop: 'flex', mobile: 'none' },
+              alignItems: 'center',
+              gap: '24px',
+            }}
+          >
+            {items.map(({ title, active }, index) => (
+              <Box
+                onClick={() => itemClick(index)}
+                key={index}
+                sx={{
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  color: 'var(--Body, #2F3A45)',
+                  fontFamily: 'Montserrat, sans-serif',
+                  fontSize: '12px',
+                  fontStyle: 'normal',
+                  fontWeight: 500,
+                  cursor: 'pointer',
+                  lineHeight: '16px',
+                  paddingBottom: '8px',
+                  borderBottom: activeItem === index ? '2px solid red' : 'none',
+                }}
+              >
+                {formatMessage({ id: `${title}` })}
+              </Box>
+            ))}
+          </Box>
+
+          <Box
+            sx={{
+              display: { desktop: 'flex', mobile: 'none' },
+              justifyContent: 'center',
+              alignItems: 'center',
+              gap: '12px',
+            }}
+          >
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                gap: '4px',
+                cursor: 'pointer',
+              }}
+              onClick={() =>
+                languageDispatch({
+                  type: activeLanguage === 'en' ? 'USE_FRENCH' : 'USE_ENGLISH',
+                })
+              }
+            >
+              <Typography
+                sx={{
+                  color: 'var(--Body, #2F3A45)',
+                  fontFamily: 'Montserrat, sans-serif',
+                  fontSize: 12,
+                  fontStyle: 'normal',
+                  fontWeight: 600,
+                  lineHeight: '20px',
+                }}
+              >
+                {activeLanguage}
+              </Typography>
+              <Icon icon={CaretIcon} color="#2F3A45" />
+            </Box>
+            <Button
+              variant="contained"
+              color="primary"
+              size="large"
+              sx={{ borderRadius: '50px' }}
+            >
+              {formatMessage({ id: 'makeADonation' })}
+            </Button>
+          </Box>
+          {/* side BAr */}
+          <IconButton
+            sx={{ display: { desktop: 'none', mobile: 'block' } }}
+            onClick={openSidebar}
+          >
+            <Icon icon={MenuIcon} color="#2F3A45" />
+          </IconButton>
+        </Toolbar>
+      </Box>
+    </>
+  );
+}
