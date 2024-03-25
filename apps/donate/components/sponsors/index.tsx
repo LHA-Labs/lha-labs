@@ -1,7 +1,7 @@
 import { Box, Button } from '@mui/material';
 import Image from 'next/image';
-import SectionHeader from '../Landing/SectionHeader';
 import { useIntl } from 'react-intl';
+import SectionHeader from '../Landing/SectionHeader';
 
 const styleImgContainer = {
   border: '2px solid var(--primary)',
@@ -24,7 +24,7 @@ function Sponsors() {
     <Box p={1.5}>
       <SectionHeader
         title={formatMessage({ id: 'ourSponsors' })}
-        subtitle={formatMessage({id:'ourSponsorsSectionSubtitle'})}
+        subtitle={formatMessage({ id: 'ourSponsorsSectionSubtitle' })}
       />
       <Box
         sx={{
@@ -36,50 +36,25 @@ function Sponsors() {
       >
         <Box sx={styleImgGroup}>
           <Box sx={styleImgContainer}>
-            <Image
-              src="/assets/7b7fdd3d54793b9740024883f6e34a4d.png"
-              alt=""
-              width={80}
-              height={80}
-            />
+            <Image src="/assets/logo_glom.png" alt="" width={80} height={80} />
           </Box>
-          <Image
-            src="/assets/3031c3fd3a0775273647780e4e0a3523.png"
-            alt=""
-            width={70}
-            height={30}
-          />
+          <Image src="/assets/line_heart.png" alt="" width={70} height={30} />
           <Box sx={styleImgContainer}>
-            <Image
-              src="/assets/9a93772d63e2561a586468531debef7d.png"
-              alt=""
-              width={80}
-              height={80}
-            />
+            <Image src="/assets/logo_hif.png" alt="" width={80} height={80} />
           </Box>
         </Box>
         <Box sx={styleImgGroup}>
           <Box sx={styleImgContainer}>
             <Image
-              src="/assets/660a732da7659a4159674ddcedb323b1.png"
+              src="/assets/logo_hopehome.png"
               alt=""
               width={80}
               height={80}
             />
           </Box>
-          <Image
-            src="/assets/3031c3fd3a0775273647780e4e0a3523.png"
-            alt=""
-            width={70}
-            height={30}
-          />
+          <Image src="/assets/line_heart.png" alt="" width={70} height={30} />
           <Box sx={styleImgContainer}>
-            <Image
-              src="/assets/de0e4e9fe8c08a5d7231f0d9ee277ea4.jpg"
-              alt=""
-              width={80}
-              height={80}
-            />
+            <Image src="/assets/logo_asbed.jpg" alt="" width={80} height={80} />
           </Box>
         </Box>
       </Box>
@@ -91,11 +66,9 @@ function Sponsors() {
         }}
       >
         <Button variant="contained" color="primary">
-          {' '}
           Devenier partenaire
         </Button>
         <Button variant="outlined" color="primary">
-          {' '}
           View all
         </Button>
       </Box>
