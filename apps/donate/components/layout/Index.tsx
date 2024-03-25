@@ -1,5 +1,9 @@
-import { Box, Typography } from '@mui/material';
-
+import { Box } from '@mui/material';
+import Footer from './Footer/Footer';
+import Header from './Header/Header';
+// import AboutUs from '../../pages/AboutUs/AboutUs';
+// import OurPartners from '../../pages/OurPartners/OurPartners';
+import Donate from '../../pages/Donate/Donate';
 export default function DonateLayout({ children }: { children: JSX.Element }) {
   /* TODO: this function will receive
     the header, footer and makeof it the layout,
@@ -11,12 +15,14 @@ export default function DonateLayout({ children }: { children: JSX.Element }) {
         minHeight: '100svh',
         display: 'grid',
         gridTemplateRows: 'auto 1fr auto',
-        rowGap: 1,
       }}
     >
-      <Typography>Layout Header</Typography>
-      {children}
-      <Typography>Layout Footer</Typography>
+      <Header />
+      {/* <AboutUs /> */}
+      {/* <OurPartners /> */}
+      <Donate />
+      {/* {children} */}
+      <Footer />
     </Box>
   );
 }
