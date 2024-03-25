@@ -1,6 +1,6 @@
 import { Box, Button } from "@mui/material";
-import SectionTitle from "../title_section";
 import Image from "next/image";
+import SectionHeader from "../Landing/SectionHeader";
 
 const styleImgContainer =
 {
@@ -22,7 +22,7 @@ const styleImgGroup = {
 function Sponsors() {
     return (
         <Box p={1.5}>
-            <SectionTitle title="Our Sponsors" label="Our Valued Partnerships in Making a Difference" />
+            <SectionHeader title="Our Sponsors" subtitle="Our Valued Partnerships in Making a Difference" />
             <Box sx={{
                 display: 'flex',
                 flexDirection: 'column',
