@@ -1,4 +1,7 @@
-import { Box, Typography } from '@mui/material';
+import { Box } from '@mui/material';
+import Footer from './Footer/Footer';
+import Header from './Header/Header';
+import AboutUs from '../../pages/AboutUs/AboutUs';
 
 export default function DonateLayout({ children }: { children: JSX.Element }) {
   /* TODO: this function will receive
@@ -14,9 +17,10 @@ export default function DonateLayout({ children }: { children: JSX.Element }) {
         rowGap: 1,
       }}
     >
-      <Typography>Layout Header</Typography>
-      {children}
-      <Typography>Layout Footer</Typography>
+      <Header />
+      <AboutUs />
+      {/* {children} */}
+      <Footer />
     </Box>
   );
 }
