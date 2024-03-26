@@ -1,24 +1,22 @@
-import { useLanguage } from '@lha-labs/theme';
-import { Box, Button, Typography } from '@mui/material';
-import { useIntl } from 'react-intl';
+import { Box } from '@mui/material';
+import AboutUs from '../components/AboutUs/AboutUs';
+import ActiveCampaigns from '../components/ActiveCampaigns/ActiveCampaigns';
+import DonorsSection from '../components/Donors/Donors';
+import HeroSection from '../components/HeroSection/HeroSection';
+import GallerySection from '../components/gallery/Gallery';
+import Sponsors from '../components/sponsors';
+import PreFooter from '../components/Landing/PreFooter';
 
 export function Index() {
-  const { formatMessage } = useIntl();
-  const { activeLanguage, languageDispatch } = useLanguage();
   return (
-    <Box>
-      <Button
-        variant="contained"
-        color="primary"
-        onClick={() =>
-          languageDispatch({
-            type: activeLanguage === 'en' ? 'USE_FRENCH' : 'USE_ENGLISH',
-          })
-        }
-      >
-        Change Language: {activeLanguage}
-      </Button>
-      <Typography variant="h1"> {formatMessage({ id: 'Hello' })}</Typography>
+    <Box sx={{ padding: '32px 0 0 0' }}>
+      <HeroSection />
+      <AboutUs />
+      <ActiveCampaigns />
+      <GallerySection />
+      <DonorsSection />
+      <Sponsors />
+      <PreFooter />
     </Box>
   );
 }
