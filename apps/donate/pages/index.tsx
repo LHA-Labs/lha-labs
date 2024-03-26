@@ -5,6 +5,7 @@ import DonorsSection from '../components/Donors/Donors';
 import HeroSection from '../components/HeroSection/HeroSection';
 import GallerySection from '../components/gallery/Gallery';
 import Sponsors from '../components/sponsors';
+import PreFooter from '../components/Landing/PreFooter';
 
 export function Index() {
   return (
@@ -15,6 +16,7 @@ export function Index() {
       <GallerySection />
       <DonorsSection />
       <Sponsors />
+      <PreFooter />
     </Box>
   );
 }

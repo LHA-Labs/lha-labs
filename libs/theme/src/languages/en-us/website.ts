@@ -43,4 +43,5 @@ export const website = {
   ourSponsors: 'Our Sponsors',
   ourSponsorsSectionSubtitle: 'Our Valued Partnerships in Making a Difference',
   becomePartner: 'Become a partner',
+  preFooterMessage: 'HELP US BUILD A COMMUNITY FOR OUR CHILDREN AND ORPHANS',
 };
