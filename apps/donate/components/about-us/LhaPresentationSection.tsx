@@ -5,21 +5,13 @@ import React from 'react';
 import imgOfTeam1 from '../../assets/imgOfTeam1.png';
 import imgOfTeam2 from '../../assets/imgOfTeam2.png';
 import { useIntl } from 'react-intl';
+import { ILetsHelpStat, useStats } from '../../services/stats';
+import { shortenNumber } from '@lha-labs/utils';
 
 export default function LhaPresentationSection() {
   const { formatMessage } = useIntl();
 
-  interface stats {
-    quantity: string;
-    nature: string;
-  }
-  const statistic: stats[] = [
-    { quantity: '+2M', nature: 'donsReçu' },
-    { quantity: '+100', nature: 'Benevoles' },
-    { quantity: '+6', nature: 'partners' },
-    { quantity: '+500', nature: 'orphans' },
-    { quantity: '+15', nature: 'Sponsors' },
-  ];
+  const statistic: ILetsHelpStat[] = useStats();
 
   return (
     <Box
@@ -91,7 +83,7 @@ export default function LhaPresentationSection() {
           alignItems: 'center',
         }}
       >
-        {statistic.map(({ quantity, nature }, index) => (
+        {statistic.map(({ value, label }, index) => (
           <Box
             key={index}
             sx={{
@@ -112,10 +104,9 @@ export default function LhaPresentationSection() {
               }}
             >
               <Typography variant="h1" sx={{ color: 'titleActive' }}>
-                {formatMessage({ id: `${quantity}` })}
+                {`+${shortenNumber(value)}`}
               </Typography>
               <Box
-                // color="primary"
                 sx={{
                   borderRadius: '4px',
                   display: 'flex',
@@ -132,7 +123,7 @@ export default function LhaPresentationSection() {
                     color: 'titleActive',
                   }}
                 >
-                  {formatMessage({ id: `${nature}` })}
+                  {formatMessage({ id: `${label}` })}
                 </Typography>
               </Box>
             </Box>

@@ -3,21 +3,11 @@ import { shortenNumber } from '@lha-labs/utils';
 import { Box, Button, Typography } from '@mui/material';
 import { useIntl } from 'react-intl';
 import SectionHeader from '../SectionHeader';
+import { ILetsHelpStat, useStats } from '../../../services/stats';
 
-interface ILetsHelpStat {
-  label: string;
-  value: number;
-  unit?: string;
-}
 function AboutUs() {
   const { formatMessage } = useIntl();
-  const letsHelpStatistics: ILetsHelpStat[] = [
-    { label: 'donors', value: 100 },
-    { label: 'sponsors', value: 15 },
-    { label: 'orphans', value: 500 },
-    { label: 'receivedDonations', value: 2000000, unit: 'XAF' },
-    { label: 'partners', value: 16 },
-  ];
+  const letsHelpStatistics: ILetsHelpStat[] = useStats();
   return (
     <Box
       component="section"
