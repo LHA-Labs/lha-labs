@@ -1,11 +1,11 @@
 import { Box } from '@mui/material';
-import AboutUs from '../components/AboutUs/AboutUs';
-import ActiveCampaigns from '../components/ActiveCampaigns/ActiveCampaigns';
-import DonorsSection from '../components/Donors/Donors';
-import HeroSection from '../components/HeroSection/HeroSection';
-import GallerySection from '../components/gallery/Gallery';
-import Sponsors from '../components/sponsors';
+import AboutUs from '../components/Landing/AboutUs/AboutUs';
+import ActiveCampaigns from '../components/Landing/ActiveCampaigns/ActiveCampaigns';
+import DonorsSection from '../components/Landing/Donors/Donors';
+import GallerySection from '../components/Landing/Gallery/Gallery';
+import HeroSection from '../components/Landing/HeroSection/HeroSection';
 import PreFooter from '../components/Landing/PreFooter';
+import Sponsors from '../components/Landing/sponsors';
 
 export function Index() {
   return (
