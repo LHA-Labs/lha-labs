@@ -27,7 +27,10 @@ export default function GetInvolved() {
           fontWeight: 600,
           fontSize: '14px',
           lineHeight: '28px',
-          width: '70%',
+          width: {
+            mobile: '100%',
+            laptop: '70%',
+          },
         }}
       >
         {formatMessage({
@@ -39,7 +42,10 @@ export default function GetInvolved() {
           display: 'grid',
           gridAutoFlow: 'column',
           columnGap: 2,
-          justifySelf: 'start',
+          justifySelf: {
+            mobile: 'stretch',
+            laptop: 'start',
+          },
         }}
       >
         <Button variant="contained" color="primary">

@@ -11,17 +11,19 @@ function CampaignImg() {
             <Box className="blank"></Box>
             <Box sx={{ position: 'relative', width: '4rem', height: '4rem' }}>
               <Image
-                src="/assets/International-Day-of-the-African-Child-781x441.jpg"
+                src="/assets/child1.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
             <Box sx={{ position: 'relative', width: '4rem', height: '4rem' }}>
               <Image
-                src="/assets/International-Day-of-the-African-Child-781x441.jpg"
+                src="/assets/child1.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -32,6 +34,7 @@ function CampaignImg() {
                 src="/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -40,6 +43,7 @@ function CampaignImg() {
                 src="/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -51,17 +55,19 @@ function CampaignImg() {
             <Box className="blank"></Box>
             <Box sx={{ position: 'relative', width: '4rem', height: '4rem' }}>
               <Image
-                src="/assets/International-Day-of-the-African-Child-781x441.jpg"
+                src="/assets/child1.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
             <Box sx={{ position: 'relative', width: '4rem', height: '4rem' }}>
               <Image
-                src="/assets/International-Day-of-the-African-Child-781x441.jpg"
+                src="/assets/child1.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -72,6 +78,7 @@ function CampaignImg() {
                 src="/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -80,6 +87,7 @@ function CampaignImg() {
                 src="/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -91,17 +99,19 @@ function CampaignImg() {
             <Box className="blank"></Box>
             <Box sx={{ position: 'relative', width: '4rem', height: '4rem' }}>
               <Image
-                src="/assets/International-Day-of-the-African-Child-781x441.jpg"
+                src="/assets/child1.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
             <Box sx={{ position: 'relative', width: '4rem', height: '4rem' }}>
               <Image
-                src="/assets/International-Day-of-the-African-Child-781x441.jpg"
+                src="/assets/child1.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -112,6 +122,7 @@ function CampaignImg() {
                 src="/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -120,6 +131,7 @@ function CampaignImg() {
                 src="/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -131,17 +143,19 @@ function CampaignImg() {
             <Box className="blank"></Box>
             <Box sx={{ position: 'relative', width: '4rem', height: '4rem' }}>
               <Image
-                src="/assets/International-Day-of-the-African-Child-781x441.jpg"
+                src="/assets/child1.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
             <Box sx={{ position: 'relative', width: '4rem', height: '4rem' }}>
               <Image
-                src="/assets/International-Day-of-the-African-Child-781x441.jpg"
+                src="/assets/child1.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -149,17 +163,19 @@ function CampaignImg() {
           <Box>
             <Box sx={{ position: 'relative', width: '4rem', height: '4rem' }}>
               <Image
-                src="/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg"
+                src="/assets/child2.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
             <Box sx={{ position: 'relative', width: '4rem', height: '4rem' }}>
               <Image
-                src="/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg"
+                src="/assets/child2.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -171,17 +187,19 @@ function CampaignImg() {
             <Box className="blank"></Box>
             <Box sx={{ position: 'relative', width: '4rem', height: '4rem' }}>
               <Image
-                src="/assets/International-Day-of-the-African-Child-781x441.jpg"
+                src="/assets/child1.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
             <Box sx={{ position: 'relative', width: '4rem', height: '4rem' }}>
               <Image
-                src="/assets/International-Day-of-the-African-Child-781x441.jpg"
+                src="/assets/child1.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -189,17 +207,19 @@ function CampaignImg() {
           <Box>
             <Box sx={{ position: 'relative', width: '4rem', height: '4rem' }}>
               <Image
-                src="/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg"
+                src="/assets/child2.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
             <Box sx={{ position: 'relative', width: '4rem', height: '4rem' }}>
               <Image
-                src="/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg"
+                src="/assets/child2.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -211,17 +231,19 @@ function CampaignImg() {
             <Box className="blank"></Box>
             <Box sx={{ position: 'relative', width: '4rem', height: '4rem' }}>
               <Image
-                src="/assets/International-Day-of-the-African-Child-781x441.jpg"
+                src="/assets/child3.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
             <Box sx={{ position: 'relative', width: '4rem', height: '4rem' }}>
               <Image
-                src="/assets/International-Day-of-the-African-Child-781x441.jpg"
+                src="/assets/child3.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -229,17 +251,19 @@ function CampaignImg() {
           <Box>
             <Box sx={{ position: 'relative', width: '4rem', height: '4rem' }}>
               <Image
-                src="/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg"
+                src="/assets/child2.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
             <Box sx={{ position: 'relative', width: '4rem', height: '4rem' }}>
               <Image
-                src="/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg"
+                src="/assets/child2.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>

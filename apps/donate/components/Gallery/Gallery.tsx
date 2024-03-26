@@ -53,10 +53,7 @@ export default function GallerySection() {
         backgroundPosition: '0px 50%',
       }}
     >
-      <SectionHeader
-        title={formatMessage({ id: 'gallery' })}
-        subtitle={formatMessage({ id: 'gallerySectionSubtitle' })}
-      />
+      <SectionHeader title={'gallery'} subtitle={'gallerySectionSubtitle'} />
       <Box sx={{ display: 'grid', rowGap: 2 }}>
         <Tabs
           value={activeTabIndex}
