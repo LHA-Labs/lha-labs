@@ -2,7 +2,7 @@ import { theme } from '@lha-labs/theme';
 import { shortenNumber } from '@lha-labs/utils';
 import { Box, Button, Typography } from '@mui/material';
 import { useIntl } from 'react-intl';
-import SectionHeader from '../Landing/SectionHeader';
+import SectionHeader from '../SectionHeader';
 
 interface ILetsHelpStat {
   label: string;

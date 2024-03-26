@@ -1,7 +1,7 @@
 import { Box, Button } from '@mui/material';
 import Image from 'next/image';
 import { useIntl } from 'react-intl';
-import SectionHeader from '../Landing/SectionHeader';
+import SectionHeader from '../SectionHeader';
 
 interface Sponsor {
   name: string;

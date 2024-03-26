@@ -10,7 +10,7 @@ import {
 } from '@mui/material';
 import { useState } from 'react';
 import { useIntl } from 'react-intl';
-import SectionHeader from '../Landing/SectionHeader';
+import SectionHeader from '../SectionHeader';
 import CampaignCard, { Campaign } from './CampaignCard';
 
 function ActiveCampaigns() {

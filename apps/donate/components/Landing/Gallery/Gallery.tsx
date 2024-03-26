@@ -3,8 +3,8 @@ import { theme } from '@lha-labs/theme';
 import { Box, Button, ImageListItem, Tab, Tabs } from '@mui/material';
 import { ReactNode, useState } from 'react';
 import { useIntl } from 'react-intl';
-import ResponsiveImageList from '../../utils/ResponsiveImageList';
-import SectionHeader from '../Landing/SectionHeader';
+import ResponsiveImageList from '../../../utils/ResponsiveImageList';
+import SectionHeader from '../SectionHeader';
 
 type TabComponent = Record<number, ReactNode>;
 export default function GallerySection() {

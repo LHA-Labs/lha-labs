@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 import Scrollbars from 'rc-scrollbars';
-import SectionHeader from '../Landing/SectionHeader';
+import SectionHeader from '../SectionHeader';
 import DonorCard from './DonorCard';
 
 export interface Donor {
