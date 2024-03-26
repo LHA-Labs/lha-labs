@@ -76,6 +76,12 @@ function Sponsors() {
                 display: 'grid',
                 alignItems: 'center',
                 justifyItems: 'center',
+                '&:hover': {
+                  transition: '0.4s',
+                  boxShadow:
+                    '0px 8px 18px -6px rgba(24, 44, 75, 0.12), 0px 12px 42px -4px rgba(24, 44, 75, 0.12)',
+                  backgroundColor: '#a500000f',
+                },
               }}
               key={index}
             >
