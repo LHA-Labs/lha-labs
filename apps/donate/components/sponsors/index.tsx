@@ -3,23 +3,37 @@ import Image from 'next/image';
 import { useIntl } from 'react-intl';
 import SectionHeader from '../Landing/SectionHeader';
 
-const styleImgContainer = {
-  border: '2px solid var(--primary)',
-  borderRadius: '50%',
-  width: '150px',
-  height: '150px',
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-};
+interface Sponsor {
+  name: string;
+  logo_ref: string;
+  website: string;
+}
 
-const styleImgGroup = {
-  display: 'flex',
-  alignItems: 'center',
-  justifyContent: 'center',
-};
 function Sponsors() {
   const { formatMessage } = useIntl();
+
+  const sponsors: Sponsor[] = [
+    {
+      logo_ref: '/assets/logo_glom.png',
+      name: 'GLOM',
+      website: 'https://google.com',
+    },
+    {
+      logo_ref: '/assets/logo_hif.png',
+      name: 'Hope Investment Fund',
+      website: 'https://google.com',
+    },
+    {
+      logo_ref: '/assets/logo_hopehome.png',
+      name: 'HopeHome',
+      website: 'https://google.com',
+    },
+    {
+      logo_ref: '/assets/logo_asbed.jpg',
+      name: 'ASBED',
+      website: 'https://google.com',
+    },
+  ];
   return (
     <Box p={1.5}>
       <SectionHeader
@@ -28,35 +42,49 @@ function Sponsors() {
       />
       <Box
         sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          gap: 2,
-          padding: '20px 0',
+          display: 'grid',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 150px))',
         }}
       >
-        <Box sx={styleImgGroup}>
-          <Box sx={styleImgContainer}>
-            <Image src="/assets/logo_glom.png" alt="" width={80} height={80} />
+        {sponsors.map(({ logo_ref, name, website }, index) => (
+          <Box
+            key={index}
+            sx={{
+              display: 'grid',
+              gridTemplateColumns: 'auto 1fr',
+              alignItems: 'center',
+            }}
+          >
+            <Box
+              sx={{
+                border: '2px solid var(--primary)',
+                borderRadius: '50%',
+                width: '150px',
+                height: '150px',
+                display: 'grid',
+                alignItems: 'center',
+                justifyItems: 'center',
+              }}
+              key={index}
+            >
+              <Image
+                src={logo_ref}
+                alt={name}
+                width={80}
+                height={80}
+                style={{ objectFit: 'contain' }}
+              />
+            </Box>
+            {index !== sponsors.length - 1 && (
+              <Image
+                src="/assets/line_heart.png"
+                alt=""
+                width={60}
+                height={22}
+              />
+            )}
           </Box>
-          <Image src="/assets/line_heart.png" alt="" width={70} height={30} />
-          <Box sx={styleImgContainer}>
-            <Image src="/assets/logo_hif.png" alt="" width={80} height={80} />
-          </Box>
-        </Box>
-        <Box sx={styleImgGroup}>
-          <Box sx={styleImgContainer}>
-            <Image
-              src="/assets/logo_hopehome.png"
-              alt=""
-              width={80}
-              height={80}
-            />
-          </Box>
-          <Image src="/assets/line_heart.png" alt="" width={70} height={30} />
-          <Box sx={styleImgContainer}>
-            <Image src="/assets/logo_asbed.jpg" alt="" width={80} height={80} />
-          </Box>
-        </Box>
+        ))}
       </Box>
       <Box
         sx={{
