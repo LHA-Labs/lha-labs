@@ -9,7 +9,7 @@ import PreFooter from '../components/Landing/PreFooter';
 
 export function Index() {
   return (
-    <Box sx={{ padding: '32px 0' }}>
+    <Box sx={{ padding: '32px 0 0 0' }}>
       <HeroSection />
       <AboutUs />
       <ActiveCampaigns />

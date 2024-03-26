@@ -10,7 +10,6 @@ export default function DonateLayout({ children }: PropsWithChildren) {
         minHeight: '100svh',
         display: 'grid',
         gridTemplateRows: 'auto 1fr auto',
-        rowGap: 1,
       }}
     >
       <Header />
