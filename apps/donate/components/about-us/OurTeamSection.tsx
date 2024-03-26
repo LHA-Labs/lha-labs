@@ -3,7 +3,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import TitleAndSubtitle from '../../components/layout/TitleAndSubtitle/TitleAndSubtitle';
+import TitleAndSubtitle from '../layout/TitleAndSubtitle/TitleAndSubtitle';
 import React from 'react';
 import LorrainPic from '../../assets/LorrainPic.png';
 import Image, { StaticImageData } from 'next/image';
