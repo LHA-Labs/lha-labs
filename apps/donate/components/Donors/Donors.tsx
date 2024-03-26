@@ -1,6 +1,5 @@
 import { Box } from '@mui/material';
 import Scrollbars from 'rc-scrollbars';
-import { useIntl } from 'react-intl';
 import SectionHeader from '../Landing/SectionHeader';
 import DonorCard from './DonorCard';
 
@@ -41,7 +40,6 @@ const donors: Donor[] = [
 ];
 
 function DonorsSection() {
-  const { formatMessage } = useIntl();
   return (
     <Box
       sx={{
@@ -56,10 +54,7 @@ function DonorsSection() {
           rowGap: 3,
         }}
       >
-        <SectionHeader
-          title={formatMessage({ id: 'ourDonors' })}
-          subtitle={formatMessage({ id: 'ourDonorsSubtitle' })}
-        />
+        <SectionHeader title={'ourDonors'} subtitle={'ourDonorsSubtitle'} />
         <Box
           sx={{
             position: 'relative',

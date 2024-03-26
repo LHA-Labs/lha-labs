@@ -37,8 +37,8 @@ function Sponsors() {
   return (
     <Box p={1.5}>
       <SectionHeader
-        title={formatMessage({ id: 'ourSponsors' })}
-        subtitle={formatMessage({ id: 'ourSponsorsSectionSubtitle' })}
+        title={'ourSponsors'}
+        subtitle={'ourSponsorsSectionSubtitle'}
       />
       <Box
         sx={{
