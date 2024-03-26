@@ -1,12 +1,11 @@
-import { Box } from '@mui/system';
+import { shortenNumber } from '@lha-labs/utils';
 import { Divider, Typography } from '@mui/material';
+import { Box } from '@mui/system';
 import Image from 'next/image';
-import React from 'react';
+import { useIntl } from 'react-intl';
 import imgOfTeam1 from '../../assets/imgOfTeam1.png';
 import imgOfTeam2 from '../../assets/imgOfTeam2.png';
-import { useIntl } from 'react-intl';
 import { ILetsHelpStat, useStats } from '../../services/stats';
-import { shortenNumber } from '@lha-labs/utils';
 
 export default function LhaPresentationSection() {
   const { formatMessage } = useIntl();
@@ -18,28 +17,8 @@ export default function LhaPresentationSection() {
       sx={{
         display: 'grid',
         gap: '30px',
-        marginTop: '50px',
       }}
     >
-      <Box
-        sx={{
-          display: 'inline-flex',
-          padding: '0px 207px',
-          flexDirection: 'column',
-          alignItems: 'center',
-          gap: '10px',
-        }}
-      >
-        <Typography variant="h1" sx={{ textAlign: 'center' }}>
-          {formatMessage({ id: 'lhaPresentationTitle' })}
-        </Typography>
-        <Typography variant="body1" sx={{ textAlign: 'center' }}>
-          {formatMessage({ id: 'lhaPresentationSubtitle1' })}
-          <Typography variant="body1" color="primary">
-            {formatMessage({ id: 'lhaPresentationSubtitle2' })}
-          </Typography>
-        </Typography>
-      </Box>
       <Box
         sx={{
           display: 'flex',
@@ -83,7 +62,7 @@ export default function LhaPresentationSection() {
           alignItems: 'center',
         }}
       >
-        {statistic.map(({ value, label }, index) => (
+        {statistic.map(({ value, label, unit }, index) => (
           <Box
             key={index}
             sx={{
@@ -104,7 +83,7 @@ export default function LhaPresentationSection() {
               }}
             >
               <Typography variant="h1" sx={{ color: 'titleActive' }}>
-                {`+${shortenNumber(value)}`}
+                {`+${shortenNumber(value)} ${unit ?? ''}`}
               </Typography>
               <Box
                 sx={{

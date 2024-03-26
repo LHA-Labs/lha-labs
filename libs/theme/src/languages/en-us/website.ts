@@ -1,11 +1,9 @@
 export const website = {
-  //our Team section
-  lhaPresentationTitle:
+  aboutUsHeaderTitle:
     'Welcome to Let’s Help Association, where passion meets purpose',
-  lhaPresentationSubtitle1:
+  aboutUsSubtitle1:
     'At the heart of our journey is a commitment to making a meaningful difference. Discover who we are, our story, and the collective',
-  lhaPresentationSubtitle2: 'positive change and inspire hope.',
-  donsReçu: 'donations Received',
+  aboutUsSubtitle2: 'positive change and inspire hope.',
 
   //our Team
   roleLorrain: 'Technical Team Leader',
