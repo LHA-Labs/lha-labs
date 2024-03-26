@@ -35,7 +35,13 @@ function Sponsors() {
     },
   ];
   return (
-    <Box p={1.5}>
+    <Box
+      sx={{
+        padding: { mobile: '12px 32px', laptop: '48px 118px' },
+        display: 'grid',
+        rowGap: { laptop: 4, mobile: 2.6 },
+      }}
+    >
       <SectionHeader
         title={'ourSponsors'}
         subtitle={'ourSponsorsSectionSubtitle'}
@@ -43,7 +49,10 @@ function Sponsors() {
       <Box
         sx={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fit, minmax(210px, 150px))',
+          gridTemplateColumns: 'repeat(auto-fit, minmax(150px, 150px))',
+          justifyContent: 'center',
+          rowGap: 3,
+          columnGap: 5,
         }}
       >
         {sponsors.map(({ logo_ref, name, website }, index) => (
@@ -75,14 +84,6 @@ function Sponsors() {
                 style={{ objectFit: 'contain' }}
               />
             </Box>
-            {index !== sponsors.length - 1 && (
-              <Image
-                src="/assets/line_heart.png"
-                alt=""
-                width={60}
-                height={22}
-              />
-            )}
           </Box>
         ))}
       </Box>
