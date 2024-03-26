@@ -49,7 +49,7 @@ function DonorsSection() {
     >
       <Box
         sx={{
-          padding: { mobile: '12px 32px', laptop: '48px 118px' },
+          padding: { mobile: '12px 32px 0 32px', laptop: '48px 118px 0 118px' },
           display: 'grid',
           rowGap: 3,
         }}
