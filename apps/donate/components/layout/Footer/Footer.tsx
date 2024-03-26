@@ -1,6 +1,5 @@
 import { Box, Divider } from '@mui/material';
 import Image from 'next/image';
-import ImgFooter from '../../../assets/ImgFooter.png';
 import GetInTouch from './GetInTouch';
 import GetInvolved from './GetInvolved';
 import Organisation from './Organisation';
@@ -30,9 +29,10 @@ export default function Footer() {
           sx={{ border: '1px solid #E0E0E0' }}
         />
         <Image
-          src={ImgFooter}
+          src="/assets/img_footer.png"
           alt="Img Footer"
-          style={{ width: '75px', height: 'auto' }}
+          width={74}
+          height={74.4}
         />
         <Divider
           orientation="horizontal"
