@@ -14,6 +14,7 @@ function CampaignImg() {
                 src="/assets/child1.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -22,6 +23,7 @@ function CampaignImg() {
                 src="/assets/child1.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -32,6 +34,7 @@ function CampaignImg() {
                 src="/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -40,6 +43,7 @@ function CampaignImg() {
                 src="/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -54,6 +58,7 @@ function CampaignImg() {
                 src="/assets/child1.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -62,6 +67,7 @@ function CampaignImg() {
                 src="/assets/child1.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -72,6 +78,7 @@ function CampaignImg() {
                 src="/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -80,6 +87,7 @@ function CampaignImg() {
                 src="/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -94,6 +102,7 @@ function CampaignImg() {
                 src="/assets/child1.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -102,6 +111,7 @@ function CampaignImg() {
                 src="/assets/child1.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -112,6 +122,7 @@ function CampaignImg() {
                 src="/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -120,6 +131,7 @@ function CampaignImg() {
                 src="/assets/InternationalAfricanChild-InPage-PaulMbonankiraTearfund.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -134,6 +146,7 @@ function CampaignImg() {
                 src="/assets/child1.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -142,6 +155,7 @@ function CampaignImg() {
                 src="/assets/child1.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -152,6 +166,7 @@ function CampaignImg() {
                 src="/assets/child2.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -160,6 +175,7 @@ function CampaignImg() {
                 src="/assets/child2.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -174,6 +190,7 @@ function CampaignImg() {
                 src="/assets/child1.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -182,6 +199,7 @@ function CampaignImg() {
                 src="/assets/child1.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -192,6 +210,7 @@ function CampaignImg() {
                 src="/assets/child2.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -200,6 +219,7 @@ function CampaignImg() {
                 src="/assets/child2.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -214,6 +234,7 @@ function CampaignImg() {
                 src="/assets/child3.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -222,6 +243,7 @@ function CampaignImg() {
                 src="/assets/child3.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -232,6 +254,7 @@ function CampaignImg() {
                 src="/assets/child2.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
@@ -240,6 +263,7 @@ function CampaignImg() {
                 src="/assets/child2.jpg"
                 alt="campaigns img"
                 fill={true}
+                sizes='4rem'
                 style={{ objectFit: 'cover' }}
               />
             </Box>
