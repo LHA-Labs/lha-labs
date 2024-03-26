@@ -6,7 +6,7 @@ import SectionHeader from '../Landing/SectionHeader';
 interface Sponsor {
   name: string;
   logo_ref: string;
-  website: string;
+  website?: string;
 }
 
 function Sponsors() {
@@ -65,6 +65,9 @@ function Sponsors() {
             }}
           >
             <Box
+              component="a"
+              href={website}
+              target="_blank"
               sx={{
                 border: '2px solid var(--primary)',
                 borderRadius: '50%',
