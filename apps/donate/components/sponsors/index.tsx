@@ -91,13 +91,14 @@ function Sponsors() {
           display: 'grid',
           gridAutoFlow: 'column',
           gap: 3,
+          justifyContent: 'center',
         }}
       >
         <Button variant="contained" color="primary">
-          Devenier partenaire
+          {formatMessage({ id: 'becomePartner' })}
         </Button>
         <Button variant="outlined" color="primary">
-          View all
+          {formatMessage({ id: 'viewAll' })}
         </Button>
       </Box>
     </Box>

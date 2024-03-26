@@ -42,4 +42,5 @@ export const website = {
   ourDonors: 'Our Donors',
   ourSponsors: 'Our Sponsors',
   ourSponsorsSectionSubtitle: 'Our Valued Partnerships in Making a Difference',
+  becomePartner: 'Become a partner',
 };
