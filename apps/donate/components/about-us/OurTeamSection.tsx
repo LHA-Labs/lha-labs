@@ -14,10 +14,9 @@ export default function OurTeamSection() {
   return (
     <Box
       sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        gap: '35px',
+        display: 'grid',
+        justifyItems: 'center',
+        rowGap: 4,
       }}
     >
       <SectionHeader title={'ourTeam'} subtitle={'ourTeamSubtitle'} />
@@ -25,8 +24,8 @@ export default function OurTeamSection() {
         <Box
           key={index}
           sx={{
-            display: 'flex',
-            justifyContent: 'center',
+            display: 'grid',
+            gridAutoFlow: 'column',
             alignItems: 'center',
             gap: '50px',
             width: '55%',
@@ -46,7 +45,7 @@ export default function OurTeamSection() {
           <Box
             sx={{
               display: 'grid',
-              gap: 3,
+              gap: 2,
             }}
           >
             <Box
@@ -68,22 +67,25 @@ export default function OurTeamSection() {
                 {formatMessage({ id: `${activeMember.role}` })}
               </Typography>
             </Box>
-            <Typography
-              sx={{
-                color: 'var(--body)',
-                fontWeight: 500,
-                lineHeight: '28px',
-              }}
-            >
-              {formatMessage({ id: `${activeMember.message}` })}
-            </Typography>
-            <Box sx={{ display: 'flex' }}>
-              {Object.keys(activeMember.socials).map((key, index) => (
-                <MemberSocialIcon
-                  key={index}
-                  link={activeMember.socials[key]}
-                />
-              ))}
+            <Box>
+              <Typography
+                sx={{
+                  color: 'var(--body)',
+                  fontWeight: 500,
+                  lineHeight: '28px',
+                  textAlign: 'justify',
+                }}
+              >
+                {formatMessage({ id: `${activeMember.message}` })}
+              </Typography>
+              <Box sx={{ display: 'flex' }}>
+                {Object.keys(activeMember.socials).map((key, index) => (
+                  <MemberSocialIcon
+                    key={index}
+                    link={activeMember.socials[key]}
+                  />
+                ))}
+              </Box>
             </Box>
           </Box>
         </Box>
