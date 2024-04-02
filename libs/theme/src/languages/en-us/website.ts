@@ -34,7 +34,7 @@ export const website = {
   donors: 'Donors',
   sponsors: 'Sponsors',
   orphans: 'Orphans',
-  receivedDonations: 'Donation Received',
+  receivedDonations: 'Received',
   moreAboutUs: 'More about us',
   aboutUsMessage:
     "Let's Help Association, devoted to compassion and social impact, is committed to providing meaningful assistance to communities in need. Through diverse humanitarian initiatives, the association aims to make a positive difference by offering tangible support, whether through the provision of essential resources, education, or the promotion of well-being. Together, we build bridges to a better future, one act at a time, fostering a spirit of unity and solidarity",
