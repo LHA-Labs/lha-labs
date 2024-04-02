@@ -56,5 +56,6 @@ export const website = {
   ourSponsorsSectionSubtitle: 'Our Valued Partnerships in Making a Difference',
   becomePartner: 'Become a partner',
   preFooterMessage: 'HELP US BUILD A COMMUNITY FOR OUR CHILDREN AND ORPHANS',
+  joinUsPreFooterMessage:
+    "Join Let's Help Association and help in pushing our mission in education with you!",
 };
-
