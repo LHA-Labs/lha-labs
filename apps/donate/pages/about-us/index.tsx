@@ -1,8 +1,8 @@
 import { Box } from '@mui/material';
-// import OurTeamSection from './OurTeamSection';
 import AboutUsHeader from '../../components/about-us/AboutUsHeader';
 import LhaPresentationSection from '../../components/about-us/LhaPresentationSection';
 import LhaStats from '../../components/about-us/LhaStats';
+import OurTeamSection from '../../components/about-us/OurTeamSection';
 
 export default function AboutUs() {
   return (
@@ -16,7 +16,7 @@ export default function AboutUs() {
       <AboutUsHeader />
       <LhaPresentationSection />
       <LhaStats />
-      {/* <OurTeamSection /> */}
+      <OurTeamSection />
     </Box>
   );
 }
