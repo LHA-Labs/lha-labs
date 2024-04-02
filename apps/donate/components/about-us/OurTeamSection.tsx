@@ -51,10 +51,10 @@ export default function OurTeamSection() {
             sx={{
               display: 'grid',
               gridAutoFlow: 'column',
-              justifyContent: 'center',
+              justifyItems:'center',
               alignItems: 'center',
               columnGap: '18px',
-              paddingLeft: { mobile: '100px', laptop: '400px' },
+              padding: { mobile: '0 20px', laptop: '0 100px' },
             }}
           >
             {members.map((member, index) => (
