@@ -1,33 +1,14 @@
 import { getFirstTwoNameInitials } from '@lha-labs/utils';
 import { Avatar, Box, Typography } from '@mui/material';
 import { useIntl } from 'react-intl';
+import { Member, useTeam } from '../../services/team';
 import SectionHeader from '../Landing/SectionHeader';
 import MemberSocialIcon from './MemberSocialIcon';
 
-interface Member {
-  fullname: string;
-  role: string;
-  message: string;
-  imageRef: string;
-  socials: Record<string, string>;
-}
 export default function OurTeamSection() {
   const { formatMessage } = useIntl();
 
-  const members: Member[] = [
-    {
-      fullname: 'Tchakoumi Lorrain',
-      role: 'Technial team lead',
-      imageRef: '/assets/lorrain.png',
-      message: `At Let's help association, our mission is to empower lives through compassionate initiatives. By promoting education and fostering sustainable solutions, we envision a brighter, and more lucrative life for all our disadvantaged orphans`,
-      socials: {
-        socialX: 'https://x.com',
-        instagram: 'https://instagram.com',
-        facebook: 'https://facebook.com',
-        linkedin: 'https://linkedin.com',
-      },
-    },
-  ];
+  const members: Member[] = useTeam();
   const activeMember = members[0];
 
   return (
