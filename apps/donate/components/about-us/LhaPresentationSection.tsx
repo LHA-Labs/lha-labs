@@ -14,7 +14,7 @@ export default function LhaPresentationSection() {
       <Box
         sx={{
           display: 'grid',
-          gridTemplateColumns: '1fr 1fr 1fr',
+          gridTemplateColumns: { laptop: '1fr 1fr 1fr', mobile: '1fr' },
           columnGap: 2,
           padding: { mobile: '12px 32px', laptop: '48px 118px' },
         }}
@@ -27,7 +27,7 @@ export default function LhaPresentationSection() {
 
         <Box
           sx={{
-            display: 'grid',
+            display: { laptop: 'grid', mobile: 'none' },
             gridTemplateRows: '1fr 1fr',
             gap: 2,
             height: '100%',
@@ -46,11 +46,13 @@ export default function LhaPresentationSection() {
           />
         </Box>
 
-        <Image
-          src={imgOfTeam1}
-          alt="Managing team"
-          style={{ height: '100%', width: '100%', objectFit: 'cover' }}
-        />
+        <Box sx={{ display: { mobile: 'none', laptop: 'block' } }}>
+          <Image
+            src={imgOfTeam1}
+            alt="Managing team"
+            style={{ height: '100%', width: '100%', objectFit: 'cover' }}
+          />
+        </Box>
       </Box>
     </Box>
   );
