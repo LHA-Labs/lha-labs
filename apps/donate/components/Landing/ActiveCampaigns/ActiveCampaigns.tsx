@@ -72,7 +72,7 @@ function ActiveCampaigns() {
         subtitle="activeCampaignsSubtitle"
       />
       <Box key={activeCampaignIndex} data-aos={'flip-left'}>
-        <CampaignCard campaign={campaigns[activeCampaignIndex]} />
+        <CampaignCard {...campaigns[activeCampaignIndex]} />
       </Box>
       <Box sx={{ display: 'grid', rowGap: 2 }}>
         <LinearProgress

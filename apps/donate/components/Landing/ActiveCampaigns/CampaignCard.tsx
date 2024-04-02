@@ -15,12 +15,13 @@ export interface Campaign {
   description: string;
 }
 
-interface CampaignCardProps {
-  campaign: Campaign;
-}
 export default function CampaignCard({
-  campaign: { title, date, link, place, description },
-}: CampaignCardProps) {
+  title,
+  date,
+  link,
+  place,
+  description,
+}: Campaign) {
   const { formatMessage, formatDate } = useIntl();
   const { push } = useRouter();
   return (
