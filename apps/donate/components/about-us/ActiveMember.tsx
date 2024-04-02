@@ -14,10 +14,12 @@ export default function ActiveMember({
     <Box
       sx={{
         display: 'grid',
-        gridAutoFlow: 'column',
+        gridAutoFlow: { laptop: 'column', mobile: 'row' },
         alignItems: 'center',
-        gap: '50px',
-        width: '55%',
+        justifyItems: 'center',
+        columnGap: '50px',
+        rowGap: '20px',
+        width: { laptop: '55%', mobile: '100%' },
       }}
     >
       <Avatar

@@ -4,7 +4,6 @@ import SectionHeader from '../Landing/SectionHeader';
 import ActiveMember from './ActiveMember';
 
 export default function OurTeamSection() {
-
   const members: Member[] = useTeam();
   const activeMember = members[0];
 
@@ -14,6 +13,7 @@ export default function OurTeamSection() {
         display: 'grid',
         justifyItems: 'center',
         rowGap: 4,
+        padding: { mobile: '0 32px', laptop: '0 118px' },
       }}
     >
       <SectionHeader title={'ourTeam'} subtitle={'ourTeamSubtitle'} />
