@@ -7,7 +7,7 @@ export default function AboutUsHeader() {
     <Box
       sx={{
         display: 'inline-flex',
-        padding: '0px 207px',
+        padding: { mobile: '12px 32px', laptop: '0 207px' },
         flexDirection: 'column',
         alignItems: 'center',
         gap: '10px',
