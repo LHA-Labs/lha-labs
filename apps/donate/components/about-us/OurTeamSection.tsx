@@ -1,83 +1,32 @@
-import {
-  Avatar,
-  Box,
-  IconButton,
-  ImageListItem,
-  Typography,
-} from '@mui/material';
-import Image, { StaticImageData } from 'next/image';
-import { useIntl } from 'react-intl';
-import LorrainPic from '../../assets/LorrainPic.png';
-import { Linkedin, SocialX } from '../layout/Footer/SocialIcons';
-import TitleAndSubtitle from '../layout/TitleAndSubtitle/TitleAndSubtitle';
-import SectionHeader from '../Landing/SectionHeader';
 import { getFirstTwoNameInitials } from '@lha-labs/utils';
+import { Avatar, Box, Typography } from '@mui/material';
+import { useIntl } from 'react-intl';
+import SectionHeader from '../Landing/SectionHeader';
+import MemberSocialIcon from './MemberSocialIcon';
 
+interface Member {
+  fullname: string;
+  role: string;
+  message: string;
+  imageRef: string;
+  socials: Record<string, string>;
+}
 export default function OurTeamSection() {
   const { formatMessage } = useIntl();
 
-  const socialMediaLinks = [
+  const members: Member[] = [
     {
-      Icon: Linkedin,
-      link: 'lien_facebook',
-    },
-    // { icon: <TwitterIcon />, link: 'lien_twitter' },
-    // { icon: <InstagramIcon />, link: 'lien_instagram' },
-    // { icon: <LinkedInIcon />, link: 'lien_linkedin' },
-  ];
-
-  const tt = {
-    socialX: SocialX,
-  };
-
-  interface MembersInfo {
-    name: string;
-    role: string;
-    description: string;
-    linkFacebook: string;
-    linkTwitter: string;
-    linkInstagram: string;
-    linkLinkedin: string;
-    image: {
-      src: StaticImageData;
-      alt: string;
-      width: number;
-      height: number;
-    };
-  }
-
-  const members: MembersInfo[] = [
-    {
-      name: 'Lorrain Tchakoumi',
-      role: 'roleLorrain',
-      description: 'descriptionLorrain',
-      linkFacebook: 'lien_facebook',
-      linkTwitter: 'lien_twitter',
-      linkInstagram: 'lien_instagram',
-      linkLinkedin: 'lien_linkedin',
-      image: {
-        src: LorrainPic,
-        alt: 'Picture Lorrain',
-        width: 246,
-        height: 246,
+      fullname: 'Tchakoumi Lorrain',
+      role: 'Technial team lead',
+      imageRef: '/assets/lorrain.png',
+      message: `At Let's help association, our mission is to empower lives through compassionate initiatives. By promoting education and fostering sustainable solutions, we envision a brighter, and more lucrative life for all our disadvantaged orphans`,
+      socials: {
+        socialX: 'https://x.com',
+        instagram: 'https://instagram.com',
+        facebook: 'https://facebook.com',
+        linkedin: 'https://linkedin.com',
       },
     },
-    // {
-    //   name: 'Christiane Possi ',
-    //   role: 'Tresoriere',
-    //   description:
-    //     'At Let’s help Association, our mission is to empower lives through compassionate initiatives. By promoting education and fostering sustainable solutions, we envision a brighter, more.',
-    //   linkFacebook: 'lien_facebook',
-    //   linkTwitter: 'lien_twitter',
-    //   linkInstagram: 'lien_instagram',
-    //   linkLinkedin: 'lien_linkedin',
-    //   image: {
-    //     src: '/LorrainPic.png',
-    //     alt: 'Picture Chris',
-    //     width: 246,
-    //     height: 246,
-    //   },
-    // },
   ];
   const activeMember = members[0];
 
@@ -103,15 +52,15 @@ export default function OurTeamSection() {
           }}
         >
           <Avatar
-            src={activeMember.image.src}
-            alt={activeMember.image.alt}
+            src={activeMember.imageRef}
+            alt={activeMember.fullname}
             sx={{
-              width: activeMember.image.width,
-              height: activeMember.image.height,
+              width: 246,
+              height: 246,
               border: '1px solid #A50000',
             }}
           >
-            {getFirstTwoNameInitials(activeMember.name)}
+            {getFirstTwoNameInitials(activeMember.fullname)}
           </Avatar>
           <Box
             sx={{
@@ -132,7 +81,7 @@ export default function OurTeamSection() {
                   paddingBottom: 0,
                 }}
               >
-                {activeMember.name}
+                {activeMember.fullname}
               </Typography>
               <Typography variant="h3" sx={{ color: '#333' }}>
                 {formatMessage({ id: `${activeMember.role}` })}
@@ -141,33 +90,18 @@ export default function OurTeamSection() {
             <Typography
               sx={{
                 color: 'var(--body)',
-                fontWeight: 600,
+                fontWeight: 500,
                 lineHeight: '28px',
               }}
             >
-              {formatMessage({ id: `${activeMember.description}` })}
+              {formatMessage({ id: `${activeMember.message}` })}
             </Typography>
             <Box sx={{ display: 'flex' }}>
-              {socialMediaLinks.map(({ Icon, link }, index) => (
-                <a
+              {Object.keys(activeMember.socials).map((key, index) => (
+                <MemberSocialIcon
                   key={index}
-                  href={link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <Box
-                    sx={{
-                      display: 'flex',
-                      justifyContent: 'center',
-                      alignItems: 'flex-start',
-                      gap: '18px',
-                    }}
-                  >
-                    <IconButton size="small">
-                      {<Icon socialHandle="@lha" sx={{ fontSize: '50px' }} />}
-                    </IconButton>
-                  </Box>
-                </a>
+                  link={activeMember.socials[key]}
+                />
               ))}
             </Box>
           </Box>
