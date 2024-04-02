@@ -1,23 +1,34 @@
-import { Box, IconButton, ImageListItem, Typography } from '@mui/material';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import TitleAndSubtitle from '../layout/TitleAndSubtitle/TitleAndSubtitle';
-import React from 'react';
-import LorrainPic from '../../assets/LorrainPic.png';
+import {
+  Avatar,
+  Box,
+  IconButton,
+  ImageListItem,
+  Typography,
+} from '@mui/material';
 import Image, { StaticImageData } from 'next/image';
 import { useIntl } from 'react-intl';
+import LorrainPic from '../../assets/LorrainPic.png';
+import { Linkedin, SocialX } from '../layout/Footer/SocialIcons';
+import TitleAndSubtitle from '../layout/TitleAndSubtitle/TitleAndSubtitle';
+import SectionHeader from '../Landing/SectionHeader';
+import { getFirstTwoNameInitials } from '@lha-labs/utils';
 
 export default function OurTeamSection() {
   const { formatMessage } = useIntl();
 
   const socialMediaLinks = [
-    { icon: <FacebookIcon />, link: 'lien_facebook' },
-    { icon: <TwitterIcon />, link: 'lien_twitter' },
-    { icon: <InstagramIcon />, link: 'lien_instagram' },
-    { icon: <LinkedInIcon />, link: 'lien_linkedin' },
+    {
+      Icon: Linkedin,
+      link: 'lien_facebook',
+    },
+    // { icon: <TwitterIcon />, link: 'lien_twitter' },
+    // { icon: <InstagramIcon />, link: 'lien_instagram' },
+    // { icon: <LinkedInIcon />, link: 'lien_linkedin' },
   ];
+
+  const tt = {
+    socialX: SocialX,
+  };
 
   interface MembersInfo {
     name: string;
@@ -79,124 +90,89 @@ export default function OurTeamSection() {
         gap: '35px',
       }}
     >
-      <TitleAndSubtitle
-        title={formatMessage({ id: 'ourTeamTitle' })}
-        subtitle={formatMessage({ id: 'ourTeamSubtitle' })}
-      />
-      {members.map(
-        (
-          {
-            name,
-            role,
-            description,
-            linkFacebook,
-            linkTwitter,
-            linkInstagram,
-            linkLinkedin,
-            image,
-          },
-          index
-        ) => (
-          <Box
-            key={index}
+      <SectionHeader title={'ourTeam'} subtitle={'ourTeamSubtitle'} />
+      {members.map((_, index) => (
+        <Box
+          key={index}
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            gap: '50px',
+            width: '55%',
+          }}
+        >
+          <Avatar
+            src={activeMember.image.src}
+            alt={activeMember.image.alt}
             sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              gap: '50px',
-              width: '55%',
+              width: activeMember.image.width,
+              height: activeMember.image.height,
+              border: '1px solid #A50000',
             }}
           >
-            <ImageListItem sx={{ width: '100%', height: 'auto' }}>
-              <Image
-                src={LorrainPic}
-                alt={activeMember.image.alt}
-                // style={{ minWidth: '100%', minHeight: '100%' }}
-                // width={activeMember.image.width}
-                // height={activeMember.image.height}
-              />
-            </ImageListItem>
+            {getFirstTwoNameInitials(activeMember.name)}
+          </Avatar>
+          <Box
+            sx={{
+              display: 'grid',
+              gap: 3,
+            }}
+          >
             <Box
               sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'flex-start',
-                gap: '24px',
+                display: 'grid',
+                gap: 0.5,
               }}
             >
-              <Box
-                sx={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'flex-start',
-                  gap: '4px',
-                }}
-              >
-                <Typography
-                  sx={{
-                    color: 'var(--Primary, #A50000)',
-                    fontFamily: 'Montserrat, sans-serif',
-                    fontSize: '30px',
-                    fontStyle: 'normal',
-                    fontWeight: 700,
-                    lineHeight: '36px',
-                    letterSpacing: '-0.6px',
-                  }}
-                >
-                  {activeMember.name}
-                </Typography>
-                <Typography
-                  sx={{
-                    color: 'var(--title-active, var(--Titre-active, #333))',
-                    fontFamily: 'Montserrat, sans-serif',
-                    fontSize: '18px',
-                    fontStyle: 'normal',
-                    fontWeight: 600,
-                    lineHeight: '32px',
-                  }}
-                >
-                  {formatMessage({ id: `${activeMember.role}` })}
-                </Typography>
-              </Box>
               <Typography
+                variant="h1"
                 sx={{
-                  color: 'var(--body, #666)',
-                  fontFamily: 'Montserrat, sans-serif',
-                  fontSize: '16px',
-                  fontStyle: 'normal',
-                  fontWeight: 600,
-                  lineHeight: '28px',
+                  color: 'var(--primary)',
+                  paddingBottom: 0,
                 }}
               >
-                {formatMessage({ id: `${activeMember.description}` })}
+                {activeMember.name}
               </Typography>
-              <Box sx={{ display: 'flex' }}>
-                {socialMediaLinks.map((item, index) => (
-                  <a
-                    key={index}
-                    href={item.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
+              <Typography variant="h3" sx={{ color: '#333' }}>
+                {formatMessage({ id: `${activeMember.role}` })}
+              </Typography>
+            </Box>
+            <Typography
+              sx={{
+                color: 'var(--body)',
+                fontWeight: 600,
+                lineHeight: '28px',
+              }}
+            >
+              {formatMessage({ id: `${activeMember.description}` })}
+            </Typography>
+            <Box sx={{ display: 'flex' }}>
+              {socialMediaLinks.map(({ Icon, link }, index) => (
+                <a
+                  key={index}
+                  href={link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Box
+                    sx={{
+                      display: 'flex',
+                      justifyContent: 'center',
+                      alignItems: 'flex-start',
+                      gap: '18px',
+                    }}
                   >
-                    <Box
-                      sx={{
-                        display: 'flex',
-                        justifyContent: 'center',
-                        alignItems: 'flex-start',
-                        gap: '18px',
-                      }}
-                    >
-                      <IconButton style={{ color: '#A50000' }}>
-                        {item.icon}
-                      </IconButton>
-                    </Box>
-                  </a>
-                ))}
-              </Box>
+                    <IconButton size="small">
+                      {<Icon socialHandle="@lha" sx={{ fontSize: '50px' }} />}
+                    </IconButton>
+                  </Box>
+                </a>
+              ))}
             </Box>
           </Box>
-        )
-      )}
+        </Box>
+      ))}
 
       <Box
         sx={{
