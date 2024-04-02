@@ -1,68 +1,72 @@
-import { Box } from '@mui/material';
+import { Box, Divider } from '@mui/material';
+import Scrollbars from 'rc-scrollbars';
+import { useState } from 'react';
 import { Member, useTeam } from '../../services/team';
 import SectionHeader from '../Landing/SectionHeader';
 import ActiveMember from './ActiveMember';
+import TeamMember from './TeamMember';
 
 export default function OurTeamSection() {
   const members: Member[] = useTeam();
-  const activeMember = members[0];
+  const [activeMemberIndex, setActiveMemberIndex] = useState<number>(0);
+  const activeMember = members[activeMemberIndex];
 
   return (
     <Box
       sx={{
         display: 'grid',
-        justifyItems: 'center',
-        rowGap: 4,
-        padding: { mobile: '0 32px', laptop: '0 118px' },
+        rowGap: 3,
+        paddingBottom: 5,
       }}
     >
-      <SectionHeader title={'ourTeam'} subtitle={'ourTeamSubtitle'} />
-      <ActiveMember {...activeMember} />
-
       <Box
         sx={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'flex-start',
-          gap: '18px',
+          display: 'grid',
+          justifyItems: 'center',
+          rowGap: 4,
+          padding: { mobile: '0 32px', laptop: '0 118px' },
         }}
       >
-        {/* {members.map(
-          (
-            {
-              name,
-              role,
-              description,
-              linkFacebook,
-              linkTwitter,
-              linkInstagram,
-              linkLinkedin,
-              image,
-            },
-            index
-          ) => (
-            <Box
-              key={index}
-              sx={{
-                width: '111px',
-                height: 'auto',
-                borderRadius: '100%',
-                border: '1px solid var(--Primary, #A50000)',
-                boxShadow: '0px 0px 6px 0px #CE0000',
-              }}
-            >
-              <ImageListItem sx={{ width: '246px', height: 'auto' }}>
-                <Image
-                  src={image.src}
-                  alt={image.alt}
-                  style={{ minWidth: '100%', minHeight: '100%' }}
-                  width={image.width}
-                  height={image.height}
-                />
-              </ImageListItem>
-            </Box>
-          )
-        )} */}
+        <SectionHeader title={'ourTeam'} subtitle={'ourTeamSubtitle'} />
+        <ActiveMember {...activeMember} />
+      </Box>
+      <Box
+        sx={{
+          position: 'relative',
+        }}
+      >
+        <Divider
+          orientation="horizontal"
+          sx={{
+            position: 'absolute',
+            border: '1px solid var(--primary)',
+            width: '100%',
+            top: '50%',
+            transform: 'translate(0, -50%)',
+            filter: 'drop-shadow(0px 0px 15.5px #F00)',
+          }}
+        />
+        <Scrollbars autoHide universal style={{ height: '110px' }}>
+          <Box
+            sx={{
+              display: 'grid',
+              gridAutoFlow: 'column',
+              justifyContent: 'center',
+              alignItems: 'center',
+              columnGap: '18px',
+              paddingLeft: { mobile: '100px', laptop: '400px' },
+            }}
+          >
+            {members.map((member, index) => (
+              <TeamMember
+                {...member}
+                onSelect={() => setActiveMemberIndex(index)}
+                isActive={index === activeMemberIndex}
+                key={index}
+              />
+            ))}
+          </Box>
+        </Scrollbars>
       </Box>
     </Box>
   );
