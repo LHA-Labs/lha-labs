@@ -1,9 +1,9 @@
 import { theme } from '@lha-labs/theme';
-import { shortenNumber } from '@lha-labs/utils';
 import { Box, Button, Typography } from '@mui/material';
 import { useIntl } from 'react-intl';
-import SectionHeader from '../SectionHeader';
 import { ILetsHelpStat, useStats } from '../../../services/stats';
+import SectionHeader from '../SectionHeader';
+import LhaStatCard from './LhaStatCard';
 
 function AboutUs() {
   const { formatMessage } = useIntl();
@@ -64,33 +64,8 @@ function AboutUs() {
             borderRadius: '10px',
           }}
         >
-          {letsHelpStatistics.map(({ label, value, unit }, index) => (
-            <Box key={index}>
-              <Typography
-                sx={{
-                  fontSize: '30px',
-                  lineHeight: '36px',
-                  fontWeight: 'bold',
-                  color: '#333',
-                }}
-              >
-                +{`${shortenNumber(value)} ${unit ?? ''}`}
-              </Typography>
-              <Typography
-                sx={{
-                  fontSize: '13px',
-                  fontWeight: 'var(--semiBold)',
-                  lineHeight: '12px',
-                  padding: '3px',
-                  backgroundColor: 'rgba(165, 0, 0, 0.2)',
-                  width: 'fit-content',
-                  color: '#333',
-                  borderRadius: 0.5,
-                }}
-              >
-                {formatMessage({ id: label })}
-              </Typography>
-            </Box>
+          {letsHelpStatistics.map((stat, index) => (
+            <LhaStatCard {...stat} key={index} />
           ))}
         </Box>
       </Box>
