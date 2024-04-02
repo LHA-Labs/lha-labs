@@ -19,7 +19,7 @@ export default function ActiveMember({
         justifyItems: 'center',
         columnGap: '50px',
         rowGap: '20px',
-        width: { laptop: '55%', mobile: '100%' },
+        width: { laptop: '65%', mobile: '100%' },
       }}
     >
       <Avatar
@@ -64,7 +64,6 @@ export default function ActiveMember({
               color: 'var(--body)',
               fontWeight: 500,
               lineHeight: '28px',
-              textAlign: 'justify',
             }}
           >
             {message}
