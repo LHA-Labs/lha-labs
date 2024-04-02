@@ -9,7 +9,7 @@ export const website = {
   roleLorrain: 'Technical Team Leader',
   descriptionLorrain:
     'At Let’s help Association, our mission is to empower lives through compassionate initiatives. By promoting education and fostering sustainable solutions, we envision a brighter, more.',
-  ourTeamTitle: 'Our Team',
+  ourTeam: 'Our Team',
   ourTeamSubtitle: 'United by Purpose, Driven by Passion',
   home: 'Home',
   aboutUs: 'About Us',
