@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { useIntl } from 'react-intl';
-import LogoLHA from '../../../assets/LogoLha.png';
+import LogoLHA from '../../../public/assets/LogoLha.png';
 import LanguageSwapper from '../LanguageSwapper';
 import Sidebar from './SideBar/SideBar';
 import { NavItem } from './navItem';
