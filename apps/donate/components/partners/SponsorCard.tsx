@@ -1,5 +1,4 @@
 import { Box, Divider, Typography } from '@mui/material';
-import { useIntl } from 'react-intl';
 import SponsorLogo from '../Landing/sponsors/SponsorLogo';
 import { SponsorMessage } from './OurSponsorsSection';
 import RepresentativeCard from './RepresentativeCard';
@@ -10,7 +9,6 @@ export default function SponsorCard({
   sponsorImageRef,
   sponsorName,
 }: SponsorMessage) {
-  const { formatMessage } = useIntl();
   return (
     <Box
       sx={{
@@ -40,7 +38,7 @@ export default function SponsorCard({
             title={`${representative.title} ${sponsorName}`}
           />
           <Typography variant="body1" sx={{ color: '#666666' }}>
-            {formatMessage({ id: message })}
+            {message}
           </Typography>
         </Box>
         <SponsorLogo logo_ref={sponsorImageRef} name={sponsorName} size={190} />

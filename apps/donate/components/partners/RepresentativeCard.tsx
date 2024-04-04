@@ -11,7 +11,7 @@ export default function RepresentativeCard({
     <Box
       sx={{
         display: 'grid',
-        gridAutoFlow: 'column',
+        gridTemplateColumns: 'auto 1fr',
         alignItems: 'start',
         gap: '12px',
       }}
