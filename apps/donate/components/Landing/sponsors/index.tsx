@@ -1,9 +1,9 @@
 import { Box, Button } from '@mui/material';
-import Image from 'next/image';
 import { useIntl } from 'react-intl';
 import SectionHeader from '../SectionHeader';
+import SponsorLogo from './SponsorLogo';
 
-interface Sponsor {
+export interface Sponsor {
   name: string;
   logo_ref: string;
   website?: string;
@@ -55,45 +55,8 @@ function Sponsors() {
           columnGap: 5,
         }}
       >
-        {sponsors.map(({ logo_ref, name, website }, index) => (
-          <Box
-            key={index}
-            sx={{
-              display: 'grid',
-              gridTemplateColumns: 'auto 1fr',
-              alignItems: 'center',
-            }}
-          >
-            <Box
-              component="a"
-              href={website}
-              target="_blank"
-              sx={{
-                border: '2px solid var(--primary)',
-                borderRadius: '50%',
-                width: '150px',
-                height: '150px',
-                display: 'grid',
-                alignItems: 'center',
-                justifyItems: 'center',
-                '&:hover': {
-                  transition: '0.4s',
-                  boxShadow:
-                    '0px 8px 18px -6px rgba(24, 44, 75, 0.12), 0px 12px 42px -4px rgba(24, 44, 75, 0.12)',
-                  backgroundColor: '#a500000f',
-                },
-              }}
-              key={index}
-            >
-              <Image
-                src={logo_ref}
-                alt={name}
-                width={80}
-                height={80}
-                style={{ objectFit: 'contain' }}
-              />
-            </Box>
-          </Box>
+        {sponsors.map((sponsor, index) => (
+          <SponsorLogo {...sponsor} key={index} />
         ))}
       </Box>
       <Box
