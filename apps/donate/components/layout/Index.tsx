@@ -1,14 +1,9 @@
 import { Box } from '@mui/material';
+import { PropsWithChildren } from 'react';
 import Footer from './Footer/Footer';
 import Header from './Header/Header';
-// import AboutUs from '../../pages/AboutUs/AboutUs';
-// import OurPartners from '../../pages/OurPartners/OurPartners';
-import Donate from '../../pages/Donate/Donate';
-export default function DonateLayout({ children }: { children: JSX.Element }) {
-  /* TODO: this function will receive
-    the header, footer and makeof it the layout,
-    such that other components just load into it
-  */
+
+export default function DonateLayout({ children }: PropsWithChildren) {
   return (
     <Box
       sx={{
@@ -18,10 +13,7 @@ export default function DonateLayout({ children }: { children: JSX.Element }) {
       }}
     >
       <Header />
-      {/* <AboutUs /> */}
-      {/* <OurPartners /> */}
-      <Donate />
-      {/* {children} */}
+      {children}
       <Footer />
     </Box>
   );

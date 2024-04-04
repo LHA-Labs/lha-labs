@@ -1,54 +1,32 @@
-import CaretIcon from '@iconify-icons/fluent/chevron-down-24-regular';
 import MenuIcon from '@iconify-icons/fluent/line-horizontal-3-20-regular';
 import { Icon } from '@iconify/react';
-import { useLanguage } from '@lha-labs/theme';
-import {
-  Box,
-  Button,
-  IconButton,
-  ImageListItem,
-  Toolbar,
-  Typography,
-} from '@mui/material';
+import { Box, Button, IconButton, Toolbar } from '@mui/material';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { useIntl } from 'react-intl';
-import LayoutMenu from '../../../Interface';
-import LogoLHA from '../../../assets/LogoLha.png';
-import Sidebar from '../SideBar/SideBar';
+import LogoLHA from '../../../public/assets/LogoLha.png';
+import LanguageSwapper from '../LanguageSwapper';
+import Sidebar from './SideBar/SideBar';
+import { NavItem } from './navItem';
+
+export interface INavItem {
+  item: string;
+  route: string;
+}
 
 export default function Header() {
   const { formatMessage } = useIntl();
-
-  const { activeLanguage, languageDispatch } = useLanguage();
-
-  const [activeItem, setActiveItem] = useState(0);
+  const { push } = useRouter();
 
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
-  const items: LayoutMenu[] = [
-    {
-      title: 'home',
-      active: true,
-    },
-    {
-      title: 'aboutUs',
-      active: false,
-    },
-    {
-      title: 'partners',
-      active: false,
-    },
-    {
-      title: 'donate',
-      active: false,
-    },
+  const navItems: INavItem[] = [
+    { item: 'home', route: '/' },
+    { item: 'aboutUs', route: '/about-us' },
+    { item: 'partners', route: '/partners' },
+    { item: 'donate', route: '/donate' },
   ];
-
-  const itemClick = (index: number) => {
-    setActiveItem(index);
-    closeSidebar();
-  };
 
   const openSidebar = () => {
     setSidebarOpen(true);
@@ -60,120 +38,84 @@ export default function Header() {
 
   return (
     <>
-      <Sidebar
-        open={sidebarOpen}
-        onClose={closeSidebar}
-        items={items}
-        activeItem={activeItem}
-        onItemClick={itemClick}
-      />
+      <Sidebar open={sidebarOpen} onClose={closeSidebar} navItems={navItems} />
+
       <Box
         sx={{
           display: 'flex',
           justifyContent: 'space-between',
           alignItems: 'center',
-          backgroundColor: 'var(--background, #F5F5F5)',
-          padding: '24px 94px',
+          backgroundColor: '#F5F5F5',
+          padding: {
+            laptop: '12px 94px',
+            mobile: '12px 24px',
+          },
         }}
       >
         <Toolbar
           sx={{
-            display: 'flex',
-            justifyContent: 'space-between',
+            display: 'grid',
+            gridTemplateColumns: {
+              laptop: 'auto 1fr auto',
+              mobile: 'auto 1fr',
+            },
+            justifyItems: 'center',
+            alignItems: 'center',
             width: '100%',
-            paddingRight: '0px',
-            paddingLeft: '0px',
           }}
         >
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
-            <ImageListItem sx={{ width: '167px', height: '63px' }}>
-              <Image
-                src={LogoLHA}
-                alt="Logo LHA"
-                style={{ width: '167px', height: '63px' }}
-              />
-            </ImageListItem>
+          <Box sx={{ display: { laptop: 'block', mobile: 'none' } }}>
+            <Image
+              onClick={() => push('/')}
+              src={LogoLHA}
+              alt="Logo LHA"
+              style={{ width: '167px', height: '63px', cursor: 'pointer' }}
+            />
+          </Box>
+          <Box sx={{ display: { laptop: 'none', mobile: 'block' } }}>
+            <Image
+              onClick={() => push('/')}
+              src={LogoLHA}
+              alt="Logo LHA"
+              style={{ width: 'auto', height: '45px', cursor: 'pointer' }}
+            />
           </Box>
 
           <Box
             sx={{
-              display: { desktop: 'flex', mobile: 'none' },
+              display: { laptop: 'grid', mobile: 'none' },
               alignItems: 'center',
-              gap: '24px',
+              gridAutoFlow: 'column',
+              columnGap: 3,
             }}
           >
-            {items.map(({ title, active }, index) => (
-              <Box
-                onClick={() => itemClick(index)}
-                key={index}
-                sx={{
-                  display: 'flex',
-                  flexDirection: 'column',
-                  alignItems: 'center',
-                  color: 'var(--Body, #2F3A45)',
-                  fontFamily: 'Montserrat, sans-serif',
-                  fontSize: '12px',
-                  fontStyle: 'normal',
-                  fontWeight: 500,
-                  cursor: 'pointer',
-                  lineHeight: '16px',
-                  paddingBottom: '8px',
-                  borderBottom: activeItem === index ? '2px solid red' : 'none',
-                }}
-              >
-                {formatMessage({ id: `${title}` })}
-              </Box>
+            {navItems.map((navItem, index) => (
+              <NavItem navItem={navItem} key={index} />
             ))}
           </Box>
 
           <Box
             sx={{
-              display: { desktop: 'flex', mobile: 'none' },
-              justifyContent: 'center',
+              display: { laptop: 'grid', mobile: 'none' },
+              gridAutoFlow: 'column',
               alignItems: 'center',
-              gap: '12px',
+              columnGap: 1.5,
             }}
           >
-            <Box
-              sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                gap: '4px',
-                cursor: 'pointer',
-              }}
-              onClick={() =>
-                languageDispatch({
-                  type: activeLanguage === 'en' ? 'USE_FRENCH' : 'USE_ENGLISH',
-                })
-              }
-            >
-              <Typography
-                sx={{
-                  color: 'var(--Body, #2F3A45)',
-                  fontFamily: 'Montserrat, sans-serif',
-                  fontSize: 12,
-                  fontStyle: 'normal',
-                  fontWeight: 600,
-                  lineHeight: '20px',
-                }}
-              >
-                {activeLanguage}
-              </Typography>
-              <Icon icon={CaretIcon} color="#2F3A45" />
-            </Box>
+            <LanguageSwapper />
             <Button
               variant="contained"
               color="primary"
-              size="large"
-              sx={{ borderRadius: '50px' }}
+              disableElevation={false}
             >
               {formatMessage({ id: 'makeADonation' })}
             </Button>
           </Box>
-          {/* side BAr */}
           <IconButton
-            sx={{ display: { desktop: 'none', mobile: 'block' } }}
+            sx={{
+              display: { laptop: 'none', mobile: 'block' },
+              justifySelf: 'end',
+            }}
             onClick={openSidebar}
           >
             <Icon icon={MenuIcon} color="#2F3A45" />
