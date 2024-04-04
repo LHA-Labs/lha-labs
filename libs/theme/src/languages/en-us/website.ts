@@ -78,5 +78,6 @@ export const website = {
   motivation: 'Motivation',
   interested: 'Interested?',
   becomeSponsorSubtitle: "Become a Let's Help Association sponsor",
+  donatePageTitle:
+    'Collective Contribution: Donation Tracking and Attainable Targets',
 };
-
