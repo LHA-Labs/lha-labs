@@ -1,5 +1,5 @@
+import calendar from '@iconify-icons/fluent/calendar-arrow-counterclockwise-24-regular';
 import location from '@iconify-icons/fluent/location-24-regular';
-import calendar from '@iconify/icons-fluent/calendar-arrow-counterclockwise-24-regular';
 import { Icon } from '@iconify/react';
 import { Box, Button, Typography } from '@mui/material';
 import { useRouter } from 'next/router';
