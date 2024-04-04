@@ -4,7 +4,7 @@ import LhaPresentationSection from '../../components/about-us/LhaPresentationSec
 import LhaStats from '../../components/about-us/LhaStats';
 import OurTeamSection from '../../components/about-us/OurTeamSection';
 import JoinUsPreFooter from '../../components/about-us/JoinUsPreFooter';
-import OurMissionVisionSection from '../AboutUs/OurMissionVisionSection';
+import LhaTenets from '../../components/about-us/tenets/LhaTenets';
 
 export default function AboutUs() {
   return (
@@ -18,7 +18,7 @@ export default function AboutUs() {
       <AboutUsHeader />
       <LhaPresentationSection />
       <LhaStats />
-      <OurMissionVisionSection />
+      <LhaTenets />
       <OurTeamSection />
       <JoinUsPreFooter />
     </Box>

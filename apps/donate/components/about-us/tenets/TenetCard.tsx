@@ -1,7 +1,7 @@
 import checkCircle from '@iconify-icons/fluent/checkmark-circle-24-filled';
 import { Icon } from '@iconify/react';
 import { Box, Typography } from '@mui/material';
-import { Tenet } from '../../../pages/AboutUs/OurMissionVisionSection';
+import { Tenet } from './LhaTenets';
 import { useIntl } from 'react-intl';
 interface TenetCardProps extends Tenet {
   index: number;

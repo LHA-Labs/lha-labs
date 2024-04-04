@@ -58,4 +58,8 @@ export const website = {
   preFooterMessage: 'HELP US BUILD A COMMUNITY FOR OUR CHILDREN AND ORPHANS',
   joinUsPreFooterMessage:
     "Join Let's Help Association and help in pushing our mission in education with you!",
+  ourPurpose: 'Our Purpose',
+  ourValues: 'Our Values',
+  ourMission: 'Our Mission',
+  ourVision: 'Our Vision',
 };
