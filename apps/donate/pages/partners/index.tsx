@@ -1,12 +1,11 @@
 import { Box } from '@mui/material';
-import React from 'react';
+import BecomeSponsorsSection from '../../components/partners/BecomeSponsorsSection';
 import OurPartnersHeader from '../../components/partners/OurPartnersHeader';
 import OurSponsorsSection from '../../components/partners/OurSponsorsSection';
-import BecomeSponsorsSection from '../../components/partners/BecomeSponsorsSection';
 
 export default function OurPartners() {
   return (
-    <Box>
+    <Box sx={{ padding: {laptop:'0 0 80px  0', mobile:'0 0 24px  0'} }}>
       <OurPartnersHeader />
       <OurSponsorsSection />
       <BecomeSponsorsSection />
