@@ -2,10 +2,6 @@ import call from '@iconify-icons/fluent/call-24-regular';
 import location from '@iconify-icons/fluent/location-24-regular';
 import mail from '@iconify-icons/fluent/mail-24-regular';
 import { Icon, IconifyIcon } from '@iconify/react';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/Twitter';
 import {
   Box,
   Divider,
@@ -17,7 +13,13 @@ import Image from 'next/image';
 import { useIntl } from 'react-intl';
 import SendIcon from '../../assets/SendIcon.png';
 import sendEmailIcon from '../../assets/send-mail-icon.svg';
-import TitleAndSubtitle from '../../components/layout/TitleAndSubtitle/TitleAndSubtitle';
+import SectionHeader from '../../components/Landing/SectionHeader';
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  SocialX,
+} from '../../components/layout/Footer/SocialIcons';
 
 export default function BecomeSponsorsSection() {
   const { formatMessage } = useIntl();
@@ -41,10 +43,10 @@ export default function BecomeSponsorsSection() {
     { icon: mail, item: 'letshelpassociation@gmail.com' },
   ];
   const socialMediaLinks = [
-    { icon: <FacebookIcon />, link: 'lien_facebook' },
-    { icon: <TwitterIcon />, link: 'lien_twitter' },
-    { icon: <InstagramIcon />, link: 'lien_instagram' },
-    { icon: <LinkedInIcon />, link: 'lien_linkedin' },
+    { icon: <Facebook socialHandle="@lha" />, link: 'lien_facebook' },
+    { icon: <SocialX socialHandle="@lha" />, link: 'lien_twitter' },
+    { icon: <Instagram socialHandle="@lha" />, link: 'lien_instagram' },
+    { icon: <Linkedin socialHandle="@lha" />, link: 'lien_linkedin' },
   ];
   return (
     <Box
@@ -53,10 +55,7 @@ export default function BecomeSponsorsSection() {
         // height: '60vh',
       }}
     >
-      <TitleAndSubtitle
-        title=""
-        subtitle={formatMessage({ id: 'becomeSponsorSubtitle' })}
-      />
+      <SectionHeader title=" " subtitle={'becomeSponsorSubtitle'} />
       <Box
         sx={{
           display: 'flex',

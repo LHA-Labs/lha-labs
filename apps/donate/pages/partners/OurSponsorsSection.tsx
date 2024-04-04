@@ -3,7 +3,7 @@ import Image, { StaticImageData } from 'next/image';
 import { useIntl } from 'react-intl';
 import LorrainPic from '../../assets/LorrainPic.png';
 import logoGlom from '../../assets/logoGlom.png';
-import TitleAndSubtitle from '../../components/layout/TitleAndSubtitle/TitleAndSubtitle';
+import SectionHeader from '../../components/Landing/SectionHeader';
 
 export default function OurSponsorsSection() {
   const { formatMessage } = useIntl();
@@ -59,9 +59,9 @@ export default function OurSponsorsSection() {
         gap: '30px',
       }}
     >
-      <TitleAndSubtitle
-        title={formatMessage({ id: 'ourSponsorsTitle' })}
-        subtitle={formatMessage({ id: 'ourSponsorsSubtitle' })}
+      <SectionHeader
+        title={'ourSponsorsTitle'}
+        subtitle={'ourSponsorsSubtitle'}
       />
       <Box>
         {sponsors.map(({ picture, name, role, description, logo }, index) => (
