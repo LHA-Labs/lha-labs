@@ -15,10 +15,8 @@ import SendIcon from '../../assets/SendIcon.png';
 import sendEmailIcon from '../../assets/send-mail-icon.svg';
 import SectionHeader from '../Landing/SectionHeader';
 import {
-  Facebook,
   Instagram,
-  Linkedin,
-  SocialX,
+  Linkedin
 } from '../layout/Footer/SocialIcons';
 
 export default function BecomeSponsorsSection() {
@@ -43,10 +41,14 @@ export default function BecomeSponsorsSection() {
     { icon: mail, item: 'letshelpassociation@gmail.com' },
   ];
   const socialMediaLinks = [
-    { icon: <Facebook socialHandle="@lha" />, link: 'lien_facebook' },
-    { icon: <SocialX socialHandle="@lha" />, link: 'lien_twitter' },
-    { icon: <Instagram socialHandle="@lha" />, link: 'lien_instagram' },
-    { icon: <Linkedin socialHandle="@lha" />, link: 'lien_linkedin' },
+    {
+      icon: <Instagram socialHandle="@lha" iconColor="white" />,
+      link: 'lien_instagram',
+    },
+    {
+      icon: <Linkedin socialHandle="@lha" iconColor="white" />,
+      link: 'lien_linkedin',
+    },
   ];
   return (
     <Box
