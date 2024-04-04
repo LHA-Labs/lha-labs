@@ -62,4 +62,8 @@ export const website = {
   ourValues: 'Our Values',
   ourMission: 'Our Mission',
   ourVision: 'Our Vision',
+  lhaMissionStatement:
+    "At Let's help Association, our mission is to empower lives through compassionate initiatives. By promoting education and fostering sustainable solutions, we envision a brighter, more resilient future. Join us on this journey to build a world of hope and equality.",
+  lhaVision1:
+    "At let's Help Association, our mission is to empower lives through compassionate initiatives. By promoting education",
 };

@@ -26,8 +26,7 @@ export default function LhaTenets() {
         />
       ),
       title: 'ourMission',
-      description:
-        "At Let's help Association, our mission is to empower lives through compassionate initiatives. By promoting education and fostering sustainable solutions, we envision a brighter, more resilient future. Join us on this journey to build a world of hope and equality.",
+      description: 'lhaMissionStatement',
     },
     {
       icon: (
@@ -44,11 +43,7 @@ export default function LhaTenets() {
         />
       ),
       title: 'ourVision',
-      description: [
-        "At let's Help Association, our mission is to empower lives through compassionate initiatives. By promoting education",
-        "At let's Help Association, our mission is to empower lives through compassionate initiatives. By promoting education",
-        "At let's Help Association, our mission is to empower lives through compassionate initiatives. By promoting education",
-      ],
+      description: ['lhaVision1', 'lhaVision1', 'lhaVision1'],
       colored: true,
     },
     {
@@ -66,11 +61,7 @@ export default function LhaTenets() {
         />
       ),
       title: 'ourPurpose',
-      description: [
-        "At let's Help Association, our mission is to empower lives through compassionate initiatives. By promoting education",
-        "At let's Help Association, our mission is to empower lives through compassionate initiatives. By promoting education",
-        "At let's Help Association, our mission is to empower lives through compassionate initiatives. By promoting education",
-      ],
+      description: ['lhaVision1', 'lhaVision1', 'lhaVision1'],
       colored: true,
     },
     {
@@ -88,8 +79,7 @@ export default function LhaTenets() {
         />
       ),
       title: 'ourValues',
-      description:
-        "At Let's help Association, our mission is to empower lives through compassionate initiatives. By promoting education and fostering sustainable solutions, we envision a brighter, more resilient future. Join us on this journey to build a world of hope and equality.",
+      description: 'lhaMissionStatement',
     },
   ];
 

@@ -43,7 +43,7 @@ export default function TenetCard({
       </Box>
       {Array.isArray(description) ? (
         <Box sx={{ display: 'grid', rowGap: 2 }}>
-          {description.map((_, mapIndex) => (
+          {description.map((point, mapIndex) => (
             <Box
               key={mapIndex}
               sx={{
@@ -72,7 +72,7 @@ export default function TenetCard({
                   },
                 }}
               >
-                {_}
+                {formatMessage({ id: point })}
               </Typography>
             </Box>
           ))}
@@ -87,7 +87,7 @@ export default function TenetCard({
             },
           }}
         >
-          {description}
+          {formatMessage({ id: description })}
         </Typography>
       )}
     </Box>
