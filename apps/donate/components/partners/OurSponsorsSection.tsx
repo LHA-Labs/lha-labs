@@ -3,7 +3,7 @@ import Image, { StaticImageData } from 'next/image';
 import { useIntl } from 'react-intl';
 import LorrainPic from '../../assets/LorrainPic.png';
 import logoGlom from '../../assets/logoGlom.png';
-import SectionHeader from '../../components/Landing/SectionHeader';
+import SectionHeader from '../Landing/SectionHeader';
 
 export default function OurSponsorsSection() {
   const { formatMessage } = useIntl();

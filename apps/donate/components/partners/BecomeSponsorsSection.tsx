@@ -13,13 +13,13 @@ import Image from 'next/image';
 import { useIntl } from 'react-intl';
 import SendIcon from '../../assets/SendIcon.png';
 import sendEmailIcon from '../../assets/send-mail-icon.svg';
-import SectionHeader from '../../components/Landing/SectionHeader';
+import SectionHeader from '../Landing/SectionHeader';
 import {
   Facebook,
   Instagram,
   Linkedin,
   SocialX,
-} from '../../components/layout/Footer/SocialIcons';
+} from '../layout/Footer/SocialIcons';
 
 export default function BecomeSponsorsSection() {
   const { formatMessage } = useIntl();
