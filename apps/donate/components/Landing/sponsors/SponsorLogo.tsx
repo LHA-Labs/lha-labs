@@ -3,16 +3,15 @@ import { Sponsor } from '.';
 import Image from 'next/image';
 
 interface SponsorLogo extends Sponsor {
-  height?: number;
-  width?: number;
+  size?: number;
 }
 export default function SponsorLogo({
   logo_ref,
   name,
   website,
-  height = 80,
-  width = 80,
+  size = 150,
 }: SponsorLogo) {
+  const imgSize = (80 * size) / 150;
   return (
     <Box
       component="a"
@@ -21,8 +20,8 @@ export default function SponsorLogo({
       sx={{
         border: '2px solid var(--primary)',
         borderRadius: '50%',
-        width: '150px',
-        height: '150px',
+        width: `${size}px`,
+        height: `${size}px`,
         display: 'grid',
         alignItems: 'center',
         justifyItems: 'center',
@@ -37,8 +36,8 @@ export default function SponsorLogo({
       <Image
         src={logo_ref}
         alt={name}
-        width={width}
-        height={height}
+        width={imgSize}
+        height={imgSize}
         style={{ objectFit: 'contain' }}
       />
     </Box>
