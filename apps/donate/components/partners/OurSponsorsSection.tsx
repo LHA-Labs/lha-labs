@@ -16,7 +16,8 @@ export interface SponsorMessage {
 export default function OurSponsorsSection() {
   const sponsors: SponsorMessage[] = [
     {
-      message: ' ',
+      message:
+        'Nurturing Lives, Inspiring Futures: Transformative Initiatives that Illuminate Paths, Foster Growth, Cultivate Affection, and Instill Purposeful Living for All. Nurturing Lives, Inspiring Futures: Transformative Initiatives that Illuminate Paths, Foster Growth, Cultivate Affection, and Instill Purposeful Living for All. Nurturing Lives, Inspiring Futures:',
       representative: {
         imageRef: '/assets/LorrainPic.png',
         name: 'Tchakoumi Lorrain',
@@ -26,7 +27,8 @@ export default function OurSponsorsSection() {
       sponsorImageRef: '/assets/logo_glom.png',
     },
     {
-      message: ' ',
+      message:
+        'Nurturing Lives, Inspiring Futures: Transformative Initiatives that Illuminate Paths, Foster Growth, Cultivate Affection, and Instill Purposeful Living for All. Nurturing Lives, Inspiring Futures: Transformative Initiatives that Illuminate Paths, Foster Growth, Cultivate Affection, and Instill Purposeful Living for All. Nurturing Lives, Inspiring Futures:',
       representative: {
         imageRef: '/assets/child4.jpeg',
         name: 'Nguemete Joseph',
