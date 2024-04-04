@@ -69,4 +69,5 @@ export const website = {
   ourPartners: 'Our Partners',
   ourPartnersSubtitle:
     'Nurturing Lives, Inspiring Futures: Transformative Initiatives that Illuminate Paths, Foster Growth, Cultivate Affection, and Instill Purposeful Living for All.',
+  contactInformation: 'Contact Information',
 };
