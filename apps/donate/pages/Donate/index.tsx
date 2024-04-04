@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
 import React from 'react';
-import DonatePresentationSection from './DonatePresentationSection';
+import DonateHeader from '../../components/donate/DonateHeader';
 import CampaignsNameSection from './CampaignsNameSection';
 import StatisticSection from './StatisticSection';
 import ContributionTable from './ContributionTable';
@@ -8,7 +8,7 @@ import ContributionTable from './ContributionTable';
 export default function Donate() {
   return (
     <Box>
-      <DonatePresentationSection />
+      <DonateHeader />
       <Box
         sx={{
           display: ' flex',
