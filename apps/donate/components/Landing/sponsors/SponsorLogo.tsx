@@ -1,6 +1,6 @@
 import { Box } from '@mui/material';
-import { Sponsor } from '.';
 import Image from 'next/image';
+import { Sponsor } from '.';
 
 interface SponsorLogo extends Sponsor {
   size?: number;
@@ -18,6 +18,7 @@ export default function SponsorLogo({
       href={website}
       target="_blank"
       sx={{
+        justifySelf: 'center',
         border: '2px solid var(--primary)',
         borderRadius: '50%',
         width: `${size}px`,

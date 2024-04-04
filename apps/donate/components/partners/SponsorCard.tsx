@@ -22,15 +22,17 @@ export default function SponsorCard({
           justifySelf: 'stretch',
           display: 'grid',
           alignItems: 'start',
-          gridTemplateColumns: '1fr auto',
+          gridTemplateColumns: { laptop: '1fr auto', mobile: '1fr' },
           justifyItems: 'start',
           columnGap: 1,
+          rowGap: 3,
         }}
       >
         <Box
           sx={{
             display: 'grid',
             rowGap: 2,
+            order: { laptop: -1, mobile: 1 },
           }}
         >
           <RepresentativeCard
