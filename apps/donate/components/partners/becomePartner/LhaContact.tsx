@@ -30,6 +30,7 @@ export default function LhaContact() {
       sx={{
         backgroundColor: 'var(--primary)',
         padding: '45px 70px',
+        borderRadius: { laptop: '0 10px 10px 0', mobile: '0 0 10px 10px' },
         borderTopRightRadius: '10px',
         borderBottomRightRadius: '10px',
         display: 'grid',

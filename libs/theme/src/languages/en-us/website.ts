@@ -70,4 +70,12 @@ export const website = {
   ourPartnersSubtitle:
     'Nurturing Lives, Inspiring Futures: Transformative Initiatives that Illuminate Paths, Foster Growth, Cultivate Affection, and Instill Purposeful Living for All.',
   contactInformation: 'Contact Information',
+  tellUsAboutYou: 'Tell us about you',
+  send: 'Send',
+  fullname: 'Fullname',
+  email: 'Email',
+  phone: 'Phone',
+  motivation: 'Motivation',
+  interested: 'Interested?',
+  becomeSponsorSubtitle: "Become a Let's Help Association sponsor",
 };
