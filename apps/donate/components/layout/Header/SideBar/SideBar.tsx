@@ -4,7 +4,7 @@ import { useRouter } from 'next/router';
 import React from 'react';
 import { useIntl } from 'react-intl';
 import LanguageSwapper from '../../LanguageSwapper';
-import LogoLha from '../../../../assets/LogoLha.png';
+import LogoLha from '../../../../public/assets/LogoLha.png';
 import { NavItem } from '../navItem';
 import { INavItem } from '../Header';
 
