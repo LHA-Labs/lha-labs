@@ -17,7 +17,7 @@ export default function NewPartnerForm() {
     <Box
       sx={{
         display: 'grid',
-        padding: '45px 70px',
+        padding: { laptop: '45px 70px', mobile: '32px 20px' },
         rowGap: 2,
         borderRadius: { laptop: '10px 0px 0px 10px', mobile: '10px 10px 0 0' },
         border: '2px solid var(--line)',

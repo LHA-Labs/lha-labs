@@ -12,7 +12,7 @@ export default function RepresentativeCard({
       sx={{
         display: 'grid',
         gridTemplateColumns: 'auto 1fr',
-        alignItems: 'start',
+        alignItems: { laptop: 'start', mobile: 'center' },
         gap: '12px',
       }}
     >
