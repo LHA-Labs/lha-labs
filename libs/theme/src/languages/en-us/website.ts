@@ -89,4 +89,10 @@ export const website = {
   lhaDonationList: "Let's Help Association Donation List",
   resultOfOurEsteemedDonators:
     'A thousand thanks to your esteemed donators below!',
+  '#': '#',
+  donator: 'Donator',
+  donated: 'Donated',
+  lastDonation: 'Last Donation',
+  nothingToDisplay: 'Nothing to display',
+  noDonationsYet: 'No Donations yet',
 };
