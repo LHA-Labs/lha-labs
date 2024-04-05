@@ -1,8 +1,8 @@
 import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import { useIntl } from 'react-intl';
-import porteMonnaie from '../../assets/porteMonnaie.png';
-import ProgressLevel from '../../components/donate/stats/ProgressLevel';
+import porteMonnaie from '../../../assets/porteMonnaie.png';
+import ProgressLevel from './ProgressLevel';
 
 export default function StatisticSection() {
   const { formatMessage, formatNumber, formatDate } = useIntl();
