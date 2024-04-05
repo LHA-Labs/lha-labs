@@ -13,8 +13,9 @@ export default function CampaignsNameSection() {
         display: 'grid',
         gridTemplateColumns: 'auto 1fr',
         alignItems: 'center',
-        columnGap: 50,
+        columnGap: 3,
         padding: '45px 0',
+        justifyItems: 'end',
       }}
     >
       <Box
