@@ -1,21 +1,24 @@
 import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
-import porteMonnaie from '../../assets/porteMonnaie.png';
 import { useIntl } from 'react-intl';
+import porteMonnaie from '../../assets/porteMonnaie.png';
+import ProgressLevel from '../../components/donate/stats/ProgressLevel';
 
-export default function StatisticSection() {
-  const {formatMessage}= useIntl();
+export default function StatisticSection({
+  progressLevel = 55,
+}: {
+  progressLevel?: number;
+}) {
+  const { formatMessage } = useIntl();
+  // const financeStats = {
+  //   target: 1000,
+  //   received: 500,
+  // };
   return (
     <Box
       sx={{
-        display: 'flex',
-        width: '1512px',
-        height: 'auto',
-        gap: '32px',
-        padding: '24px 118px',
-        flexDirection: 'column',
-        justifyContent: 'space-between',
-        alignItems: 'center',
+        display: 'grid',
+        rowGap: 2,
         background: 'var(--background)',
       }}
     >
@@ -35,7 +38,7 @@ export default function StatisticSection() {
             gap: '30px',
           }}
         >
-          <Image src={porteMonnaie} alt="Porte monnaie"></Image>
+          <Image src={porteMonnaie} alt="Porte monnaie" />
           <Box
             sx={{
               display: 'flex',
@@ -44,7 +47,7 @@ export default function StatisticSection() {
             }}
           >
             <Typography variant="h3" sx={{ color: 'var(--body)' }}>
-              {formatMessage({id:"montantEspere"})}
+              {formatMessage({ id: 'montantEspere' })}
             </Typography>
             <Box
               sx={{
@@ -54,14 +57,14 @@ export default function StatisticSection() {
               }}
             >
               <Typography variant="h1" sx={{ color: 'var(--titleActive)' }}>
-                1 000 000
+                1 000 000 fcfa
               </Typography>
               <Typography variant="h3" sx={{ color: 'var(--titleActive)' }}>
                 FCFA
               </Typography>
             </Box>
             <Typography variant="body2" sx={{ color: 'var(--placeholder)' }}>
-              {formatMessage({id:"date"})}
+              {formatMessage({ id: 'date' })}
             </Typography>
           </Box>
         </Box>
@@ -81,7 +84,7 @@ export default function StatisticSection() {
             }}
           >
             <Typography variant="h5" sx={{ color: 'var(--placeholder)' }}>
-              {formatMessage({id:"totalEnCaisse"})}
+              {formatMessage({ id: 'totalEnCaisse' })}
             </Typography>
             <Typography variant="h2" sx={{ color: 'var(--success)' }}>
               500 000fCFA
@@ -96,44 +99,13 @@ export default function StatisticSection() {
             }}
           >
             <Typography variant="h5" sx={{ color: 'var(--placeholder)' }}>
-              {formatMessage({id:"entreeMensuelle"})}
+              {formatMessage({ id: 'entreeMensuelle' })}
             </Typography>
             <Typography variant="h2">50 000fCFA</Typography>
           </Box>
         </Box>
       </Box>
-      <Box
-        sx={{
-          display: 'flex',
-          height: '39px',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          alignItems: 'flex-end',
-          width: '100%',
-        }}
-      >
-        <Typography variant="body2" sx={{ color: 'var(--primary)' }}>
-          50%
-        </Typography>
-
-        <Box
-          sx={{
-            width: '100%',
-            height: '15px',
-            borderRadius: '50px',
-            background: 'var(--line)',
-          }}
-        >
-          <Box
-            sx={{
-              width: '50%',
-              height: '15px',
-              borderRadius: '50px',
-              background: 'var(--primary)',
-            }}
-          ></Box>
-        </Box>
-      </Box>
+      <ProgressLevel progress={progressLevel} />
     </Box>
   );
 }
