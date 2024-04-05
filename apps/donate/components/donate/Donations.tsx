@@ -1,9 +1,10 @@
 import { Box, Typography } from '@mui/material';
 import React from 'react';
 import { useIntl } from 'react-intl';
+import DonationTable from './donations/DonationTable';
 
 export default function Donations() {
-  const {formatMessage} = useIntl()
+  const { formatMessage } = useIntl();
   return (
     <Box
       sx={{
@@ -23,16 +24,16 @@ export default function Donations() {
           variant="h1"
           sx={{ color: 'var(--primary)', padding: 0, textAlign: 'center' }}
         >
-          {formatMessage({id:'lhaDonationList'})}
+          {formatMessage({ id: 'lhaDonationList' })}
         </Typography>
         <Typography
           variant="h5"
           sx={{ color: 'var(--body)', padding: 0, textAlign: 'center' }}
         >
-          {formatMessage({id:'resultOfOurEsteemedDonators'})}
+          {formatMessage({ id: 'resultOfOurEsteemedDonators' })}
         </Typography>
       </Box>
-      <Box>table</Box>
+      <DonationTable />
     </Box>
   );
 }
