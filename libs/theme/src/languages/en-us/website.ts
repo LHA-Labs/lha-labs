@@ -86,4 +86,7 @@ export const website = {
   targetAmount: 'Target Amount',
   endsOn: 'Ends on: ',
   amountReceived: 'Amount Received',
+  lhaDonationList: "Let's Help Association Donation List",
+  resultOfOurEsteemedDonators:
+    'A thousand thanks to your esteemed donators below!',
 };

@@ -1,7 +1,7 @@
 import { Box } from '@mui/material';
 import DonateHeader from '../../components/donate/DonateHeader';
 import CampaignObjectives from '../../components/donate/CampaignObjectives';
-import ContributionTable from './ContributionTable';
+import Donations from '../../components/donate/Donations';
 import StatisticSection from '../../components/donate/stats/StatisticSection';
 
 export default function Donate() {
@@ -11,7 +11,7 @@ export default function Donate() {
       <Box>
         <CampaignObjectives />
         <StatisticSection />
-        <ContributionTable />
+        <Donations />
       </Box>
     </Box>
   );
