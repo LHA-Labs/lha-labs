@@ -1,64 +1,68 @@
+import arrowRight from '@iconify-icons/fluent/arrow-up-right-32-regular';
+import { Icon } from '@iconify/react';
 import { Box, Button, Typography } from '@mui/material';
 import Image from 'next/image';
-import React from 'react';
-import campaignsNameImg from '../../assets/campaignsNameImg.png';
 import { useIntl } from 'react-intl';
+import campaignsNameImg from '../../assets/campaignsNameImg.png';
 
 export default function CampaignsNameSection() {
   const { formatMessage } = useIntl();
   return (
     <Box
       sx={{
-        display: 'flex',
-        justifyContent: 'space-between',
+        display: 'grid',
+        gridTemplateColumns: 'auto 1fr',
         alignItems: 'center',
-        padding: '0px 118px',
+        columnGap: 50,
+        padding: '45px 0',
       }}
     >
       <Box
         sx={{
-          display: 'flex',
-          flexDirection: 'column',
-          justifyContent: 'space-between',
-          alignItems: 'flex-start',
+          display: 'grid',
           gap: '4px',
         }}
       >
-        <Typography variant="h4" sx={{ color: 'var(--primary)' }}>
-          {formatMessage({ id: 'campaignsName' })}
+        <Typography variant="h4" sx={{ color: 'var(--primary)', padding: 0 }}>
+          {formatMessage({ id: 'campaignName' })}
         </Typography>
-        <Typography variant="h2" sx={{ color: 'var(--titleActive)' }}>
-          {formatMessage({ id: 'NameOfCampaign' })}
+        <Typography
+          variant="h2"
+          sx={{ color: 'var(--titleActive)', padding: 0 }}
+        >
+          1 Orphelin 1 Pack Scolaire
         </Typography>
       </Box>
       <Box
         sx={{
-          display: 'flex',
+          display: 'grid',
+          gridTemplateColumns: 'auto 1fr',
           alignItems: 'center',
         }}
       >
-        <Image src={campaignsNameImg} alt="Campaigns Name Imgage"></Image>
+        <Image src={campaignsNameImg} alt="ping" />
         <Box
           sx={{
-            display: 'flex',
-            justifyContent: 'center',
+            display: 'grid',
             alignItems: 'center',
             gap: '10px',
             borderRadius: '200px',
             background: 'rgba(206, 0, 0, 0.10)',
             padding: '10px',
+            gridTemplateColumns: '1fr auto',
           }}
         >
           <Typography variant="body2" sx={{ textAlign: 'center' }}>
-            {formatMessage({ id: 'campaignNameText' })}L{' '}
+            {formatMessage({ id: 'objectiveMessage' })}
           </Typography>
           <Button
             variant="contained"
             color="primary"
             size="small"
             sx={{ borderRadius: '50px' }}
+            endIcon={<Icon icon={arrowRight} color="white" />}
           >
-            {formatMessage({ id: 'viewObjective' })}
+            {formatMessage({ id: 'getObjectives' })}
           </Button>
         </Box>
       </Box>

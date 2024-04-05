@@ -80,4 +80,7 @@ export const website = {
   becomeSponsorSubtitle: "Become a Let's Help Association sponsor",
   donatePageTitle:
     'Collective Contribution: Donation Tracking and Attainable Targets',
+  campaignName: 'Campaign Name',
+  objectiveMessage: "Here you'll find all the details about the campaign",
+  getObjectives: 'Get Objectives',
 };
