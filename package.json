@@ -11,6 +11,7 @@
     "@iconify/react": "^4.1.1",
     "@mui/icons-material": "^5.15.11",
     "@mui/material": "^5.15.11",
+    "@mui/x-data-grid": "^7.1.1",
     "@mui/x-date-pickers": "^6.19.5",
     "@nx/next": "17.2.8",
     "@swc/helpers": "~0.5.2",
