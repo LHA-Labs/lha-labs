@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material';
 import Image from 'next/image';
 import { useIntl } from 'react-intl';
-import porteMonnaie from '../../../assets/porteMonnaie.png';
+import wallet from '../../../public/assets/wallet.png';
 import ProgressLevel from './ProgressLevel';
 
 export default function StatisticSection() {
@@ -30,7 +30,7 @@ export default function StatisticSection() {
           gap: '30px',
         }}
       >
-        <Image src={porteMonnaie} alt="Porte monnaie" />
+        <Image src={wallet} alt="Porte monnaie" />
         <Box>
           <Typography variant="h3" sx={{ color: 'var(--body)', padding: 0 }}>
             {formatMessage({ id: 'targetAmount' })}

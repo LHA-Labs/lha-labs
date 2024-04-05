@@ -3,7 +3,7 @@ import { Icon } from '@iconify/react';
 import { Box, Button, Typography } from '@mui/material';
 import Image from 'next/image';
 import { useIntl } from 'react-intl';
-import campaignsNameImg from '../../assets/campaignsNameImg.png';
+import ping from '../../public/assets/ping.png';
 
 export default function CampaignObjectives() {
   const { formatMessage } = useIntl();
@@ -41,7 +41,7 @@ export default function CampaignObjectives() {
           alignItems: 'center',
         }}
       >
-        <Image src={campaignsNameImg} alt="ping" />
+        <Image src={ping} alt="ping" />
         <Box
           sx={{
             display: 'grid',
