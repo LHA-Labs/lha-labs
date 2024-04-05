@@ -91,7 +91,7 @@ export const website = {
     'A thousand thanks to your esteemed donators below!',
   '#': '#',
   donator: 'Donator',
-  donated: 'Donated',
+  donated: 'Donated (FCFA)',
   lastDonation: 'Last Donation',
   nothingToDisplay: 'Nothing to display',
   noDonationsYet: 'No Donations yet',
