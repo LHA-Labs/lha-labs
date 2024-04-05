@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useIntl } from 'react-intl';
 import campaignsNameImg from '../../assets/campaignsNameImg.png';
 
-export default function CampaignsNameSection() {
+export default function CampaignObjectives() {
   const { formatMessage } = useIntl();
   return (
     <Box
@@ -14,8 +14,8 @@ export default function CampaignsNameSection() {
         gridTemplateColumns: 'auto 1fr',
         alignItems: 'center',
         columnGap: 3,
-        padding: '45px 0',
         justifyItems: 'end',
+        padding: { mobile: '0 32px', laptop: '45px 118px' },
       }}
     >
       <Box
@@ -60,7 +60,6 @@ export default function CampaignsNameSection() {
             variant="contained"
             color="primary"
             size="small"
-            sx={{ borderRadius: '50px' }}
             endIcon={<Icon icon={arrowRight} color="white" />}
           >
             {formatMessage({ id: 'getObjectives' })}
