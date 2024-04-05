@@ -83,4 +83,7 @@ export const website = {
   campaignName: 'Campaign Name',
   objectiveMessage: "Here you'll find all the details about the campaign",
   getObjectives: 'Get Objectives',
+  targetAmount: 'Target Amount',
+  endsOn: 'Ends on: ',
+  amountReceived: 'Amount Received',
 };

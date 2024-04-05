@@ -4,108 +4,83 @@ import { useIntl } from 'react-intl';
 import porteMonnaie from '../../assets/porteMonnaie.png';
 import ProgressLevel from '../../components/donate/stats/ProgressLevel';
 
-export default function StatisticSection({
-  progressLevel = 55,
-}: {
-  progressLevel?: number;
-}) {
-  const { formatMessage } = useIntl();
-  // const financeStats = {
-  //   target: 1000,
-  //   received: 500,
-  // };
+export default function StatisticSection() {
+  const { formatMessage, formatNumber, formatDate } = useIntl();
+  //TODO: INTERGRATE FINANCE STATS HERE
+  const financeStats = {
+    target: 1000000,
+    received: 5000,
+    donationEndDate: new Date().toISOString(),
+  };
   return (
     <Box
       sx={{
         display: 'grid',
         rowGap: 2,
-        background: 'var(--background)',
+        background: '#F5F5F590',
+        padding: { mobile: '0 32px', laptop: '24px 118px' },
       }}
     >
       <Box
         sx={{
-          display: 'flex',
+          display: 'grid',
           alignItems: 'center',
-          justifyContent: 'space-between',
-          width: '100%',
+          gridTemplateColumns: 'auto auto 1fr',
+          justifyItems: 'end',
+          gap: '30px',
         }}
       >
-        <Box
-          sx={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'space-between',
-            gap: '30px',
-          }}
-        >
-          <Image src={porteMonnaie} alt="Porte monnaie" />
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'flex-start',
-            }}
+        <Image src={porteMonnaie} alt="Porte monnaie" />
+        <Box>
+          <Typography variant="h3" sx={{ color: 'var(--body)', padding: 0 }}>
+            {formatMessage({ id: 'targetAmount' })}
+          </Typography>
+          <Typography
+            variant="h1"
+            sx={{ color: 'var(--titleActive)', padding: 0 }}
           >
-            <Typography variant="h3" sx={{ color: 'var(--body)' }}>
-              {formatMessage({ id: 'montantEspere' })}
-            </Typography>
-            <Box
-              sx={{
-                display: 'flex',
-                alignItems: 'flex-start',
-                gap: '5px',
-              }}
-            >
-              <Typography variant="h1" sx={{ color: 'var(--titleActive)' }}>
-                1 000 000 fcfa
-              </Typography>
-              <Typography variant="h3" sx={{ color: 'var(--titleActive)' }}>
-                FCFA
-              </Typography>
-            </Box>
-            <Typography variant="body2" sx={{ color: 'var(--placeholder)' }}>
-              {formatMessage({ id: 'date' })}
-            </Typography>
-          </Box>
+            {formatNumber(financeStats.target, {
+              style: 'currency',
+              currency: 'xaf',
+            })}
+          </Typography>
+          <Typography
+            variant="body2"
+            sx={{ color: 'var(--placeholder)', padding: 0 }}
+          >
+            {`${formatMessage({ id: 'endsOn' })} ${formatDate(
+              financeStats.donationEndDate,
+              {
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                weekday: 'long',
+              }
+            )}`}
+          </Typography>
         </Box>
         <Box
           sx={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'center',
-            gap: '100px',
+            display: 'grid',
           }}
         >
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'flex-start',
-            }}
+          <Typography
+            variant="h5"
+            sx={{ color: 'var(--placeholder)', padding: 0 }}
           >
-            <Typography variant="h5" sx={{ color: 'var(--placeholder)' }}>
-              {formatMessage({ id: 'totalEnCaisse' })}
-            </Typography>
-            <Typography variant="h2" sx={{ color: 'var(--success)' }}>
-              500 000fCFA
-            </Typography>
-          </Box>
-
-          <Box
-            sx={{
-              display: 'flex',
-              flexDirection: 'column',
-              alignItems: 'flex-start',
-            }}
-          >
-            <Typography variant="h5" sx={{ color: 'var(--placeholder)' }}>
-              {formatMessage({ id: 'entreeMensuelle' })}
-            </Typography>
-            <Typography variant="h2">50 000fCFA</Typography>
-          </Box>
+            {formatMessage({ id: 'amountReceived' })}
+          </Typography>
+          <Typography variant="h2" sx={{ color: 'var(--success)', padding: 0 }}>
+            {formatNumber(financeStats.received, {
+              style: 'currency',
+              currency: 'xaf',
+            })}
+          </Typography>
         </Box>
       </Box>
-      <ProgressLevel progress={progressLevel} />
+      <ProgressLevel
+        progress={(financeStats.received / financeStats.target) * 100}
+      />
     </Box>
   );
 }
