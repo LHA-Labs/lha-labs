@@ -24,8 +24,9 @@ export default function Header() {
   const navItems: INavItem[] = [
     { item: 'home', route: '/' },
     { item: 'aboutUs', route: '/about-us' },
-    { item: 'partners', route: '/partners' },
+    { item: 'joinUs', route: '/join-us' },
     { item: 'donate', route: '/donate' },
+    { item: 'news', route: '/news' },
   ];
 
   const openSidebar = () => {
