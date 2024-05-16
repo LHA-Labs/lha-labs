@@ -71,7 +71,7 @@ function Sponsors() {
           {formatMessage({ id: 'becomePartner' })}
         </Button>
         <Button variant="outlined" color="primary">
-          {formatMessage({ id: 'viewAll' })}
+          {formatMessage({ id: 'joinUs' })}
         </Button>
       </Box>
     </Box>
