@@ -5,7 +5,6 @@ export const website = {
     'At the heart of our journey is a commitment to making a meaningful difference. Discover who we are, our story, and the collective',
   aboutUsSubtitle2: 'positive change and inspire hope.',
 
-  //our Team
   roleLorrain: 'Technical Team Leader',
   descriptionLorrain:
     'At Let’s help Association, our mission is to empower lives through compassionate initiatives. By promoting education and fostering sustainable solutions, we envision a brighter, more.',
