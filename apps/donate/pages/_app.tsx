@@ -24,7 +24,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
   }, []);
 
   return (
-    <LHALabsThemeProvider defaultLang="fr">
+    <LHALabsThemeProvider defaultLang="en">
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <Head>
           <title>{"Let's Help Association - LHA"}</title>
