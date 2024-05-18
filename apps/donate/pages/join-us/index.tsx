@@ -1,14 +1,14 @@
-import {
-  Box,
-  Button,
-  LinearProgress,
-  Tooltip,
-  Typography,
-} from '@mui/material';
+import { Box, Button, LinearProgress, Typography } from '@mui/material';
 import SectionHeader from 'apps/donate/components/Landing/SectionHeader';
 import Image from 'next/image';
+import { useIntl } from 'react-intl';
 
 export default function JoinUs() {
+  const { formatMessage } = useIntl();
+
+  //TODO: Replace with actual data from api
+  const targetMembers = 150;
+  const totalActiveMembers = 70;
   const becomeMemberReasons = [
     {
       image: '/assets/joint-hands.png',
@@ -46,26 +46,72 @@ export default function JoinUs() {
           height: '428px',
         }}
       >
-        <Box>
-          <Typography variant="h1">Devenir Membre</Typography>
+        <Box
+          sx={{
+            display: 'grid',
+            gridAutoFlow: 'column',
+            columnGap: 2,
+            alignItems: 'center',
+          }}
+        >
+          <Typography variant="h1" sx={{ color: 'white' }}>
+            {formatMessage({ id: 'becomeMember' })}
+          </Typography>
+          <Button
+            variant="contained"
+            color="inherit"
+            sx={{
+              color: 'var(--primary)',
+              bgcolor: 'white',
+              '&:hover': {
+                bgcolor: 'white',
+              },
+            }}
+          >
+            {`${formatMessage({
+              id: 'objective',
+            })}: ${targetMembers} ${formatMessage({ id: 'members' })}`}
+          </Button>
         </Box>
-        <Typography>
-          Rejoignez-nous et beneficiez de partenariats strategieques pour
-          developper votre reseau et maximiser votre impact
+        <Typography
+          variant="h3"
+          sx={{ color: 'white', textAlign: 'center', width: '45%' }}
+        >
+          {formatMessage({ id: 'becomeMemberHeadline' })}
         </Typography>
-        <Tooltip title="50%" arrow>
-          <LinearProgress variant="determinate" value={50} />
-        </Tooltip>
-        <Typography>70 Membres Actifs</Typography>
-        <Button variant="contained" color="inherit">
-          Devenir membre
+        <Box sx={{ width: '60%', display: 'grid', rowGap: 2 }}>
+          <LinearProgress
+            variant="determinate"
+            value={50}
+            color="secondary"
+            sx={{
+              height: '16px',
+              borderRadius: '10px',
+              '& .MuiLinearProgress-bar': {
+                borderRadius: '10px',
+                backgroundColor: '#A0A3BD',
+              },
+            }}
+          />
+          <Typography
+            variant="h3"
+            sx={{ color: 'white', justifySelf: 'center' }}
+          >
+            {`${totalActiveMembers} ${formatMessage({ id: 'activeMembers' })}`}
+          </Typography>
+        </Box>
+        <Button variant="contained" color="inherit" sx={{ color: 'black' }}>
+          {formatMessage({ id: 'becomeMember' })}
         </Button>
       </Box>
       <Box
         sx={{
-          padding: { laptop: '0 118px 56px 118px', mobile: '0' },
+          padding: { mobile: '12px 32px', laptop: '48px 118px 56px 118px' },
           display: 'grid',
           rowGap: 3,
+          backgroundImage: 'url(/assets/become_member_bg.png)',
+          backgroundPosition: '101% -380px',
+          backgroundRepeat: 'no-repeat',
         }}
       >
         <Box
@@ -79,8 +125,7 @@ export default function JoinUs() {
             variant="body2"
             sx={{ fontWeight: 600, textAlign: 'center' }}
           >
-            Devenez membre et decouvrez les opportunites de partenariat
-            exclusidves qui enrichiront votre quotidien et votre reseau
+            {formatMessage({ id: 'whyBecomeMemberSubtitle' })}
           </Typography>
           <Box sx={{ display: 'grid', gridAutoFlow: 'column', gap: 3 }}>
             {becomeMemberReasons.map((reason, index) => (
@@ -128,7 +173,7 @@ export default function JoinUs() {
         </Box>
 
         <Box sx={{ display: 'grid', gap: 2 }}>
-          <SectionHeader title=" " subtitle="L'importance des dons mensuels" />
+          <SectionHeader title=" " subtitle="monthlyDonationImportance" />
           <Typography
             variant="body2"
             sx={{
@@ -139,15 +184,7 @@ export default function JoinUs() {
               lineHeight: 1.6,
             }}
           >
-            Les dons mensuels sont essentiels pour la viabilité financiere a
-            long terme d'une association a but non lucratif. En fournissant une
-            source de revenus reguliere et previsibe,il permettent a
-            l'association de planifier ses activites et de repondre aux besoins
-            de maniere efficace et constante. De plus, les dons mensuels
-            favorisent la fidelisation des donateurs en renforcant leur
-            engagement et leur sentiment d'appartenance a la cause et en creant
-            un engagement continu, ce qui contribue a assurer la durabilite et
-            l'impact a long terme de l'association dans sa mission humanitaire.
+            {formatMessage({ id: 'monthlyDonationImportanceExplanation' })}
           </Typography>
           <Box
             sx={{
@@ -158,10 +195,10 @@ export default function JoinUs() {
             }}
           >
             <Button variant="contained" color="primary">
-              Devenir membre
+              {formatMessage({ id: 'becomeMember' })}
             </Button>
-            <Button variant="contained" color="inherit">
-              Inviter un ami
+            <Button variant="contained" color="inherit" sx={{ color: 'black' }}>
+              {formatMessage({id:'inviteAFriend'})}
             </Button>
           </Box>
         </Box>

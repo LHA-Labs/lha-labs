@@ -79,4 +79,26 @@ export const website = {
   motivation: 'Motivation',
   interested: 'Intéressé ?',
   becomeSponsorSubtitle: "Devenez parrain de l'Association Aidons Ensemble",
+
+  becomeMember: 'Devenir Membre',
+  objective: 'Objectif',
+  members: 'Membres',
+  becomeMemberHeadline:
+    'Rejoignez-nous et beneficiez de partenariats strategieques pour developper votre reseau et maximiser votre impact',
+  activeMembers: 'Membres Actifs',
+  whyBecomeMember: 'Pourquoi Devenir Membre ?',
+  whyBecomeMemberSubtitle:
+    'Devenez membre et decouvrez les opportunites de partenariat exclusidves qui enrichiront votre quotidien et votre reseau',
+  monthlyDonationImportance: "L'importance des dons mensuels",
+  monthlyDonationImportanceExplanation: `Les dons mensuels sont essentiels pour la viabilité financiere a
+  long terme d'une association a but non lucratif. En fournissant une
+  source de revenus reguliere et previsibe,il permettent a
+  l'association de planifier ses activites et de repondre aux besoins
+  de maniere efficace et constante. De plus, les dons mensuels
+  favorisent la fidelisation des donateurs en renforcant leur
+  engagement et leur sentiment d'appartenance a la cause et en creant
+  un engagement continu, ce qui contribue a assurer la durabilite et
+  l'impact a long terme de l'association dans sa mission humanitaire.`,
+  inviteAFriend: 'Inviter un ami',
+  news: 'Actualités',
 };
