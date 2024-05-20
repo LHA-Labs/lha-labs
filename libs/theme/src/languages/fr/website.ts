@@ -1,14 +1,15 @@
 export const website = {
   aboutUsHeaderTitle:
-    "Bienvenue à Let's Help Association, où la passion rencontre le but",
+    "Let's Help Association : Notre Engagement envers l'Éducation et la Solidarité",
   aboutUsSubtitle1:
-    'Au cœur de notre parcours se trouve un engagement à faire une différence significative. Découvrez qui nous sommes, notre histoire et le collectif',
-  aboutUsSubtitle2: "changement positif et inspirer l'espoir.",
+    'Au cœur de notre parcours se trouve un engagement à faire une différence significative. Découvrez qui nous sommes, notre histoire et le',
+  aboutUsSubtitle2:
+    "changement positif et collectif, et l'espoir que nous inspirons.",
   roleLorrain: "Chef d'équipe technique",
   descriptionLorrain:
     "À Let's Help Association, notre mission est d'autonomiser les vies grâce à des initiatives compassionnelles. En promouvant l'éducation et en favorisant des solutions durables, nous envisageons un avenir plus lumineux, plus.",
   ourTeam: 'Notre équipe',
-  ourTeamSubtitle: 'Unis par le but, animés par la passion',
+  ourTeamSubtitle: "Unis par le l'objectif, animés par la passion",
   home: 'Accueil',
   aboutUs: 'À propos de nous',
   partners: 'Partenaires',
@@ -19,7 +20,7 @@ export const website = {
   joinUs: 'Rejoignez-nous',
   getInvolved: 'Impliquez-vous',
   getInvolvedMessage:
-    "Let's Help Association, dévouée à la compassion et à l'impact social, s'engage à fournir une assistance significative aux communautés.",
+    "Let's Help Association, dévouée à la compassion et à l'impact social et éducative, s'engage à fournir une assistance significative aux personnes de la chouche vulnérable.",
   makeAnonymousDonation: 'Faire un don anonyme',
   getInTouch: 'Entrer en contact',
   organisation: 'Organisation',
@@ -58,14 +59,26 @@ export const website = {
     'AIDEZ-NOUS À CONSTRUIRE UNE COMMUNAUTÉ POUR NOS ENFANTS ET ORPHELINS',
   joinUsPreFooterMessage:
     "Rejoignez Let's Help Association et aidez à pousser notre mission dans l'éducation avec vous !",
-  ourPurpose: 'Notre objectif',
-  ourValues: 'Nos valeurs',
-  ourMission: 'Notre mission',
-  ourVision: 'Notre vision',
+  ourPurpose: 'Notre Objectif',
+  ourValues: 'Nos Valeurs',
+  ourMission: 'Notre Mission',
+  ourVision: 'Notre Vision',
   lhaMissionStatement:
-    "À Let's Help Association, notre mission est d'autonomiser les vies grâce à des initiatives compassionnelles. En promouvant l'éducation et en favorisant des solutions durables, nous envisageons un avenir plus lumineux et plus résilient. Rejoignez-nous dans ce voyage pour construire un monde d'espoir et d'égalité.",
+    "La mission de Let's Help Association est d'impacter et de transformer des vies en brisant les barrières de l'accès à l'éducation pour les personnes les plus vulnérables, en particulier les orphelins. Nous croyons fermement que chaque enfant mérite une chance égale de réussir dans la vie, et nous nous engageons à soutenir activement ces enfants pour réaliser leur potentiel.",
   lhaVision1:
-    "À Let's Help Association, notre mission est d'autonomiser les vies grâce à des initiatives compassionnelles. En promouvant l'éducation",
+    'Aspirer à être un collectif de cœurs généreux dédiés à transformer positivement les vies des orphelins et des personnes vulnérables.',
+  lhaVision2:
+    "Se concentrer sur l'offre d'opportunités éducatives concrètes et durables pour permettre à ces enfants de s'épanouir et de contribuer positivement à la société.",
+  lhaPurpose1:
+    'Réaliser des levées de fonds pour financer nos initiatives caritatives.',
+  lhaPurpose2:
+    "Parrainer des enfants pour garantir un accès continu à l'éducation et au développement personnel.",
+  lhaPurpose3:
+    'Visiter régulièrement des orphelinats pour offrir un soutien tangible.',
+  lhaPurpose4:
+    "Augmenter le nombre d'adhésions pour élargir l'impact communautaire.",
+  lhaValues:
+    "En tant qu'association, nos valeurs fondamentales incluent le dévouement envers les enfants orphelins et les personnes vulnérables, la solidarité au sein de notre équipe dynamique, l'intégrité dans nos actions et notre gestion des fonds, ainsi que l'équité en offrant des opportunités éducatives équitables à tous ceux que nous soutenons.",
   ourPartners: 'Nos partenaires',
   ourPartnersSubtitle:
     "Nourrir les vies, inspirer les futurs : Initiatives transformatrices qui éclairent les chemins, favorisent la croissance, cultivent l'affection et inculquent une vie pleine de sens pour tous.",
@@ -117,4 +130,5 @@ export const website = {
   becomePartnerMessageBody:
     "J'ai découvert votre mission, et elle résonne fortement avec moi. J'aimerais organiser une discussion pour explorer comment je peux contribuer à étendre votre portée pour rendre l'éducation accessible aux enfants démunis.",
   becomePartnerMessageFooter: 'Hâte de communiquer avec vous prochainement.',
+  technicalTeamLead: "Chef d'équipe technique",
 };
