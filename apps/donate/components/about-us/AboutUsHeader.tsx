@@ -13,10 +13,15 @@ export default function AboutUsHeader() {
         gap: '10px',
       }}
     >
-      <Typography variant="h1" sx={{ textAlign: 'center' }}>
+      <Typography
+        variant="h1"
+        sx={{ textAlign: 'center', width: { laptop: '60%', mobile: '100%' } }}
+      >
         {formatMessage({ id: 'aboutUsHeaderTitle' })}
       </Typography>
-      <Typography sx={{ textAlign: 'center' }}>
+      <Typography
+        sx={{ textAlign: 'center', width: { laptop: '80%', mobile: '100%' } }}
+      >
         {formatMessage({ id: 'aboutUsSubtitle1' })}
         <Typography component="span" color="primary">
           {` ${formatMessage({ id: 'aboutUsSubtitle2' })}`}
