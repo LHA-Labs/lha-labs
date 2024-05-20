@@ -7,10 +7,10 @@ export interface ILetsHelpStat {
 export function useStats() {
   const letsHelpStatistics: ILetsHelpStat[] = [
     { label: 'donors', value: 100 },
-    { label: 'sponsors', value: 15 },
-    { label: 'orphans', value: 500 },
-    { label: 'partners', value: 16 },
-    { label: 'receivedDonations', value: 2000000 },
+    { label: 'sponsors', value: 5 },
+    { label: 'orphans', value: 300 },
+    { label: 'partners', value: 2 },
+    { label: 'receivedDonations', value: 1000000 },
   ];
 
   return letsHelpStatistics;
