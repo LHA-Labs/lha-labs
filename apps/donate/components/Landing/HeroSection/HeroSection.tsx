@@ -19,7 +19,13 @@ export default function HeroSection() {
         padding: { laptop: '0 118px', mobile: '0 32px' },
       }}
     >
-      <Box sx={{ display: 'grid', rowGap: 1 }}>
+      <Box
+        sx={{
+          display: 'grid',
+          rowGap: 1,
+          backgroundImage: 'url(/assets/hero_bg.png)',
+        }}
+      >
         <Typography
           variant="h2"
           sx={{
