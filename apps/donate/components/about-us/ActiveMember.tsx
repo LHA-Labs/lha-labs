@@ -1,3 +1,4 @@
+import { useActiveLanguage } from '@lha-labs/theme';
 import { getFirstTwoNameInitials } from '@lha-labs/utils';
 import { Avatar, Box, Typography } from '@mui/material';
 import { Member } from '../../services/team';
@@ -6,10 +7,13 @@ import MemberSocialIcon from './MemberSocialIcon';
 export default function ActiveMember({
   fullname,
   imageRef,
-  message,
+  messageEn,
+  messageFr,
   role,
   socials,
 }: Member) {
+  const activeLanguage = useActiveLanguage();
+
   return (
     <Box
       sx={{
@@ -66,7 +70,7 @@ export default function ActiveMember({
               lineHeight: '28px',
             }}
           >
-            {message}
+            {activeLanguage === 'en' ? messageEn : messageFr}
           </Typography>
           <Box
             sx={{
