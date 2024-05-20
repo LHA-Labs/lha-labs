@@ -51,7 +51,7 @@ export default function OurTeamSection() {
             sx={{
               display: 'grid',
               gridAutoFlow: 'column',
-              justifyItems: 'center',
+              justifyContent: 'center',
               alignItems: 'center',
               columnGap: '18px',
               padding: { mobile: '0 20px', laptop: '0 100px' },
