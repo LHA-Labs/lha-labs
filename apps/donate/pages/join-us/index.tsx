@@ -1,5 +1,5 @@
 import { Box, Button, LinearProgress, Typography } from '@mui/material';
-import SectionHeader from 'apps/donate/components/Landing/SectionHeader';
+import SectionHeader from '../../components/Landing/SectionHeader';
 import Image from 'next/image';
 import { useIntl } from 'react-intl';
 
@@ -49,7 +49,7 @@ export default function JoinUs() {
         <Box
           sx={{
             display: 'grid',
-            gridAutoFlow: 'column',
+            gridAutoFlow: { laptop: 'column', mobile: 'row' },
             columnGap: 2,
             alignItems: 'center',
           }}
@@ -75,7 +75,11 @@ export default function JoinUs() {
         </Box>
         <Typography
           variant="h3"
-          sx={{ color: 'white', textAlign: 'center', width: '45%' }}
+          sx={{
+            color: 'white',
+            textAlign: 'center',
+            width: { laptop: '45%', mobile: '100%' },
+          }}
         >
           {formatMessage({ id: 'becomeMemberHeadline' })}
         </Typography>
@@ -127,7 +131,13 @@ export default function JoinUs() {
           >
             {formatMessage({ id: 'whyBecomeMemberSubtitle' })}
           </Typography>
-          <Box sx={{ display: 'grid', gridAutoFlow: 'column', gap: 3 }}>
+          <Box
+            sx={{
+              display: 'grid',
+              gridAutoFlow: { laptop: 'column', mobile: 'row' },
+              gap: 3,
+            }}
+          >
             {becomeMemberReasons.map((reason, index) => (
               <Box
                 key={index}
@@ -178,8 +188,8 @@ export default function JoinUs() {
             variant="body2"
             sx={{
               fontWeight: 600,
-              textAlign: 'center',
-              width: '80%',
+              textAlign: { laptop: 'center', mobile: 'center' },
+              width: { laptop: '80%', mobile: '100%' },
               justifySelf: 'center',
               lineHeight: 1.6,
             }}
@@ -198,7 +208,7 @@ export default function JoinUs() {
               {formatMessage({ id: 'becomeMember' })}
             </Button>
             <Button variant="contained" color="inherit" sx={{ color: 'black' }}>
-              {formatMessage({id:'inviteAFriend'})}
+              {formatMessage({ id: 'inviteAFriend' })}
             </Button>
           </Box>
         </Box>
