@@ -40,6 +40,7 @@ export default function JoinUsPreFooter() {
         variant="contained"
         size="large"
         color="inherit"
+        sx={{ color: 'black' }}
       >
         {formatMessage({ id: 'joinUs' })}
       </Button>
