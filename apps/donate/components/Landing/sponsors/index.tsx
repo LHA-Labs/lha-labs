@@ -1,5 +1,6 @@
 import { Box, Button } from '@mui/material';
 import { useRouter } from 'next/router';
+import { useEffect, useState } from 'react';
 import { useIntl } from 'react-intl';
 import SectionHeader from '../SectionHeader';
 import SponsorLogo from './SponsorLogo';
@@ -22,6 +23,14 @@ function Sponsors() {
   })}\n\n${formatMessage({
     id: 'becomePartnerMessageFooter',
   })}\n\n${tags}`;
+
+  const [fullUrl, setFullUrl] = useState<string>('');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setFullUrl(window.location.href);
+    }
+  }, []);
 
   const sponsors: Sponsor[] = [
     {
@@ -96,11 +105,9 @@ function Sponsors() {
           variant="contained"
           color="primary"
           href={`https://api.whatsapp.com/send/?phone=${assoication_whatsapp}&text=${encodeURIComponent(
-            becomePartnerMessage
-            // +
-            // `\n${window.location.href}${
-            //   window.location.href.includes('#') ? '' : '/#sponsors'
-            // }`
+            `${becomePartnerMessage}\n${fullUrl}${
+              fullUrl.includes('#') ? '' : '#sponsors'
+            }`
           )}`}
         >
           {formatMessage({ id: 'becomePartner' })}
