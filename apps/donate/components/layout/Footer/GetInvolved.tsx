@@ -1,8 +1,10 @@
 import { Box, Button, Typography } from '@mui/material';
+import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl';
 
 export default function GetInvolved() {
   const { formatMessage } = useIntl();
+  const { push } = useRouter();
   return (
     <Box
       sx={{
@@ -48,10 +50,19 @@ export default function GetInvolved() {
           },
         }}
       >
-        <Button variant="contained" color="primary">
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => push('/donate')}
+        >
           {formatMessage({ id: 'makeADonation' })}
         </Button>
-        <Button variant="contained" color="inherit" sx={{ color: '#333' }}>
+        <Button
+          onClick={() => push('/join-us')}
+          variant="contained"
+          color="inherit"
+          sx={{ color: '#333' }}
+        >
           {formatMessage({ id: 'joinUs' })}
         </Button>
       </Box>

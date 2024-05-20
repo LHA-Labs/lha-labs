@@ -6,9 +6,12 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { useIntl } from 'react-intl';
 import SectionHeader from '../../components/Landing/SectionHeader';
+import { useRouter } from 'next/router';
 
 export default function News() {
   const { formatDate, formatMessage } = useIntl();
+  const { push } = useRouter();
+
   //TODO: CALL API HERE TO FETCH THIS VALUE
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const eventDate = new Date('2024-09-31T23:59:59');
@@ -209,7 +212,11 @@ export default function News() {
             gap: 1,
           }}
         >
-          <Button variant="contained" color="primary">
+          <Button
+            onClick={() => push('/donate')}
+            variant="contained"
+            color="primary"
+          >
             {formatMessage({ id: 'makeADonation' })}
           </Button>
           <Button variant="contained" color="inherit" sx={{ color: 'black' }}>

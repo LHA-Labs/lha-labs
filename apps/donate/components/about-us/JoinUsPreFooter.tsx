@@ -1,8 +1,10 @@
 import { Box, Button, Typography } from '@mui/material';
+import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl';
 
 export default function JoinUsPreFooter() {
   const { formatMessage } = useIntl();
+  const { push } = useRouter();
 
   return (
     <Box
@@ -33,7 +35,12 @@ export default function JoinUsPreFooter() {
       >
         {formatMessage({ id: 'joinUsPreFooterMessage' })}
       </Typography>
-      <Button variant="contained" size="large" color="inherit">
+      <Button
+        onClick={() => push('/join-us')}
+        variant="contained"
+        size="large"
+        color="inherit"
+      >
         {formatMessage({ id: 'joinUs' })}
       </Button>
     </Box>

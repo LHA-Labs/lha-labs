@@ -108,6 +108,7 @@ export default function Header() {
               variant="contained"
               color="primary"
               disableElevation={false}
+              onClick={() => push('/donate')}
             >
               {formatMessage({ id: 'makeADonation' })}
             </Button>

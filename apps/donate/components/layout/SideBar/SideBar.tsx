@@ -2,6 +2,7 @@ import CaretIcon from '@iconify-icons/fluent/chevron-down-24-regular';
 import { Icon } from '@iconify/react';
 import { Box, Button, Drawer, ImageListItem, Typography } from '@mui/material';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import React from 'react';
 import { useIntl } from 'react-intl';
 import LayoutMenu from '../../../Interface';
@@ -23,6 +24,7 @@ const Sidebar: React.FC<SidebarProps> = ({
   onItemClick,
 }) => {
   const { formatMessage } = useIntl();
+  const { push } = useRouter();
 
   return (
     <Drawer anchor="right" open={open} onClose={onClose}>
@@ -109,6 +111,7 @@ const Sidebar: React.FC<SidebarProps> = ({
             size="medium"
             color="primary"
             sx={{ borderRadius: '50px' }}
+            onClick={() => push('/donate')}
           >
             {formatMessage({ id: 'makeADonation' })}
           </Button>
