@@ -45,7 +45,7 @@ export const website = {
   previous: 'Précédent',
   next: 'Suivant',
   viewAll: 'Voir tout',
-  gallery: 'Galerie',
+  gallery: 'Gallerie',
   gallerySectionSubtitle: 'Nos partenariats précieux pour faire une différence',
   photos: 'Photos',
   videos: 'Vidéos',
@@ -101,4 +101,16 @@ export const website = {
   l'impact a long terme de l'association dans sa mission humanitaire.`,
   inviteAFriend: 'Inviter un ami',
   news: 'Actualités',
+  ourNews: 'Nos actualités',
+  ourNewsSubtitle:
+    "Nourrir les vies, inspirer les avenirs : Des initiatives transformatrices qui éclairent les chemins, favorisent la croissance, cultivent l'affection et incitent à une vie utile pour tous.",
+  ourNewsSubtitle2: 'Découvrez les Denièrs Activités et Futurs Evénements',
+  weAreComingSoon: 'We Are Coming Soon...',
+  days: 'Jours',
+  hours: 'Heures',
+  minutes: 'Minutes',
+  seconds: 'Secondes',
+  registerForVisit: 'Inscrivez-vous pour visiter',
+  joinLetsHelpMessage:
+    "Rejoignez Let's Help Association et faites partie d'une mission passionnante qui vise à transformer des vies grâce à l'éducation.",
 };
