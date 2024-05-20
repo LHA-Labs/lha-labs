@@ -49,7 +49,7 @@ export default function TenetCard({
               sx={{
                 display: 'grid',
                 gridTemplateColumns: 'auto 1fr',
-                alignItems: 'start',
+                alignItems: 'center',
                 columnGap: 2,
               }}
             >
@@ -66,6 +66,10 @@ export default function TenetCard({
               <Typography
                 variant="body2"
                 sx={{
+                  fontWeight: {
+                    laptop: colored ? 400 : 600,
+                    mobile: index % 2 ? 400 : 600,
+                  },
                   color: {
                     laptop: colored ? '#E0E0E0' : '#666',
                     mobile: index % 2 ? '#E0E0E0' : '#666',
@@ -81,6 +85,10 @@ export default function TenetCard({
         <Typography
           variant="body2"
           sx={{
+            fontWeight: {
+              laptop: colored ? 400 : 600,
+              mobile: index % 2 ? 400 : 600,
+            },
             color: {
               laptop: colored ? '#E0E0E0' : '#666',
               mobile: index % 2 ? '#E0E0E0' : '#666',

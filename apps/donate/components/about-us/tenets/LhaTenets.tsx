@@ -10,7 +10,7 @@ export interface Tenet {
   colored?: boolean;
 }
 export default function LhaTenets() {
-  const element: Tenet[] = [
+  const tenets: Tenet[] = [
     {
       icon: (
         <Image
@@ -32,7 +32,7 @@ export default function LhaTenets() {
       icon: (
         <Image
           src="/assets/vision.png"
-          alt="Our Mission"
+          alt="Our Vision"
           height={78}
           width={78}
           style={{
@@ -43,14 +43,14 @@ export default function LhaTenets() {
         />
       ),
       title: 'ourVision',
-      description: ['lhaVision1', 'lhaVision1', 'lhaVision1'],
+      description: ['lhaVision1', 'lhaVision2'],
       colored: true,
     },
     {
       icon: (
         <Image
           src="/assets/purpose.png"
-          alt="Our Mission"
+          alt="Our Purpose"
           height={78}
           width={78}
           style={{
@@ -61,14 +61,14 @@ export default function LhaTenets() {
         />
       ),
       title: 'ourPurpose',
-      description: ['lhaVision1', 'lhaVision1', 'lhaVision1'],
+      description: ['lhaPurpose1', 'lhaPurpose2', 'lhaPurpose3', 'lhaPurpose4'],
       colored: true,
     },
     {
       icon: (
         <Image
           src="/assets/mission.png"
-          alt="Our Mission"
+          alt="Our Values"
           height={60}
           width={60}
           style={{
@@ -79,7 +79,7 @@ export default function LhaTenets() {
         />
       ),
       title: 'ourValues',
-      description: 'lhaMissionStatement',
+      description: 'lhaValues',
     },
   ];
 
@@ -92,7 +92,7 @@ export default function LhaTenets() {
         padding: { mobile: '0px', laptop: '0 118px' },
       }}
     >
-      {element.map((tenet, index) => (
+      {tenets.map((tenet, index) => (
         <TenetCard {...tenet} index={index} key={index} />
       ))}
     </Box>
