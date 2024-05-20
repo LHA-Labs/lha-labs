@@ -39,6 +39,7 @@ export default function TeamMember({
           backgroundColor: 'black',
           opacity: '0.62',
           height: '100%',
+          width: '100%',
           borderRadius: '100%',
           alignItems: 'center',
           textAlign: 'center',
@@ -46,7 +47,10 @@ export default function TeamMember({
           fontWeight: 700,
         }}
       >
-        {fullname}
+        {fullname
+          .split(' ')
+          .map((val) => val[0])
+          .join('.')}
       </Typography>
       <Avatar
         src={imageRef}
