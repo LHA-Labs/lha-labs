@@ -1,12 +1,12 @@
 export const website = {
   aboutUsHeaderTitle:
-    "Bienvenue à l'Association Aidons Ensemble, où la passion rencontre le but",
+    "Bienvenue à Let's Help Association, où la passion rencontre le but",
   aboutUsSubtitle1:
     'Au cœur de notre parcours se trouve un engagement à faire une différence significative. Découvrez qui nous sommes, notre histoire et le collectif',
   aboutUsSubtitle2: "changement positif et inspirer l'espoir.",
   roleLorrain: "Chef d'équipe technique",
   descriptionLorrain:
-    "À l'Association Aidons Ensemble, notre mission est d'autonomiser les vies grâce à des initiatives compassionnelles. En promouvant l'éducation et en favorisant des solutions durables, nous envisageons un avenir plus lumineux, plus.",
+    "À Let's Help Association, notre mission est d'autonomiser les vies grâce à des initiatives compassionnelles. En promouvant l'éducation et en favorisant des solutions durables, nous envisageons un avenir plus lumineux, plus.",
   ourTeam: 'Notre équipe',
   ourTeamSubtitle: 'Unis par le but, animés par la passion',
   home: 'Accueil',
@@ -19,26 +19,25 @@ export const website = {
   joinUs: 'Rejoignez-nous',
   getInvolved: 'Impliquez-vous',
   getInvolvedMessage:
-    "Association Aidons Ensemble, dévouée à la compassion et à l'impact social, s'engage à fournir une assistance significative aux communautés.",
+    "Let's Help Association, dévouée à la compassion et à l'impact social, s'engage à fournir une assistance significative aux communautés.",
   makeAnonymousDonation: 'Faire un don anonyme',
   getInTouch: 'Entrer en contact',
   organisation: 'Organisation',
-  heroSectionTitle:
-    "Donner de l'espoir, de l'autonomisation, de l'amour et du but.",
+  heroSectionTitle: "Parcequ'il y'a plus de bonheur à donner qu'à recevoir. ",
   heroSectionSubtitle:
-    "Nourrir les vies, inspirer les futurs : Initiatives transformatrices qui éclairent les chemins, favorisent la croissance, cultivent l'affection et inculquent une vie pleine de sens pour.",
+    "Let's Help Association : un collectif de cœurs généreux dédiés à transformer positivement les vies des orphelins et des personnes vulnérables.",
   itIsTime: 'Il est temps',
   toChangeA: 'Pour changer A',
   childsLife: "La vie d'un enfant",
-  donors: 'Donateurs',
-  sponsors: 'Parrains',
+  donors: 'Benevoles',
+  sponsors: 'Sponsors',
   orphans: 'Orphelins',
-  receivedDonations: 'Reçu',
+  receivedDonations: 'Dons Reçu',
   moreAboutUs: 'Plus sur nous',
   aboutUsMessage:
-    "L'Association Aidons Ensemble, dévouée à la compassion et à l'impact social, s'engage à fournir une assistance significative aux communautés dans le besoin. À travers diverses initiatives humanitaires, l'association vise à faire une différence positive en offrant un soutien tangible, que ce soit par la fourniture de ressources essentielles, l'éducation, ou la promotion du bien-être. Ensemble, nous construisons des ponts vers un avenir meilleur, un acte à la fois, en favorisant un esprit d'unité et de solidarité.",
-  aboutUsSectionSubtitle: "Bienvenue à l'Association Aidons Ensemble",
-  activeCampaigns: 'Campagnes actives',
+    "Let's Help Association est une association caritative pleine de dévouement regroupant des individus qui se sont unis dans le but de soutenir activement les orphelins ainsi que les personnes vulnérables. Fondée en janvier 2023 et reconnue par l'État camerounais en avril 2024, avec une équipe de membres dynamiques et partenaires officiels, nous nous efforçons d'apporter une aide concrète et durable à ceux qui en ont le plus besoin.",
+  aboutUsSectionSubtitle: "Bienvenue à Let's Help Association",
+  activeCampaigns: 'Campagnes Actives',
   activeCampaignsSubtitle:
     'Transformer des vies, construire des futurs : Explorez nos campagnes impactantes',
   participate: 'Participer',
@@ -49,24 +48,24 @@ export const website = {
   gallerySectionSubtitle: 'Nos partenariats précieux pour faire une différence',
   photos: 'Photos',
   videos: 'Vidéos',
-  ourDonorsSubtitle: 'Mains de soutien : Nos généreux donateurs',
-  ourDonors: 'Nos donateurs',
-  ourSponsors: 'Nos parrains',
+  ourDonorsSubtitle: 'Mains de soutien : Nos généreux bienfaiteurs',
+  ourDonors: 'Nos Bienfaiteurs',
+  ourSponsors: 'Nos Sponsors',
   ourSponsorsSectionSubtitle:
     'Nos partenariats précieux pour faire une différence',
-  becomePartner: 'Devenir un partenaire',
+  becomePartner: 'Devenir un sponsor',
   preFooterMessage:
     'AIDEZ-NOUS À CONSTRUIRE UNE COMMUNAUTÉ POUR NOS ENFANTS ET ORPHELINS',
   joinUsPreFooterMessage:
-    "Rejoignez l'Association Aidons Ensemble et aidez à pousser notre mission dans l'éducation avec vous !",
+    "Rejoignez Let's Help Association et aidez à pousser notre mission dans l'éducation avec vous !",
   ourPurpose: 'Notre objectif',
   ourValues: 'Nos valeurs',
   ourMission: 'Notre mission',
   ourVision: 'Notre vision',
   lhaMissionStatement:
-    "À l'Association Aidons Ensemble, notre mission est d'autonomiser les vies grâce à des initiatives compassionnelles. En promouvant l'éducation et en favorisant des solutions durables, nous envisageons un avenir plus lumineux et plus résilient. Rejoignez-nous dans ce voyage pour construire un monde d'espoir et d'égalité.",
+    "À Let's Help Association, notre mission est d'autonomiser les vies grâce à des initiatives compassionnelles. En promouvant l'éducation et en favorisant des solutions durables, nous envisageons un avenir plus lumineux et plus résilient. Rejoignez-nous dans ce voyage pour construire un monde d'espoir et d'égalité.",
   lhaVision1:
-    "À l'Association Aidons Ensemble, notre mission est d'autonomiser les vies grâce à des initiatives compassionnelles. En promouvant l'éducation",
+    "À Let's Help Association, notre mission est d'autonomiser les vies grâce à des initiatives compassionnelles. En promouvant l'éducation",
   ourPartners: 'Nos partenaires',
   ourPartnersSubtitle:
     "Nourrir les vies, inspirer les futurs : Initiatives transformatrices qui éclairent les chemins, favorisent la croissance, cultivent l'affection et inculquent une vie pleine de sens pour tous.",
@@ -78,7 +77,7 @@ export const website = {
   phone: 'Téléphone',
   motivation: 'Motivation',
   interested: 'Intéressé ?',
-  becomeSponsorSubtitle: "Devenez parrain de l'Association Aidons Ensemble",
+  becomeSponsorSubtitle: "Devenez parrain de Let's Help Association",
 
   becomeMember: 'Devenir Membre',
   objective: 'Objectif',
@@ -113,4 +112,9 @@ export const website = {
   registerForVisit: 'Inscrivez-vous pour visiter',
   joinLetsHelpMessage:
     "Rejoignez Let's Help Association et faites partie d'une mission passionnante qui vise à transformer des vies grâce à l'éducation.",
+  ' ': '',
+  becomePartnerMessageHeader: "Cher Let's Help Association",
+  becomePartnerMessageBody:
+    "J'ai découvert votre mission, et elle résonne fortement avec moi. J'aimerais organiser une discussion pour explorer comment je peux contribuer à étendre votre portée pour rendre l'éducation accessible aux enfants démunis.",
+  becomePartnerMessageFooter: 'Hâte de communiquer avec vous prochainement.',
 };
