@@ -1,8 +1,10 @@
 import { Box, Button, Typography } from '@mui/material';
+import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl';
 
 export default function PreFooter() {
   const { formatMessage } = useIntl();
+  const { push } = useRouter();
   return (
     <Box
       sx={{
@@ -38,6 +40,7 @@ export default function PreFooter() {
         color="inherit"
         variant="contained"
         disableElevation={false}
+        onClick={() => push('/join-us')}
       >
         {formatMessage({ id: 'joinUs' })}
       </Button>

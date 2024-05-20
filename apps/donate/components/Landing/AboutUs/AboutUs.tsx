@@ -4,9 +4,11 @@ import { useIntl } from 'react-intl';
 import { ILetsHelpStat, useStats } from '../../../services/stats';
 import SectionHeader from '../SectionHeader';
 import LhaStatCard from './LhaStatCard';
+import { useRouter } from 'next/router';
 
 function AboutUs() {
   const { formatMessage } = useIntl();
+  const { push } = useRouter();
   const letsHelpStatistics: ILetsHelpStat[] = useStats();
   return (
     <Box
@@ -45,10 +47,15 @@ function AboutUs() {
               columnGap: 2,
             }}
           >
-            <Button variant="contained">
+            <Button variant="contained" onClick={() => push('/join-us')}>
               {formatMessage({ id: 'joinUs' })}
             </Button>
-            <Button variant="contained" color="secondary">
+            <Button
+              variant="contained"
+              color="inherit"
+              sx={{ color: 'black' }}
+              onClick={() => push('/about-us')}
+            >
               {formatMessage({ id: 'moreAboutUs' })}
             </Button>
           </Box>

@@ -1,4 +1,5 @@
 import { Box, Button } from '@mui/material';
+import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl';
 import SectionHeader from '../SectionHeader';
 import SponsorLogo from './SponsorLogo';
@@ -11,16 +12,21 @@ export interface Sponsor {
 
 function Sponsors() {
   const { formatMessage } = useIntl();
+  const { push } = useRouter();
+  const assoication_whatsapp = '+33780772986';
+  const tags = '#lha #destitute-children #lha-sponsor #sourire-aux-orphelins';
+  const becomePartnerMessage = `${formatMessage({
+    id: 'becomePartnerMessageHeader',
+  })}\n\n${formatMessage({
+    id: 'becomePartnerMessageBody',
+  })}\n\n${formatMessage({
+    id: 'becomePartnerMessageFooter',
+  })}\n\n${tags}`;
 
   const sponsors: Sponsor[] = [
     {
-      logo_ref: '/assets/logo_glom.png',
-      name: 'GLOM',
-      website: 'https://google.com',
-    },
-    {
-      logo_ref: '/assets/logo_hif.png',
-      name: 'Hope Investment Fund',
+      logo_ref: '/assets/logo_asbed.jpg',
+      name: 'ASBED',
       website: 'https://google.com',
     },
     {
@@ -29,13 +35,30 @@ function Sponsors() {
       website: 'https://google.com',
     },
     {
-      logo_ref: '/assets/logo_asbed.jpg',
-      name: 'ASBED',
+      logo_ref: '/assets/logo_ispa.png',
+      name: 'ISPA',
+      website: 'https://google.com',
+    },
+    {
+      logo_ref: '/assets/logo_hif.png',
+      name: 'Hope Investment Fund',
+      website: 'https://google.com',
+    },
+    {
+      logo_ref: '/assets/logo_glom.png',
+      name: 'GLOM',
+      website: 'https://google.com',
+    },
+    {
+      logo_ref: '/assets/logo_danla_hair.png',
+      name: 'GLOM',
       website: 'https://google.com',
     },
   ];
   return (
     <Box
+      component="section"
+      id="sponsors"
       sx={{
         padding: { mobile: '12px 32px', laptop: '48px 118px' },
         display: 'grid',
@@ -43,7 +66,7 @@ function Sponsors() {
       }}
     >
       <SectionHeader
-        title={'ourSponsors'}
+        title={'ourPartners'}
         subtitle={'ourSponsorsSectionSubtitle'}
       />
       <Box
@@ -67,10 +90,26 @@ function Sponsors() {
           justifyContent: 'center',
         }}
       >
-        <Button variant="contained" color="primary">
+        <Button
+          component="a"
+          target="_blank"
+          variant="contained"
+          color="primary"
+          href={`https://api.whatsapp.com/send/?phone=${assoication_whatsapp}&text=${encodeURIComponent(
+            becomePartnerMessage
+            // +
+            // `\n${window.location.href}${
+            //   window.location.href.includes('#') ? '' : '/#sponsors'
+            // }`
+          )}`}
+        >
           {formatMessage({ id: 'becomePartner' })}
         </Button>
-        <Button variant="outlined" color="primary">
+        <Button
+          variant="outlined"
+          color="primary"
+          onClick={() => push('/join-us')}
+        >
           {formatMessage({ id: 'joinUs' })}
         </Button>
       </Box>

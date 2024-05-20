@@ -1,10 +1,10 @@
 import calendar from '@iconify-icons/fluent/calendar-arrow-counterclockwise-24-regular';
 import location from '@iconify-icons/fluent/location-24-regular';
 import { Icon } from '@iconify/react';
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, Paper, Typography } from '@mui/material';
+import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl';
-import CampaignImg from './campaignImgs';
 
 export interface Campaign {
   title: string;
@@ -18,9 +18,9 @@ export interface Campaign {
 export default function CampaignCard({
   title,
   date,
-  link,
   place,
   description,
+  images,
 }: Campaign) {
   const { formatMessage, formatDate } = useIntl();
   const { push } = useRouter();
@@ -30,7 +30,7 @@ export default function CampaignCard({
         display: 'grid',
         gridTemplateColumns: { laptop: '4.5fr 5.5fr', mobile: 'none' },
         alignContent: 'start',
-        alignItems: 'start',
+        alignItems: 'center',
         columnGap: 7,
       }}
     >
@@ -109,17 +109,40 @@ export default function CampaignCard({
         >
           {description}
         </Typography>
-        <Button
-          variant="contained"
-          color="primary"
-          onClick={() => push(link)}
-          sx={{ justifySelf: { laptop: 'start', mobile: 'stretch' } }}
+        <Box
+          sx={{
+            display: 'grid',
+            gridAutoFlow: 'column',
+            alignItems: 'center',
+            gap: 1,
+            justifySelf: { laptop: 'start', mobile: 'stretch' },
+          }}
         >
-          {formatMessage({ id: 'participate' })}
-        </Button>
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => push('/donate')}
+          >
+            {formatMessage({ id: 'makeADonation' })}
+          </Button>
+          <Button
+            variant="outlined"
+            color="primary"
+            onClick={() => push('/join-us')}
+          >
+            {formatMessage({ id: 'participate' })}
+          </Button>
+        </Box>
       </Box>
-      <Box sx={{ justifySelf: 'center' }}>
-        <CampaignImg />
+      <Box component={Paper} elevation={1} sx={{ justifySelf: 'center' }}>
+        <Image
+          src={images[0]}
+          alt="1 Orphelin = 1 Pack Scolare Acte 2"
+          loading="eager"
+          height={400}
+          width={400}
+        />
+        {/* <CampaignImg /> */}
       </Box>
     </Box>
   );

@@ -1,5 +1,7 @@
-import { Box } from '@mui/material';
+import { Box, Button } from '@mui/material';
+import { useRouter } from 'next/router';
 import Scrollbars from 'rc-scrollbars';
+import { useIntl } from 'react-intl';
 import SectionHeader from '../SectionHeader';
 import DonorCard from './DonorCard';
 
@@ -7,39 +9,49 @@ export interface Donor {
   name: string;
   image: string;
 }
-
 const donors: Donor[] = [
   {
-    name: 'Poukam pierre',
-    image: '/assets/child1.jpg',
+    name: 'Ulriche Nguemete',
+    image: '',
   },
   {
-    name: 'Cyntiche nguemete',
-    image: '/assets/child4.jpeg',
+    name: 'Daniella Gassant',
+    image: '',
   },
   {
-    name: 'Jessica Nguena',
-    image: '/assets/child1.jpg',
+    name: 'Isabelle Essama',
+    image: '',
   },
   {
-    name: 'Poukam pierre',
-    image: '/assets/child1.jpg',
+    name: 'Cyntiche Nguemete',
+    image: '',
   },
   {
-    name: 'Cyntiche nguemete',
-    image: '/assets/child4.jpeg',
+    name: 'Bolivan Donfack',
+    image: '',
   },
   {
-    name: 'Jessica Nguena',
-    image: '/assets/child1.jpg',
+    name: 'Lorena Kuitchou',
+    image: '',
   },
   {
-    name: 'Jessica Nguena',
-    image: '/assets/child1.jpg',
+    name: 'Vigne Paul',
+    image: '',
+  },
+  {
+    name: 'Samira Tientcheu',
+    image: '',
+  },
+  {
+    name: 'Dassi Daril',
+    image: '',
   },
 ];
 
 function DonorsSection() {
+  const { formatMessage } = useIntl();
+  const { push } = useRouter();
+
   return (
     <Box
       sx={{
@@ -138,6 +150,20 @@ function DonorsSection() {
             </Box>
           </Scrollbars>
         </Box>
+      </Box>
+      <Box
+        sx={{
+          justifySelf: 'center',
+          padding: { mobile: '0 32px 32px 32px', laptop: '48px 118px 0 118px' },
+        }}
+      >
+        <Button
+          variant="contained"
+          color="primary"
+          onClick={() => push('/join-us')}
+        >
+          {formatMessage({ id: 'joinUs' })}
+        </Button>
       </Box>
     </Box>
   );

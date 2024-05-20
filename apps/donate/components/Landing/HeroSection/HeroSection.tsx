@@ -1,9 +1,11 @@
 import { Box, Button, Typography } from '@mui/material';
 import { useIntl } from 'react-intl';
 import HeroImageGrid from './HeroImageGrid/HeroImageGrid';
+import { useRouter } from 'next/router';
 
 export default function HeroSection() {
   const { formatMessage } = useIntl();
+  const { push } = useRouter();
   return (
     <Box
       component="section"
@@ -17,7 +19,7 @@ export default function HeroSection() {
         padding: { laptop: '0 118px', mobile: '0 32px' },
       }}
     >
-      <Box>
+      <Box sx={{ display: 'grid', rowGap: 1 }}>
         <Typography
           variant="h2"
           sx={{
@@ -48,9 +50,16 @@ export default function HeroSection() {
             columnGap: 2,
           }}
         >
-          <Button variant="contained">{formatMessage({ id: 'donate' })}</Button>
-          <Button variant="contained" color="secondary">
-            {formatMessage({ id: 'joinUs' })}
+          <Button onClick={() => push('/donate')} variant="contained">
+            {formatMessage({ id: 'donate' })}
+          </Button>
+          <Button
+            variant="contained"
+            color="inherit"
+            sx={{ color: 'black' }}
+            onClick={() => push('/join-us')}
+          >
+            {formatMessage({ id: 'becomeMember' })}
           </Button>
         </Box>
       </Box>

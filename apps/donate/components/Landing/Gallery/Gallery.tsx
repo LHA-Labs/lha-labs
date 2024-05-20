@@ -1,6 +1,6 @@
 /* eslint-disable @next/next/no-img-element */
 import { theme } from '@lha-labs/theme';
-import { Box, Button, ImageListItem, Tab, Tabs } from '@mui/material';
+import { Box, ImageListItem, Tab, Tabs } from '@mui/material';
 import { ReactNode, useState } from 'react';
 import { useIntl } from 'react-intl';
 import ResponsiveImageList from '../../../utils/ResponsiveImageList';
@@ -13,14 +13,14 @@ export default function GallerySection() {
 
   const tabTitles = ['photos'];
   const galleryImages = [
-    '/assets/child1.jpg',
-    '/assets/child2.jpg',
-    '/assets/child3.jpg',
-    '/assets/child4.jpeg',
-    '/assets/child1.jpg',
-    '/assets/child2.jpg',
-    '/assets/child3.jpg',
-    '/assets/child4.jpeg',
+    '/assets/acte1/image_7.jpg',
+    '/assets/acte1/image_2.jpg',
+    '/assets/acte1/image_4.jpg',
+    '/assets/acte1/image_5.jpg',
+    '/assets/acte1/image_6.jpg',
+    '/assets/acte1/image_8.jpg',
+    '/assets/acte1/image_1.jpg',
+    '/assets/acte1/image_9.jpg',
   ];
 
   const tabComponent: TabComponent = {
@@ -71,9 +71,16 @@ export default function GallerySection() {
         </Tabs>
         {tabComponent[activeTabIndex]}
       </Box>
-      <Button variant="outlined" color="primary" sx={{ justifySelf: 'center' }}>
-        {formatMessage({ id: 'viewAll' })}
-      </Button>
+      {
+        //TODO: ALL CAMPAIGNS PAGE NOT AVAILABLE YET.
+        // <Button
+        //   variant="outlined"
+        //   color="primary"
+        //   sx={{ justifySelf: 'center' }}
+        // >
+        //   {formatMessage({ id: 'viewAll' })}
+        // </Button>
+      }
     </Box>
   );
 }
