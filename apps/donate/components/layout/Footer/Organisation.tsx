@@ -1,13 +1,15 @@
 import { Box, Typography } from '@mui/material';
+import { useRouter } from 'next/router';
 import { useIntl } from 'react-intl';
 
 export default function Organisation() {
   const { formatMessage } = useIntl();
+  const { push } = useRouter();
 
-  const listOrganisation: string[] = [
-    'aboutUs',
-    'partners',
-    'makeAnonymousDonation',
+  const listOrganisation: { title: string; action: () => void }[] = [
+    { title: 'aboutUs', action: () => push('/about-us') },
+    { title: 'partners', action: () => push('/#sponsors') },
+    { title: 'makeAnonymousDonation', action: () => push('/donate') },
   ];
 
   return (
@@ -30,10 +32,16 @@ export default function Organisation() {
         {formatMessage({ id: 'organisation' })}
       </Typography>
       <Box sx={{ display: 'grid', rowGap: 1 }}>
-        {listOrganisation.map((title, index) => (
+        {listOrganisation.map(({ title, action }, index) => (
           <Typography
             key={index}
-            sx={{ fontWeight: 600, fontSize: '14px', color: '#333' }}
+            onClick={action}
+            sx={{
+              fontWeight: 600,
+              fontSize: '14px',
+              color: '#333',
+              cursor: 'pointer',
+            }}
           >
             {formatMessage({ id: `${title}` })}
           </Typography>
