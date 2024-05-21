@@ -130,5 +130,22 @@ export const website = {
   becomePartnerMessageBody:
     "J'ai découvert votre mission, et elle résonne fortement avec moi. J'aimerais organiser une discussion pour explorer comment je peux contribuer à étendre votre portée pour rendre l'éducation accessible aux enfants démunis.",
   becomePartnerMessageFooter: 'Hâte de communiquer avec vous prochainement.',
+  becomeMemberMessageBody:
+    "J'ai découvert votre mission et elle résonne profondément avec moi. J'aimerais contribuer à rendre l'éducation accessible aux enfants défavorisés en faisant des dons mensuels (ou en une seule fois).",
   technicalTeamLead: "Chef d'équipe technique",
+  inviteFriendMessageBody:
+    "Rejoins-moi pour avoir un impact positif avec l'Association Let's Help (LHA). Ensemble, nous pouvons améliorer la vie des enfants défavorisés en rendant l'éducation accessible pour eux.",
+  inviteFriendMessageHeader: "👋 Salut l'ami!",
+  inviteFriendMessageFooter:
+    'Ta contribution est importante ! Chaque sourire compte, peu importe le montant. 🌟',
+  inviteFriendMessageTitle: 'Ensemble, faisons la différence !',
+  donatePageTitle:
+    'Contribution Collective : Suivi des Dons et Objectif Atteignable',
+  campaignName: 'Nom de la campagne',
+  getObjectives: 'Voir les objectifs',
+  objectiveMessage:
+    'Trouvez tout les details relatif a la campaign ainsi que les contact utiles !',
+  targetAmount: 'Montant cible a lèver',
+  endsOn: "Jusqu'au",
+  amountReceived: 'Montant en caisse',
 };

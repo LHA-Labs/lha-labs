@@ -77,4 +77,9 @@ export const website = {
   motivation: 'Motivation',
   interested: 'Interested?',
   becomeSponsorSubtitle: "Become a Let's Help Association sponsor",
+  inviteFriendMessageBody:
+    "Join me in making a positive impact with Let's Help Association (LHA). Together, we can uplift the lives of underprivileged children by making education accessible to them.",
+  inviteFriendMessageHeader: '👋 Hey friend!',
+  inviteFriendMessageFooter:
+    'Your contribution matters! Every smile counts, regardless of the amount. 🌟',
 };
