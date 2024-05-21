@@ -1,7 +1,8 @@
 import { Box, Button, LinearProgress, Typography } from '@mui/material';
-import SectionHeader from '../../components/Landing/SectionHeader';
 import Image from 'next/image';
+import { useEffect, useState } from 'react';
 import { useIntl } from 'react-intl';
+import SectionHeader from '../../components/Landing/SectionHeader';
 
 export default function JoinUs() {
   const { formatMessage } = useIntl();
@@ -30,6 +31,35 @@ export default function JoinUs() {
         "Vous contribuez directement a transformer des vies en soutenant des initiatives educatives pour les orphelins et les personnes vulnerables. Vous pouvez voir concretement l'impact positif de votre engagement",
     },
   ];
+
+  const [fullUrl, setFullUrl] = useState<string>('');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setFullUrl(window.location.href);
+    }
+  }, []);
+  const secretary_whatsapp = '+237691402170';
+  const tags = '#lha #destitute-children #lha-membre #sourire-aux-orphelins';
+  const becomeMemberMessage = `${formatMessage({
+    id: 'becomePartnerMessageHeader',
+  })}\n\n${formatMessage({
+    id: 'becomeMemberMessageBody',
+  })}\n\n${formatMessage({
+    id: 'becomePartnerMessageFooter',
+  })}\n\n${tags}\n${fullUrl}`;
+
+  const newMemberRef = `https://api.whatsapp.com/send/?phone=${secretary_whatsapp}&text=${encodeURIComponent(
+    becomeMemberMessage
+  )}`;
+
+  const inviteFriendMessage = `
+  ${formatMessage({ id: 'inviteFriendMessageHeader' })}\n\n${formatMessage({
+    id: 'inviteFriendMessageBody',
+  })}\n\n${formatMessage({
+    id: 'inviteFriendMessageFooter',
+  })}\n\n${tags}\n${fullUrl}`;
+
   return (
     <Box>
       <Box
@@ -104,7 +134,14 @@ export default function JoinUs() {
             {`${totalActiveMembers} ${formatMessage({ id: 'activeMembers' })}`}
           </Typography>
         </Box>
-        <Button variant="contained" color="inherit" sx={{ color: 'black' }}>
+        <Button
+          component="a"
+          target="_blank"
+          href={newMemberRef}
+          variant="contained"
+          color="inherit"
+          sx={{ color: 'black' }}
+        >
           {formatMessage({ id: 'becomeMember' })}
         </Button>
       </Box>
@@ -204,10 +241,28 @@ export default function JoinUs() {
               gap: 1,
             }}
           >
-            <Button variant="contained" color="primary">
+            <Button
+              variant="contained"
+              color="primary"
+              component="a"
+              target="_blank"
+              href={newMemberRef}
+            >
               {formatMessage({ id: 'becomeMember' })}
             </Button>
-            <Button variant="contained" color="inherit" sx={{ color: 'black' }}>
+            <Button
+              variant="contained"
+              color="inherit"
+              sx={{ color: 'black' }}
+              onClick={() => {
+                if (navigator && navigator.share)
+                  navigator.share({
+                    title: formatMessage({ id: 'inviteFriendMessageTitle' }),
+                    text: inviteFriendMessage,
+                    url: fullUrl,
+                  });
+              }}
+            >
               {formatMessage({ id: 'inviteAFriend' })}
             </Button>
           </Box>
