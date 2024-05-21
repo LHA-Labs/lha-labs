@@ -43,6 +43,7 @@ export default function GallerySection() {
   return (
     <Box
       component="section"
+      id="gallery"
       sx={{
         backgroundColor: theme.common.inputBackground,
         padding: { mobile: '12px 32px', laptop: '48px 118px' },
