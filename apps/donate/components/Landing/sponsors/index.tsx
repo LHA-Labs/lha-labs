@@ -15,7 +15,7 @@ function Sponsors() {
   const { formatMessage } = useIntl();
   const { push } = useRouter();
   const assoication_whatsapp = '+33780772986';
-  const tags = '#lha #destitute-children #lha-sponsor #sourire-aux-orphelins';
+  const tags = `#lha #destitute-children #lha-sponsor #sourire-aux-orphelins`;
   const becomePartnerMessage = `${formatMessage({
     id: 'becomePartnerMessageHeader',
   })}\n\n${formatMessage({
