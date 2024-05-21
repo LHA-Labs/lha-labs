@@ -1,7 +1,11 @@
 import { getFirstTwoNameInitials } from '@lha-labs/utils';
 import { Avatar, Box, Typography } from '@mui/material';
-import { Representative } from './OurSponsorsSection';
 
+export interface Representative {
+  imageRef: string;
+  title: string;
+  name: string;
+}
 export default function RepresentativeCard({
   imageRef,
   name,

@@ -1,8 +1,13 @@
 import { Box, Divider, Typography } from '@mui/material';
 import SponsorLogo from '../Landing/sponsors/SponsorLogo';
-import { SponsorMessage } from './OurSponsorsSection';
-import RepresentativeCard from './RepresentativeCard';
+import RepresentativeCard, { Representative } from './RepresentativeCard';
 
+export interface SponsorMessage {
+  representative: Representative;
+  sponsorName: string;
+  sponsorImageRef: string;
+  message: string;
+}
 export default function SponsorCard({
   message,
   representative,
