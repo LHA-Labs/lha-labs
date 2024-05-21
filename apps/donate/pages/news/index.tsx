@@ -3,10 +3,10 @@ import location from '@iconify-icons/fluent/location-24-regular';
 import { Icon } from '@iconify/react';
 import { Box, Button, Chip, Typography } from '@mui/material';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import { useIntl } from 'react-intl';
 import SectionHeader from '../../components/Landing/SectionHeader';
-import { useRouter } from 'next/router';
 
 export default function News() {
   const { formatDate, formatMessage } = useIntl();
@@ -14,8 +14,8 @@ export default function News() {
 
   //TODO: CALL API HERE TO FETCH THIS VALUE
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const eventDate = new Date('2024-09-31T23:59:59');
-  const eventLocation = 'Yaounde, Cameroun';
+  const eventDate = new Date('2024-08-24T10:00:00');
+  const eventLocation = 'Douala, Cameroun';
   const [timeSegments, setTimeSegments] = useState<{
     days: number;
     hours: number;
@@ -146,7 +146,7 @@ export default function News() {
           }}
         >
           <Typography variant="h1" sx={{ color: 'black' }}>
-            {"Descente a l'Orphelinat de Noul"}
+            {'1 orphelin = 1 pack scolaire Acte 2'}
           </Typography>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
             <Box sx={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
@@ -199,10 +199,7 @@ export default function News() {
             lineHeight: 1.6,
           }}
         >
-          {`Revivez avec nous notre événement phare de l'année dernière, où nous
-          avons uni nos efforts pour offrir des packs scolaires à des orphelins.
-          Revivez avec nous notre événement phare de l'année dernière, où nous
-          avons uni nos efforts pour offrir des packs scolaires à des orphelins.`}
+          {`Nous croyons que chaque enfant mérite une chance égale de réussir dans la vie. Nous croyons également que l'éducation est la clé qui libère le potentiel de chacun de nous. C'est dans cette logique que s'inscrit l'extension de notre dernière action reussie ; baptisé "1 Orphelin, 1 Pack Scolaire Acte 2" dans la ville de Douala ce 24 août 2024, 10:00.`}
         </Typography>
         <Box
           sx={{
@@ -219,8 +216,13 @@ export default function News() {
           >
             {formatMessage({ id: 'makeADonation' })}
           </Button>
-          <Button variant="contained" color="inherit" sx={{ color: 'black' }}>
-            {formatMessage({ id: 'registerForVisit' })}
+          <Button
+            variant="contained"
+            color="inherit"
+            onClick={() => push('/join-us')}
+            sx={{ color: 'black' }}
+          >
+            {formatMessage({ id: 'becomeMember' })}
           </Button>
         </Box>
       </Box>
@@ -283,7 +285,11 @@ export default function News() {
             d'opportunités, donnant aux enfants les outils enssentiels pour
             poursuivre leur éducation avec confiance et dignité.`}
           </Typography>
-          <Button variant="contained" color="primary">
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => push('/#gallery')}
+          >
             {formatMessage({ id: 'gallery' })}
           </Button>
         </Box>
@@ -381,7 +387,11 @@ export default function News() {
               ))}
             </Box>
           </Box>
-          <Button variant="contained" color="primary">
+          <Button
+            variant="contained"
+            color="primary"
+            onClick={() => push('/#gallery')}
+          >
             {formatMessage({ id: 'gallery' })}
           </Button>
         </Box>
@@ -418,7 +428,12 @@ export default function News() {
         >
           {formatMessage({ id: 'joinLetsHelpMessage' })}
         </Typography>
-        <Button variant="contained" color="inherit" sx={{ color: 'black' }}>
+        <Button
+          variant="contained"
+          color="inherit"
+          sx={{ color: 'black' }}
+          onClick={() => push('/join-us')}
+        >
           {formatMessage({ id: 'becomeMember' })}
         </Button>
       </Box>
