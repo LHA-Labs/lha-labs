@@ -36,17 +36,17 @@ function Sponsors() {
     {
       logo_ref: '/assets/logo_asbed.jpg',
       name: 'ASBED',
-      website: 'https://google.com',
+      website: 'https://asbedworld.org/',
     },
     {
       logo_ref: '/assets/logo_hopehome.png',
       name: 'HopeHome',
-      website: 'https://google.com',
+      website: 'https://www.facebook.com/SCIhopehome',
     },
     {
       logo_ref: '/assets/logo_ispa.png',
       name: 'ISPA',
-      website: 'https://google.com',
+      website: 'https://www.facebook.com/ispaacademy',
     },
     {
       logo_ref: '/assets/logo_hif.png',
@@ -56,12 +56,12 @@ function Sponsors() {
     {
       logo_ref: '/assets/logo_glom.png',
       name: 'GLOM',
-      website: 'https://google.com',
+      website: '#',
     },
     {
       logo_ref: '/assets/logo_danla_hair.png',
       name: 'GLOM',
-      website: 'https://google.com',
+      website: 'https://www.facebook.com/danllaHairr',
     },
   ];
   return (
