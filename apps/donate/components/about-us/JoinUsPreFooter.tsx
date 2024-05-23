@@ -33,7 +33,7 @@ export default function JoinUsPreFooter() {
           width: { mobile: '100%', laptop: '50%' },
         }}
       >
-        {formatMessage({ id: 'joinUsPreFooterMessage' })}
+        {formatMessage({ id: 'joinLetsHelpMessage' })}
       </Typography>
       <Button
         onClick={() => push('/join-us')}
