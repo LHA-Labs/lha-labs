@@ -8,7 +8,7 @@ export default function StatisticSection() {
   const { formatMessage, formatNumber, formatDate } = useIntl();
   //TODO: INTERGRATE FINANCE STATS HERE
   const financeStats = {
-    target: 4000000,
+    target: 1200000,
     received: 150400,
     donationEndDate: new Date('24 August 2024 10:00').toISOString(),
   };
