@@ -5,7 +5,7 @@ export const website = {
     'Au cœur de notre parcours se trouve un engagement à faire une différence significative. Découvrez qui nous sommes, notre histoire et le',
   aboutUsSubtitle2:
     "changement positif et collectif, et l'espoir que nous inspirons.",
-  roleLorrain: "Chef d'équipe technique",
+  roleLorrain: 'Responsable Technique',
   descriptionLorrain:
     "À Let's Help Association, notre mission est d'autonomiser les vies grâce à des initiatives compassionnelles. En promouvant l'éducation et en favorisant des solutions durables, nous envisageons un avenir plus lumineux, plus.",
   ourTeam: 'Notre équipe',
@@ -20,7 +20,7 @@ export const website = {
   joinUs: 'Rejoignez-nous',
   getInvolved: 'Impliquez-vous',
   getInvolvedMessage:
-    "Let's Help Association, dévouée à la compassion et à l'impact social et éducative, s'engage à fournir une assistance significative aux personnes de la chouche vulnérable.",
+    "Let's Help Association, dévouée à la compassion et à l'impact social et éducative, s'engage à fournir une assistance significative aux personnes de la couche vulnérable.",
   makeAnonymousDonation: 'Faire un don anonyme',
   getInTouch: 'Entrer en contact',
   organisation: 'Organisation',
@@ -57,8 +57,6 @@ export const website = {
   becomePartner: 'Devenir un sponsor',
   preFooterMessage:
     'AIDEZ-NOUS À CONSTRUIRE UNE COMMUNAUTÉ POUR NOS ENFANTS ET ORPHELINS',
-  joinUsPreFooterMessage:
-    "Rejoignez Let's Help Association et aidez à pousser notre mission dans l'éducation avec vous !",
   ourPurpose: 'Notre Objectif',
   ourValues: 'Nos Valeurs',
   ourMission: 'Notre Mission',
@@ -132,7 +130,7 @@ export const website = {
   becomePartnerMessageFooter: 'Hâte de communiquer avec vous prochainement.',
   becomeMemberMessageBody:
     "J'ai découvert votre mission et elle résonne profondément avec moi. J'aimerais contribuer à rendre l'éducation accessible aux enfants défavorisés en faisant des dons mensuels (ou en une seule fois).",
-  technicalTeamLead: "Chef d'équipe technique",
+  technicalTeamLead: 'Responsable Technique',
   inviteFriendMessageBody:
     "Rejoins-moi pour avoir un impact positif avec l'Association Let's Help (LHA). Ensemble, nous pouvons améliorer la vie des enfants défavorisés en rendant l'éducation accessible pour eux.",
   inviteFriendMessageHeader: "👋 Salut l'ami!",
@@ -148,4 +146,10 @@ export const website = {
   targetAmount: 'Montant cible a lèver',
   endsOn: "Jusqu'au",
   amountReceived: 'Montant en caisse',
+  treasurer: 'Trésorière',
+  foundingPresident: 'Présidente Fondatrice',
+  secretary: 'Secrétaire Générale',
+  organisationManager: "Responsable d'Organisation",
+  organisationAssistant: "Responsable d'Organisation Adjoint",
+  technicalAssistant: 'Responsable Technique Adjoint',
 };
