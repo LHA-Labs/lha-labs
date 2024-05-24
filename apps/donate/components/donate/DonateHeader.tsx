@@ -1,8 +1,6 @@
 import { Box, Typography } from '@mui/material';
-import { useIntl } from 'react-intl';
 
 export default function DonateHeader() {
-  const { formatMessage } = useIntl();
   return (
     <Box
       sx={{
@@ -12,8 +10,11 @@ export default function DonateHeader() {
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         display: 'grid',
+        gridTemplateRows: 'auto auto',
         alignItems: 'center',
         justifyItems: 'center',
+        alignContent: 'center',
+        rowGap: 2,
       }}
     >
       <Typography
@@ -27,7 +28,19 @@ export default function DonateHeader() {
           width: { mobile: '100%', laptop: '50%' },
         }}
       >
-        {formatMessage({ id: 'donatePageTitle' })}
+        {'Operation Sourire aux orphelins Acte 2'}
+      </Typography>
+      <Typography
+        sx={{
+          color: 'white',
+          fontSize: '20px',
+          fontWeight: 600,
+          textAlign: 'center',
+          lineHeight: '24px',
+          letterSpacing: '-0.35px',
+        }}
+      >
+        1 Orphelin 1 Pack Scolaire
       </Typography>
     </Box>
   );
