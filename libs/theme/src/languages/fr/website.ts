@@ -152,4 +152,13 @@ export const website = {
   organisationManager: "Responsable d'Organisation",
   organisationAssistant: "Responsable d'Organisation Adjoint",
   technicalAssistant: 'Responsable Technique Adjoint',
+  name: 'Nom',
+  financialDonations: 'Dons Financiers',
+  contactUs: 'Contactez Nous',
+  nonPerishableGoodDescription:
+    "Aliments Non Erissables, Produits Frais, Vetements, Jouets, Fournitures Scolaires, Produits D'hygiene etc.",
+  nonPerishableDonations: 'Dons Alimentaire et en Nature',
+  donateNow: 'Faites un don maintenant',
+  donationBody:
+    "J'aimerais faire un don en nature pour contribuer à vos initiatives et aider les personnes dans le besoin.",
 };
