@@ -3,10 +3,9 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { useIntl } from 'react-intl';
-import LanguageSwapper from '../../LanguageSwapper';
 import LogoLha from '../../../../public/assets/LogoLha.png';
-import { NavItem } from '../navItem';
 import { INavItem } from '../Header';
+import { NavItem } from '../navItem';
 
 interface SidebarProps {
   open: boolean;
@@ -62,7 +61,7 @@ const Sidebar: React.FC<SidebarProps> = ({ open, onClose, navItems }) => {
           </Box>
         </Box>
         <Box sx={{ display: 'grid', rowGap: 1, justifyItems: 'center' }}>
-          <LanguageSwapper />
+          {/* <LanguageSwapper /> */}
           <Button
             onClick={() => push('/donate')}
             variant="contained"

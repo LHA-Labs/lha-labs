@@ -6,7 +6,6 @@ import { useRouter } from 'next/router';
 import { useState } from 'react';
 import { useIntl } from 'react-intl';
 import LogoLHA from '../../../public/assets/LogoLha.png';
-import LanguageSwapper from '../LanguageSwapper';
 import Sidebar from './SideBar/SideBar';
 import { NavItem } from './navItem';
 
@@ -103,7 +102,7 @@ export default function Header() {
               columnGap: 1.5,
             }}
           >
-            <LanguageSwapper />
+            {/* <LanguageSwapper /> */}
             <Button
               variant="contained"
               color="primary"
