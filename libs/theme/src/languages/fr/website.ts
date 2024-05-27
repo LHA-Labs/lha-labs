@@ -114,7 +114,7 @@ export const website = {
   ourNews: 'Nos actualités',
   ourNewsSubtitle:
     "Nourrir les vies, inspirer les avenirs : Des initiatives transformatrices qui éclairent les chemins, favorisent la croissance, cultivent l'affection et incitent à une vie utile pour tous.",
-  ourNewsSubtitle2: 'Découvrez les Denièrs Activités et Futurs Evénements',
+  ourNewsSubtitle2: 'Découvrez les Denières Activités et Futurs Evénements',
   weAreComingSoon: 'We Are Coming Soon...',
   days: 'Jours',
   hours: 'Heures',

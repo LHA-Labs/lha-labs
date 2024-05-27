@@ -263,7 +263,7 @@ export default function News() {
             <Typography variant="h1">Un Orphelin Un pack scolaire</Typography>
             <Chip
               variant="filled"
-              label="Notre dernier action"
+              label="Notre dernière action"
               color="warning"
               icon={<Icon icon={calendar} fontSize={18} color="#FF9200" />}
               sx={{
