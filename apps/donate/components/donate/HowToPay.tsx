@@ -105,7 +105,7 @@ export default function HowToPay() {
 
           <LocalPayment
             serviceName="MTN Mobile Money"
-            payLink={encodeURIComponent('*126*1*1*654002598*montant#')}
+            payLink={encodeURIComponent('*126*1*1*654002598*2000#')}
             receivingName="Possi Christiane"
             receivingNumber="654 002 598"
             image={{ ref: '/assets/momo.png', height: 74, width: 109 }}
