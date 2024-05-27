@@ -58,7 +58,7 @@ export default function JoinUs() {
     id: 'inviteFriendMessageBody',
   })}\n\n${formatMessage({
     id: 'inviteFriendMessageFooter',
-  })}\n\n${tags}\n${fullUrl}`;
+  })}\n\n${tags}\n`;
 
   return (
     <Box>
