@@ -41,6 +41,7 @@ export default function Organisation() {
               fontSize: '14px',
               color: '#333',
               cursor: 'pointer',
+              width: 'fit-content',
             }}
           >
             {formatMessage({ id: `${title}` })}
@@ -49,10 +50,15 @@ export default function Organisation() {
         <Typography
           component="a"
           target="_blank"
-          href="mailto:letshelp@gmail.com"
-          sx={{ fontWeight: 600, fontSize: '14px', color: '#333' }}
+          href="mailto:contact@letshelp.ong"
+          sx={{
+            fontWeight: 600,
+            fontSize: '14px',
+            color: '#333',
+            width: 'fit-content',
+          }}
         >
-          letshelp@gmail.com
+          contact@letshelp.ong
         </Typography>
       </Box>
     </Box>

@@ -10,6 +10,7 @@ export default function GetInvolved() {
       sx={{
         display: 'grid',
         gap: 2,
+        gridTemplateRows: 'auto 1fr auto',
       }}
     >
       <Typography

@@ -43,7 +43,12 @@ export default function GetInTouch() {
       </Typography>
       <Box sx={{ display: 'grid', rowGap: 0, alignContent: 'start' }}>
         {socialMediaLinks.map(({ icon, link, handle }, index) => (
-          <a key={index} href={link} target="_blank">
+          <a
+            key={index}
+            href={link}
+            target="_blank"
+            style={{ width: 'fit-content' }}
+          >
             <Box
               sx={{
                 display: 'grid',
