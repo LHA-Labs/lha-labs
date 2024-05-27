@@ -13,7 +13,7 @@ export default function DonateLayout({ children }: PropsWithChildren) {
       }}
     >
       <Header />
-      <Box height='60px' />
+      <Box height='80px' />
       {children}
       <Footer />
     </Box>
