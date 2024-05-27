@@ -142,10 +142,16 @@ export default function News() {
             display: 'grid',
             justifyContent: 'center',
             justifyItems: 'center',
-            rowGap: 1,
+            rowGap: 2,
           }}
         >
-          <Typography variant="h1" sx={{ color: 'black' }}>
+          <Typography
+            variant="h1"
+            sx={{
+              color: 'black',
+              textAlign: 'center',
+            }}
+          >
             {'1 orphelin = 1 pack scolaire Acte 2'}
           </Typography>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
