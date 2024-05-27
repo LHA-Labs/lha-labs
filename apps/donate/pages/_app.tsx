@@ -27,7 +27,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
     <LHALabsThemeProvider defaultLang="fr">
       <LocalizationProvider dateAdapter={AdapterDayjs}>
         <Head>
-          <title>{"Let's Help Association - LHA"}</title>
+          <title>{`Let's Help Association (LHA) : un collectif de cœurs généreux dédiés à transformer positivement les vies des orphelins et des personnes vulnérables.`}</title>
         </Head>
         <Box component="main" className="app">
           <DonateLayout>
