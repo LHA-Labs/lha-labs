@@ -1,4 +1,5 @@
 import { Box, Divider } from '@mui/material';
+import { useRouter } from 'next/router';
 import Scrollbars from 'rc-scrollbars';
 import { useState } from 'react';
 import { Member, useTeam } from '../../services/team';
@@ -10,9 +11,12 @@ export default function OurTeamSection() {
   const members: Member[] = useTeam();
   const [activeMemberIndex, setActiveMemberIndex] = useState<number>(0);
   const activeMember = members[activeMemberIndex];
+  const { asPath, push } = useRouter();
 
   return (
     <Box
+      component="section"
+      id="ourTeam"
       sx={{
         display: 'grid',
         rowGap: 3,
@@ -23,7 +27,7 @@ export default function OurTeamSection() {
         sx={{
           display: 'grid',
           justifyItems: 'center',
-          rowGap: 4,
+          rowGap: 2,
           padding: { mobile: '0 32px', laptop: '0 118px' },
         }}
       >
@@ -62,7 +66,12 @@ export default function OurTeamSection() {
             {members.map((member, index) => (
               <TeamMember
                 {...member}
-                onSelect={() => setActiveMemberIndex(index)}
+                onSelect={() => {
+                  setActiveMemberIndex(index);
+                  push(
+                    `${asPath.split('#')[0]}${'/#teamMember'}`
+                  );
+                }}
                 isActive={index === activeMemberIndex}
                 key={index}
               />

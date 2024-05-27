@@ -16,7 +16,10 @@ export default function ActiveMember({
 
   return (
     <Box
+      component="section"
+      id="teamMember"
       sx={{
+        paddingTop: 2,
         display: 'grid',
         gridAutoFlow: { laptop: 'column', mobile: 'row' },
         alignItems: 'center',
