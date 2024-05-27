@@ -96,6 +96,7 @@ export default function HowToPay() {
           </Box>
 
           <LocalPayment
+            serviceName="Orange Money"
             payLink={encodeURIComponent('#150*11*695755959#')}
             receivingName="Possi Christiane"
             receivingNumber="695 755 959"
@@ -103,6 +104,7 @@ export default function HowToPay() {
           />
 
           <LocalPayment
+            serviceName="MTN Mobile Money"
             payLink={encodeURIComponent('*126*1*1*654002598*montant#')}
             receivingName="Possi Christiane"
             receivingNumber="654 002 598"
@@ -110,6 +112,7 @@ export default function HowToPay() {
           />
 
           <LocalPayment
+            serviceName="PayLib"
             receivingName="Ulriche Nguemete"
             receivingNumber="07 80 77 29 86"
             image={{ ref: '/assets/paylib.png', height: 56, width: 123.91 }}

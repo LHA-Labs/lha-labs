@@ -6,6 +6,7 @@ interface LocalPaymentProps {
   receivingNumber: string;
   receivingName: string;
   payLink?: string;
+  serviceName: string;
   image: {
     ref: string;
     height: number;
@@ -16,6 +17,7 @@ export default function LocalPayment({
   payLink,
   receivingName,
   receivingNumber,
+  serviceName,
   image: { ref, height, width },
 }: LocalPaymentProps) {
   const { formatMessage } = useIntl();
@@ -40,7 +42,7 @@ export default function LocalPayment({
       >
         <Image
           src={ref}
-          alt="Dons Financiers"
+          alt={serviceName}
           height={height}
           width={width}
           loading="eager"
