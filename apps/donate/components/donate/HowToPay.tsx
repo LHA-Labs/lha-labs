@@ -103,7 +103,7 @@ export default function HowToPay() {
           />
 
           <LocalPayment
-            payLink="654002598"
+            payLink={encodeURIComponent('*126*1*1*654002598*montant#')}
             receivingName="Possi Christiane"
             receivingNumber="654 002 598"
             image={{ ref: '/assets/momo.png', height: 74, width: 109 }}
