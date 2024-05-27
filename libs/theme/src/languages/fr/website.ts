@@ -161,4 +161,5 @@ export const website = {
   donateNow: 'Faites un don maintenant',
   donationBody:
     "J'aimerais faire un don en nature pour contribuer à vos initiatives et aider les personnes dans le besoin.",
+  vicePresident: 'Vice-Président',
 };

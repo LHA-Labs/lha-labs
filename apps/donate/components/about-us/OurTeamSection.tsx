@@ -59,8 +59,8 @@ export default function OurTeamSection() {
               alignItems: 'center',
               columnGap: '18px',
               padding: { mobile: '0 20px', laptop: '0 100px' },
-              marginLeft: '400px',
-              marginRight: '400px',
+              marginLeft: '480px',
+              marginRight: '480px',
             }}
           >
             {members.map((member, index) => (

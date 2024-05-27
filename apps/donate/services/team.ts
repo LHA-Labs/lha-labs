@@ -31,6 +31,24 @@ export function useTeam() {
       And LHA was born!`,
     },
     {
+      fullname: 'Lorena Tchouakeu',
+      role: formatMessage({ id: 'vicePresident' }),
+      imageRef: '',
+      socials: {
+        instagram: 'https://www.instagram.com/lorekuitch/',
+      },
+      messageFr: `
+      Donner de l'amour est la plus belle des actions.🫶
+
+Aimer son prochain, lui tendre la main quand il en a besoin... L'univers nous le prouve sans cesse : donner, c'est recevoir. 🙏🏾
+
+Notre mission est d'apporter du réconfort aux orphelins, de les soutenir, de leur redonner confiance en l'avenir et de leur permettre de croire en leurs rêves. Ensemble, nous réussirons. 👌🏾
+
+Chers orphelins, vous n'êtes pas seuls, nous sommes à vos côtés.🤞🏾
+`,
+      messageEn: '',
+    },
+    {
       fullname: 'Christiane Kiyang Possi',
       role: formatMessage({ id: 'treasurer' }),
       imageRef: '',
