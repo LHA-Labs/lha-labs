@@ -28,7 +28,7 @@ export const website = {
   heroSectionSubtitle:
     "Let's Help Association : un collectif de cœurs généreux dédiés à transformer positivement les vies des orphelins et des personnes vulnérables.",
   itIsTime: 'Il est temps',
-  toChangeA: 'Pour changer A',
+  toChangeA: 'Pour changer',
   childsLife: "La vie d'un enfant",
   donors: 'Benevoles',
   sponsors: 'Sponsors',
