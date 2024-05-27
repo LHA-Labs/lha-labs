@@ -46,7 +46,7 @@ export const website = {
   next: 'Suivant',
   viewAll: 'Voir tout',
   gallery: 'Gallerie',
-  gallerySectionSubtitle: 'Nos partenariats précieux pour faire une différence',
+  gallerySectionSubtitle: 'Revivez en images nos dernières actions',
   photos: 'Photos',
   videos: 'Vidéos',
   ourDonorsSubtitle: 'Mains de soutien : Nos généreux bienfaiteurs',
@@ -94,7 +94,7 @@ export const website = {
   objective: 'Objectif',
   members: 'Membres',
   becomeMemberHeadline:
-    'Rejoignez-nous et beneficiez de partenariats strategieques pour developper votre reseau et maximiser votre impact',
+    'Rejoignez-nous et beneficiez de partenariats strategiques pour developper votre reseau et maximiser votre impact',
   activeMembers: 'Membres Actifs',
   whyBecomeMember: 'Pourquoi Devenir Membre ?',
   whyBecomeMemberSubtitle:
