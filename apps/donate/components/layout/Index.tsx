@@ -10,10 +10,12 @@ export default function DonateLayout({ children }: PropsWithChildren) {
         minHeight: '100svh',
         display: 'grid',
         gridTemplateRows: 'auto auto 1fr auto',
+        maxWidth: '1512px',
+        margin: '0 auto',
       }}
     >
       <Header />
-      <Box height='80px' />
+      <Box height="80px" />
       {children}
       <Footer />
     </Box>

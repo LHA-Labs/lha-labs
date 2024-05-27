@@ -56,6 +56,7 @@ export default function Header() {
       >
         <Toolbar
           sx={{
+            maxWidth: '1512px',
             display: 'grid',
             gridTemplateColumns: {
               laptop: 'auto 1fr auto',
