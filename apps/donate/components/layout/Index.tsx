@@ -9,10 +9,11 @@ export default function DonateLayout({ children }: PropsWithChildren) {
       sx={{
         minHeight: '100svh',
         display: 'grid',
-        gridTemplateRows: 'auto 1fr auto',
+        gridTemplateRows: 'auto auto 1fr auto',
       }}
     >
       <Header />
+      <Box height='60px' />
       {children}
       <Footer />
     </Box>

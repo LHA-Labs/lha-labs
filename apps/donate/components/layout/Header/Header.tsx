@@ -1,6 +1,6 @@
 import MenuIcon from '@iconify-icons/fluent/line-horizontal-3-20-regular';
 import { Icon } from '@iconify/react';
-import { Box, Button, IconButton, Toolbar } from '@mui/material';
+import { AppBar, Box, Button, IconButton, Toolbar } from '@mui/material';
 import Image from 'next/image';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
@@ -40,7 +40,8 @@ export default function Header() {
     <>
       <Sidebar open={sidebarOpen} onClose={closeSidebar} navItems={navItems} />
 
-      <Box
+      <AppBar
+        component="nav"
         sx={{
           display: 'flex',
           justifyContent: 'space-between',
@@ -50,6 +51,7 @@ export default function Header() {
             laptop: '12px 94px',
             mobile: '12px 24px',
           },
+          boxShadow: 'none',
         }}
       >
         <Toolbar
@@ -122,7 +124,7 @@ export default function Header() {
             <Icon icon={MenuIcon} color="#2F3A45" />
           </IconButton>
         </Toolbar>
-      </Box>
+      </AppBar>
     </>
   );
 }
