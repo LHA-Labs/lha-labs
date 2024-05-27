@@ -109,6 +109,7 @@ function Sponsors() {
               fullUrl.includes('#') ? '' : '#sponsors'
             }`
           )}`}
+          sx={{ textAlign: 'center' }}
         >
           {formatMessage({ id: 'becomePartner' })}
         </Button>
