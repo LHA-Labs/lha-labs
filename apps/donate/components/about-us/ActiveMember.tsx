@@ -70,7 +70,7 @@ export default function ActiveMember({
               lineHeight: '28px',
             }}
           >
-            {activeLanguage === 'en' ? messageEn : messageFr}
+            {`<<${activeLanguage === 'en' ? messageEn : messageFr}>>`}
           </Typography>
           <Box
             sx={{
