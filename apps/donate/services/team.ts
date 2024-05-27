@@ -93,7 +93,7 @@ et le Partage est le fruit de l'esprit❤🤍❤
         facebook: 'https://facebook.com/nguena.jessica',
         instagram: 'https://instagram.com/nguenajessica',
       },
-      messageFr: `Je suis honorée de faire partie de LHA non seulement parceque j'aime toute initiative ayant trait à apporter un soutien à autrui mais également parceaue la vision de LHA m'a transpercé!
+      messageFr: `Je suis honorée de faire partie de LHA non seulement parceque j'aime toute initiative ayant trait à apporter un soutien à autrui mais également parceque la vision de LHA m'a transpercé!
       Juste l'idée de vouloir apporter son soutien à ceux dans le besoin est déjà une motivation assez grande et par dessus tout voir le sourire sur le visage de ses enfants apporte une joie immense que j'aimerai ressentir à chaque fois que j'en ai l'occasion!
       Tout le monde mérite d'une manière ou d'une autre d'être heureux et c'est notre manière à nous de leur arracher un sourire`,
       messageEn: `I'm honored to be part of LHA not only because I love any initiative that has to do with helping others, but also because the vision of LHA has pierced me!
