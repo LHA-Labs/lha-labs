@@ -50,7 +50,7 @@ export const website = {
   photos: 'Photos',
   videos: 'Vidéos',
   ourDonorsSubtitle: 'Mains de soutien : Nos généreux bienfaiteurs',
-  ourDonors: 'Nos Bienfaiteurs',
+  ourDonors: 'Nos Membres Actifs',
   ourSponsors: 'Nos Sponsors',
   ourSponsorsSectionSubtitle:
     'Nos partenariats précieux pour faire une différence',
@@ -162,4 +162,5 @@ export const website = {
   donationBody:
     "J'aimerais faire un don en nature pour contribuer à vos initiatives et aider les personnes dans le besoin.",
   vicePresident: 'Vice-Président',
+  writeContactReason: 'Votre motif de contact ici',
 };

@@ -1,9 +1,30 @@
 import { Box, Typography } from '@mui/material';
+import { useEffect, useState } from 'react';
 import { useIntl } from 'react-intl';
-import { Instagram, Linkedin } from './SocialIcons';
+import { Instagram, Linkedin, Mail, Whatsapp } from './SocialIcons';
 
 export default function GetInTouch() {
   const { formatMessage } = useIntl();
+  const secretary_whatsapp = '+237691402170';
+
+  const [fullUrl, setFullUrl] = useState<string>('');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setFullUrl(window.location.href);
+    }
+  }, []);
+
+  const tags = '#lha #destitute-children #sourire-aux-orphelins';
+  const contactUsMessage = `
+  ${formatMessage({ id: 'becomePartnerMessageHeader' })}\n\n${formatMessage({
+    id: 'writeContactReason',
+  })}\n\n${formatMessage({
+    id: 'becomePartnerMessageFooter',
+  })}\n\n${tags}\n${fullUrl}`;
+  const contactUsRef = `https://api.whatsapp.com/send/?phone=${secretary_whatsapp}&text=${encodeURIComponent(
+    contactUsMessage
+  )}`;
 
   const socialMediaLinks: {
     icon: JSX.Element;
@@ -11,12 +32,42 @@ export default function GetInTouch() {
     handle: string;
   }[] = [
     {
-      icon: <Linkedin socialHandle="@LHA" sx={{ fontSize: '50px' }} />,
+      icon: (
+        <Whatsapp
+          socialHandle="Lets Help Association"
+          sx={{ fontSize: { mobile: '50px', laptop: '30px' } }}
+        />
+      ),
+      link: contactUsRef,
+      handle: '(237) 691 102 170',
+    },
+    {
+      icon: (
+        <Mail
+          socialHandle="contact@letshelp.ong"
+          sx={{ fontSize: { mobile: '50px', laptop: '30px' } }}
+        />
+      ),
+      link: 'mailto:contact@letshelp.ong',
+      handle: 'contact@letshelp.ong',
+    },
+    {
+      icon: (
+        <Linkedin
+          socialHandle="@LHA"
+          sx={{ fontSize: { mobile: '50px', laptop: '30px' } }}
+        />
+      ),
       link: 'https://google.com',
       handle: '@LHA',
     },
     {
-      icon: <Instagram socialHandle="@LHA" sx={{ fontSize: '50px' }} />,
+      icon: (
+        <Instagram
+          socialHandle="@LHA"
+          sx={{ fontSize: { mobile: '50px', laptop: '30px' } }}
+        />
+      ),
       link: 'https://google.com',
       handle: '@LHA',
     },
