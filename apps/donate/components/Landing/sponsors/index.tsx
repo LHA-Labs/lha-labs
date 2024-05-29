@@ -14,7 +14,7 @@ export interface Sponsor {
 function Sponsors() {
   const { formatMessage } = useIntl();
   const { push } = useRouter();
-  const assoication_whatsapp = '+33780772986';
+  const association_whatsapp = '+33780772986';
   const tags = `#lha #destitute-children #lha-sponsor #sourire-aux-orphelins`;
   const becomePartnerMessage = `${formatMessage({
     id: 'becomePartnerMessageHeader',
@@ -104,7 +104,7 @@ function Sponsors() {
           target="_blank"
           variant="contained"
           color="primary"
-          href={`https://api.whatsapp.com/send/?phone=${assoication_whatsapp}&text=${encodeURIComponent(
+          href={`https://api.whatsapp.com/send/?phone=${association_whatsapp}&text=${encodeURIComponent(
             `${becomePartnerMessage}\n${fullUrl}${
               fullUrl.includes('#') ? '' : '#sponsors'
             }`
