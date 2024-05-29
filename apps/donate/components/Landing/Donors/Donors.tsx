@@ -19,6 +19,10 @@ const donors: Donor[] = [
     image: '',
   },
   {
+    name: 'Lesley Kengah',
+    image: '',
+  },
+  {
     name: 'Isabelle Essama',
     image: '',
   },
@@ -46,6 +50,130 @@ const donors: Donor[] = [
     name: 'Dassi Daril',
     image: '',
   },
+  {
+    name: 'Alyson Djoumatchoua',
+    image: '',
+  },
+  {
+    name: 'Ange Noubissie',
+    image: '',
+  },
+  {
+    name: 'Emmanuel Tientcheu',
+    image: '',
+  },
+  {
+    name: 'Chistianne Possi',
+    image: '',
+  },
+  {
+    name: 'Danielle Nguemete',
+    image: '',
+  },
+  {
+    name: 'Darelle Talla',
+    image: '',
+  },
+  {
+    name: 'Dharol Fotsing',
+    image: '',
+  },
+  {
+    name: 'Esteva Tiako',
+    image: '',
+  },
+  {
+    name: 'Fatima Lele',
+    image: '',
+  },
+  {
+    name: 'Hilarie Fotso',
+    image: '',
+  },
+  {
+    name: 'Ines Ankene',
+    image: '',
+  },
+  {
+    name: 'Ivan Bosso',
+    image: '',
+  },
+  {
+    name: 'Jennifer Tchami',
+    image: '',
+  },
+  {
+    name: 'Jessica Nguena',
+    image: '',
+  },
+  {
+    name: 'Leticia Kuemo',
+    image: '',
+  },
+  {
+    name: 'Negou Zidane',
+    image: '',
+  },
+  {
+    name: 'Nikita Tchana',
+    image: '',
+  },
+  {
+    name: 'Presley Talla',
+    image: '',
+  },
+  {
+    name: 'Scott Nyadjeu',
+    image: '',
+  },
+  {
+    name: 'Stelane Mbeh',
+    image: '',
+  },
+  {
+    name: 'Deuga Ulrich',
+    image: '',
+  },
+  {
+    name: 'Yannick Feuyou',
+    image: '',
+  },
+  {
+    name: 'Famille Kouatchoua',
+    image: '',
+  },
+  {
+    name: 'Famille Yonga',
+    image: '',
+  },
+  {
+    name: 'Famille Youmbi',
+    image: '',
+  },
+  // {
+  //   name: 'Armand Meppa',
+  //   image: '',
+  // },
+  // {
+  //   name: 'Dylane Bengono',
+  //   image: '',
+  // },
+  // {
+  //   name: 'Kengne David',
+  //   image: '',
+  // },
+  // {
+  //   name: 'Kuidja Marco',
+  //   image: '',
+  // },
+  // {
+  //   name: 'Desmond Nde',
+  //   image: '',
+  // },
+  // {
+  //   name: 'Vidal Tchapleu',
+  //   image: '',
+  // },
 ];
 
 function DonorsSection() {
