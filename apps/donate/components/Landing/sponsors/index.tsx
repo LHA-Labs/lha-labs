@@ -1,6 +1,5 @@
 import { Box, Button } from '@mui/material';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
 import { useIntl } from 'react-intl';
 import SectionHeader from '../SectionHeader';
 import SponsorLogo from './SponsorLogo';
@@ -14,23 +13,6 @@ export interface Sponsor {
 function Sponsors() {
   const { formatMessage } = useIntl();
   const { push } = useRouter();
-  const association_whatsapp = '+33780772986';
-  const tags = `#lha #destitute-children #lha-sponsor #sourire-aux-orphelins`;
-  const becomePartnerMessage = `${formatMessage({
-    id: 'becomePartnerMessageHeader',
-  })}\n\n${formatMessage({
-    id: 'becomePartnerMessageBody',
-  })}\n\n${formatMessage({
-    id: 'becomePartnerMessageFooter',
-  })}\n\n${tags}`;
-
-  const [fullUrl, setFullUrl] = useState<string>('');
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      setFullUrl(window.location.href);
-    }
-  }, []);
 
   const sponsors: Sponsor[] = [
     {
@@ -64,6 +46,7 @@ function Sponsors() {
       website: 'https://www.facebook.com/danllaHairr',
     },
   ];
+
   return (
     <Box
       component="section"
@@ -104,11 +87,7 @@ function Sponsors() {
           target="_blank"
           variant="contained"
           color="primary"
-          href={`https://api.whatsapp.com/send/?phone=${association_whatsapp}&text=${encodeURIComponent(
-            `${becomePartnerMessage}\n${fullUrl}${
-              fullUrl.includes('#') ? '' : '#sponsors'
-            }`
-          )}`}
+          href={'https://forms.gle/7muQEcXdavtGMzTU6'}
           sx={{ textAlign: 'center' }}
         >
           {formatMessage({ id: 'becomePartner' })}
