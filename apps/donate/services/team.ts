@@ -68,7 +68,7 @@ Chers orphelins, vous n'êtes pas seuls, nous sommes à vos côtés.🤞🏾
         facebook: 'https://facebook.com/fati.towo',
       },
       messageFr: `
-      Quoi de plus merveilleux que de dessiner un sourire sur un visage attristé les bonnes pensées font de nous des personnes heureuses c'est dans cet élan que je suis non seulement fière motivée et dévouée de faire partie de LHA car son but n'est rien d'autre que d'apporter du sourire à tout ces enfants défavorisés et dont la vie n'a pas toujours été rose pour eux et ceci avec un amour immense.
+      Quoi de plus merveilleux que de dessiner un sourire sur un visage attristé les bonnes pensées font de nous des personnes heureuses c'est dans cet élan que je suis non seulement fière motivée et dévouée de faire partie de LHA car son but n'est rien d'autre que d'apporter du sourire à tous ces enfants défavorisés et dont la vie n'a pas toujours été rose pour eux et ceci avec un amour immense.
 
 Il y'a pas de bonheur comme aimer et être aimé.
 
@@ -112,7 +112,7 @@ et le Partage est le fruit de l'esprit❤🤍❤
         instagram: 'https://instagram.com/nguenajessica',
       },
       messageFr: `Je suis honorée de faire partie de LHA non seulement parceque j'aime toute initiative ayant trait à apporter un soutien à autrui mais également parceque la vision de LHA m'a transpercé!
-      Juste l'idée de vouloir apporter son soutien à ceux dans le besoin est déjà une motivation assez grande et par dessus tout voir le sourire sur le visage de ses enfants apporte une joie immense que j'aimerai ressentir à chaque fois que j'en ai l'occasion!
+      Juste l'idée de vouloir apporter son soutien à ceux dans le besoin est déjà une motivation assez grande et par dessus tout voir le sourire sur le visage de ces enfants apporte une joie immense que j'aimerai ressentir à chaque fois que j'en ai l'occasion!
       Tout le monde mérite d'une manière ou d'une autre d'être heureux et c'est notre manière à nous de leur arracher un sourire`,
       messageEn: `I'm honored to be part of LHA not only because I love any initiative that has to do with helping others, but also because the vision of LHA has pierced me!
         Just the idea of wanting to support those in need is motivation enough, and above all seeing the smiles on your children's faces brings an immense joy that I'd like to feel every time I get the chance!
