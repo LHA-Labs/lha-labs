@@ -156,7 +156,7 @@ export const website = {
   financialDonations: 'Dons Financiers',
   contactUs: 'Contactez Nous',
   nonPerishableGoodDescription:
-    "Aliments Non Erissables, Produits Frais, Vetements, Jouets, Fournitures Scolaires, Produits D'hygiene etc.",
+    "Aliments Non Perissables, Produits Frais, Vetements, Jouets, Fournitures Scolaires, Produits D'hygiene etc.",
   nonPerishableDonations: 'Dons Alimentaire et en Nature',
   donateNow: 'Faites un don maintenant',
   donationBody:
