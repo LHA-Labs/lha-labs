@@ -9,7 +9,7 @@ export default function StatisticSection() {
   //TODO: INTERGRATE FINANCE STATS HERE
   const financeStats = {
     target: 1200000,
-    received: 150400,
+    received: 347000,
     donationEndDate: new Date('24 August 2024 10:00').toISOString(),
   };
   return (
